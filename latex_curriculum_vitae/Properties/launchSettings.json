@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "latex_curriculum_vitae": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}

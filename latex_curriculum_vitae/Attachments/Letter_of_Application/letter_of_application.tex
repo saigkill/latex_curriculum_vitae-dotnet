@@ -1,0 +1,206 @@
+% Copyright (C) 2015-2020 Sascha Manns <Sascha.Manns@outlook.de>
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%---------------------------------------------------------------------------
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=11pt,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   %pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=off,%%         Linie unter der Seitenzahl
+   parskip=half,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Was kommt in den Briefkopf und in die Anschrift
+   fromalign=right,%%        Plazierung des Briefkopfs
+   fromphone=on,%%           Telefonnummer im Absender
+   fromrule=aftername,%%     Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%           Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=off,%%            Firmenlogo
+   addrfield=on,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%         ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=narrow,%%        zusaetzliches Feld fuer Absender
+   foldmarks=on,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=narrow,%%         Geschaeftszeile im Satzspiegel
+   firstfoot=off,%%           Footerbereich
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=off%%                Entwurfsmodus
+]{scrlttr2}
+%---------------------------------------------------------------------------
+\usepackage[english, ngerman]{babel}
+\usepackage{url}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+% symbols: (cell)phone, email
+\RequirePackage{marvosym}
+% for gray color in header
+\RequirePackage{color}
+\usepackage[T1]{fontenc}
+
+%---------------------------------------------------------------------------
+% Schriften werden hier definiert
+\renewcommand*\familydefault{\sfdefault} % Latin Modern Sans
+%\setmainfont[Mapping=tex-text]{KoblenzPro}
+\setkomafont{fromname}{\sffamily\color{mygray}\LARGE}
+%\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\mdseries}
+\setkomafont{backaddress}{\mdseries}
+\setkomafont{fromaddress}{\small\sffamily\mdseries\color{mygray}}
+
+% -------------------------------------------------
+% Personal Data
+% -------------------------------------------------
+\input{$HOME/AppData/Roaming/latex_curriculum_vitae/personal_data.tex}
+
+% -------------------------------------------------
+% Details from Job Offer
+% -------------------------------------------------
+\input{./application_details.tex}
+
+%---------------------------------------------------------------------------
+\begin{document}
+%---------------------------------------------------------------------------
+% Briefstil und Position des Briefkopfs
+\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+\makeatletter
+\@setplength{sigbeforevskip}{17mm} % Abstand der Signatur von dem closing
+\@setplength{firstheadvpos}{12mm} % Abstand des Absenderfeldes vom Top
+\@setplength{firstfootvpos}{275mm} % Abstand des Footers von oben
+\@setplength{firstheadwidth}{\paperwidth}
+\@setplength{locwidth}{70mm}   % Breite des Locationfeldes
+\@setplength{locvpos}{65mm}    % Abstand des Locationfeldes von oben
+\ifdim \useplength{toaddrhpos}>\z@
+  \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
+\else
+  \@addtoplength[2]{firstheadwidth}{\useplength{toaddrhpos}}
+\fi
+\@setplength{foldmarkhpos}{6.5mm}
+\makeatother
+%---------------------------------------------------------------------------
+% Farben werden hier definiert
+% define gray for header
+\definecolor{mygray}{gray}{.55}
+% define blue for address
+\definecolor{myblue}{rgb}{0.25,0.50,0.75}
+\definecolor{mygruen}{rgb}{0.35,0.70,0.30}
+%\setkomavar{fromlogo}{\includegraphics[scale=0.2]{pabook.jpg}}
+%---------------------------------------------------------------------------
+% Absender Daten +49\,(0)\,2651\,40\,14\,045
+\setkomavar{fromname}{\firstname\ \familyname}
+\setkomavar{fromaddress}{\mystreet\\\mycity}
+\setkomavar{fromphone}[\Telefon~]{\myphone}
+\setkomavar{fromfax}[\FAX~]{+49\,(0)\,123\,456\,789\,1}
+\setkomavar{fromemail}[\Letter~]{\myemail}
+\setkomavar{fromurl}[]{\myblog}
+\setkomafont{fromaddress}{\small\rmfamily\mdseries\slshape\color{mygray}}
+
+\setkomavar{backaddressseparator}{ - }
+\setkomavar{signature}{\\[-5\baselineskip]%
+%\rule{10em}{2\baselineskip}\\
+\includegraphics[scale=0.5]{$HOME/AppData/Roaming/latex_curriculum_vitae/Pictures/signatur.png}\\
+SASCHA MANNS}
+%\setkomavar{backaddress}{Tim Metzner, Felderhof 112, 40880 Ratingen} % wenn erwünscht kann hier eine andere Backaddress eingetragen werden
+%\setkomavar{signature}{SASCHA MANNS}
+% signature same indention level as rest
+%\renewcommand*{\raggedsignature}{\raggedright}
+%\setkomavar{location}{\raggedleft
+
+%Kundennummer: 12345678 \\}
+
+% Anlage neu definieren
+%\renewcommand{\enclname}{Anlagen}
+%\setkomavar{enclseparator}{: }
+%---------------------------------------------------------------------------
+% Seitenstil
+%pagenumber=footmiddle
+\pagestyle{plain}%% keine Header in der Kopfzeile bzw. plain
+\pagenumbering{arabic}
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+\firstfoot{\footnotesize%
+\textcolor{mygray}{\rule[3pt]{\textwidth}{.4pt} \\}
+%\rule[3pt]{\textwidth}{.4pt} \\
+\begin{tabular}[t]{l@{}}%
+\usekomavar{fromname}\\
+\usekomavar{fromaddress}\\
+\end{tabular}%
+\hfill
+\begin{tabular}[t]{l@{}}%
+  \usekomavar[\Mobilefone~]{fromphone}\\
+   \usekomavar[\Letter~]{fromemail}\\
+\end{tabular}%
+\ifkomavarempty{frombank}{}{%
+\hfill
+\begin{tabular}[t]{l@{}}%
+\usekomavar{frombank}
+\end{tabular}%
+}%
+}%
+%---------------------------------------------------------------------------
+% Bankverbindung
+%\setkomavar{frombank}{Kto. 198\ 242\ 620\\
+%BLZ 576\,500\,10\\
+%Kreissparkasse Mayen}
+\setkomavar{frombank}{\mybank}
+%---------------------------------------------------------------------------
+%\setkomavar{yourref}{}
+%\setkomavar{yourmail}{}
+%\setkomavar{myref}{}
+%\setkomavar{customer}{}
+%\setkomavar{invoice}{}
+%---------------------------------------------------------------------------
+% Datum und Ort werden hier eingetragen
+\setkomavar{date}{den \today}
+\setkomavar{place}{Mayen}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+% Hier beginnt der Brief, mit der Anschrift des Empfängers
+
+\begin{letter}{\addressstring}
+
+%---------------------------------------------------------------------------
+% Der Betreff des Briefes
+\setkomavar{subject}{\subject}
+%---------------------------------------------------------------------------
+%\opening{Sehr geehrter \Ansprechpartner,}
+\opening{\introduction}
+Ich bin Fachinformatiker in der Anwendungsentwicklung und bereits 10 Jahre im IT-Bereich tätig. Seit meinem ersten Heimcomputer (Commodore 64) beschäftige ich mich mit Computern. Erfahrungen konnte ich bereits in den Branchen Bankwesen, Gesundheit, Bauwesen und Automotive sammeln. Gearbeitet habe ich hier im Bereich der Desktop-Anwendungsentwicklung, der mobilen Appentwicklung, der Webentwicklung, der Dokumentation und des Supports. 
+
+In den letzten beiden Stellen war ich als Softwareentwickler tätig, und sowohl für die Weiterentwicklung vorhandener Anwendungen, als auch für die Konzeption und Programmierung neuer Produkte verantwortlich. So ermittelte ich den Workflow des Kunden und setzte diesen in ein leicht zu bedienendes mobiles oder Desktop-Produkt um. In allen Fällen konnte ich auch eigenverantwortliche Projekte bearbeiten. Ein besonderes Augenmerk lege ich auf die Optimierung vorhandener Projekte. Da viele der verfügbaren Dokumentationen im Softwarebereich in englischer Sprache geschrieben sind, kann ich auf meine Englischkenntnisse zurückgreifen. Auch eine schriftliche Kommunikation in Foren oder per Email sind mir möglich. Erfahrungen im agilen Umfeld können ebenfalls vorausgesetzt werden.
+
+Ausserdem habe ich ein ausgeprägtes Qualitätsbewusstsein. Gerade beim Programmieren spielt es eine Rolle, seine Programme so zu gestalten, das jeder andere damit zurechtkommt. Insgesamt wende ich die Möglichkeiten des Clean-Codes an, um meine Codebasis wartbar zu halten, bei minimalem Aufwand. Auch neue Technologien probiere ich gerne aus, um Lösungen für künftige Probleme zu haben, oder Kostenminimierungen zu bewirken.
+
+Ich wäre kurzfristig für Sie verfügbar. Auf Ihre Einladung freue ich mich sehr.
+\closing{Mit freundlichen Grüßen}
+
+%---------------------------------------------------------------------------
+%\ps{PS:}
+%\encl{Bewerbungsunterlagen}
+%\cc{}
+%---------------------------------------------------------------------------
+\end{letter}
+%---------------------------------------------------------------------------
+\end{document}
+%---------------------------------------------------------------------------
