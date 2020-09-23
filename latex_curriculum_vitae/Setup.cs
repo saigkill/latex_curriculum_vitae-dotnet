@@ -95,5 +95,19 @@ namespace latex_curriculum_vitae
             File.Copy(Path.Combine(main, "Attachments", "Appendix", "Bibliography", "bibliography.bib"), Path.Combine(targetPath, "Appendix", "Bibliography", "bibliography.bib"));
         }
 
+        public void Cleanup()
+        {
+            string tmpDir = Path.GetTempPath();
+            string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
+            Directory.SetCurrentDirectory(mytmpDir);
+
+            string[] delete = Directory.GetFiles(mytmpDir);
+
+            foreach (string del in delete)
+            {
+                File.Delete(del);
+            };
+
+        }
     }
 }

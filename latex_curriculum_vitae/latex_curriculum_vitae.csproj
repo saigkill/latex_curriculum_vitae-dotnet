@@ -8,13 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Attachements\Appendix\Bibliography\" />
-    <Folder Include="Attachements\Appendix\Certificates\" />
-    <Folder Include="Attachements\Appendix\Employers_Reference\" />
-    <Folder Include="Attachements\Cover\" />
-    <Folder Include="Attachements\Motivational_Letter\" />
-    <Folder Include="Attachements\Pictures\" />
-    <Folder Include="Attachements\Resume\" />
+    <Compile Remove="Attachements\**" />
+    <EmbeddedResource Remove="Attachements\**" />
+    <None Remove="Attachements\**" />
+    <Page Remove="Attachements\**" />
   </ItemGroup>
 
   <ItemGroup>

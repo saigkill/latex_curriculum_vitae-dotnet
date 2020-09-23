@@ -61,6 +61,7 @@ namespace latex_curriculum_vitae
                 startInfo.Arguments = cmd;
                 process.StartInfo = startInfo;
                 process.Start();
+                process.WaitForExit();
             }
 
         }
@@ -72,13 +73,28 @@ namespace latex_curriculum_vitae
             string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
             Directory.SetCurrentDirectory(mytmpDir);
 
+            string cos = "Certificates_Application_" + firstname + "_" + familyname + ".pdf";
+            string cert = "Certificates_" + firstname + "_" + familyname + ".pdf";
+            string finalpdf = "Bewerbungsunterlagen_" + firstname + "_" + familyname + ".pdf";
 
-            string[] cosEntries = Directory.GetFiles(Path.Combine(srcPath, "latex_curriculum_vitae", "Appendix", "Certificates_of_Employment"));
-            string[] certEntries = Directory.GetFiles(Path.Combine(srcPath, "latex_curriculum_vitae", "Appendix", "Certificates"));
-            string[] final = { "letter_of_application.pdf", "curriculum_vitae.pdf", "Certificates_Application_" + firstname + "_" + familyname + ".pdf", "Certificates_" + firstname + "_" + familyname + ".pdf" };
+            string[] cosEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates_of_Employment"));
+            string[] certEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates"));            
+            string[] final = { "letter_of_application.pdf", "curriculum_vitae.pdf", cos, cert };            
+            
+            // Sort array in ascending order. 
+            Array.Sort(cosEntries);
+
+            // reverse array 
+            Array.Reverse(cosEntries);
+
+            // Sort array in ascending order. 
+            Array.Sort(certEntries);
+
+            // reverse array 
+            Array.Reverse(certEntries);
 
             // Certificates of Employment
-            //open pdf documents           
+            //open pdf documents                                 
             PdfDocument[] docs = new PdfDocument[cosEntries.Length];
             for (int i = 0; i < cosEntries.Length; i++)
             {
@@ -91,14 +107,12 @@ namespace latex_curriculum_vitae
             {
                 docs[0].InsertPage(docs[2], i);
             }
-            docs[0].SaveToFile("Certificates_Application_" + firstname + "_" + familyname + ".pdf");
+            docs[0].SaveToFile(cos);
             foreach (PdfDocument doc in docs)
             {
                 doc.Close();
             }
-            //PDFDocumentViewer("MergeDocuments.pdf");
-            Process.Start("Certificates_Application_" + firstname + "_" + familyname + ".pdf");
-
+            
             // Certificates
             //open pdf documents           
             PdfDocument[] docs1 = new PdfDocument[certEntries.Length];
@@ -113,20 +127,18 @@ namespace latex_curriculum_vitae
             {
                 docs1[0].InsertPage(docs1[2], i);
             }
-            docs1[0].SaveToFile("Certificates_" + firstname + "_" + familyname + ".pdf");
+            docs1[0].SaveToFile(cert);
             foreach (PdfDocument doc in docs1)
             {
                 doc.Close();
-            }
-            //PDFDocumentViewer("MergeDocuments.pdf");
-            Process.Start("Certificates_" + firstname + "_" + familyname + ".pdf");           
+            }            
 
             // Production of the final document
             //open pdf documents           
             PdfDocument[] docs2 = new PdfDocument[final.Length];
             for (int i = 0; i < final.Length; i++)
             {
-                docs1[i] = new PdfDocument(final[i]);
+                docs2[i] = new PdfDocument(final[i]);
             }
             //append document
             docs2[0].AppendPage(docs2[1]);
@@ -135,28 +147,11 @@ namespace latex_curriculum_vitae
             {
                 docs2[0].InsertPage(docs2[2], i);
             }
-            docs2[0].SaveToFile("Bewerbungsunterlagen_" + firstname + "_" + familyname + ".pdf");
+            docs2[0].SaveToFile(finalpdf);
             foreach (PdfDocument doc in docs2)
             {
                 doc.Close();
-            }
-            //PDFDocumentViewer("MergeDocuments.pdf");
-            Process.Start("Bewerbungsunterlagen_" + firstname + "_" + familyname + ".pdf");
-
-        }
-
-        public void Cleanup()
-        {
-            string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
-            Directory.SetCurrentDirectory(mytmpDir);
-
-            string[] delete = Directory.GetFiles(mytmpDir);
-
-            foreach (string del in delete)
-            {
-                File.Delete(del);
-            };
-
-        }
+            }            
+        }        
     }
 }

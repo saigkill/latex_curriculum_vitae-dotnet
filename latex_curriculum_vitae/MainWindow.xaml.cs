@@ -31,7 +31,8 @@ namespace latex_curriculum_vitae
         {
             string addressline;
             
-            _ = new Setup();
+            Setup mysetup = new Setup();
+            mysetup.Cleanup();
             User myuser = new User();
             JobApplication myapplication = new JobApplication(txtURL.Text, txtEmail.Text, txtJobtitle.Text);
             Company mycompany = new Company(txtCompanyName.Text, txtCompanyStreet.Text, Convert.ToInt32(txtZIP.Text), txtCity.Text);
