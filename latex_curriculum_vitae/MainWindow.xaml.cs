@@ -30,20 +30,42 @@ namespace latex_curriculum_vitae
         private void BtnGenerate_Click(object sender, EventArgs e)
         {
             string addressline;
+            bool compemail_set;
             
             Setup mysetup = new Setup();
             mysetup.Cleanup();
             User myuser = new User();
             JobApplication myapplication = new JobApplication(txtURL.Text, txtEmail.Text, txtJobtitle.Text);
-            Company mycompany = new Company(txtCompanyName.Text, txtCompanyStreet.Text, Convert.ToInt32(txtZIP.Text), txtCity.Text);
+            
+            if (myapplication.Email == "")
+            {
+                compemail_set = false;
+            } else
+            {
+                compemail_set = true;
+            }
+
+            Company company = new Company(txtCompanyName.Text, txtCompanyStreet.Text, Convert.ToInt32(txtZIP.Text), txtCity.Text);
             ComboBoxItem typeItem = (ComboBoxItem)cboGender.SelectedItem;
             string gender = typeItem.Content.ToString();
-            Contact mycontact = new Contact(txtContactName.Text, gender);
-            addressline = mycontact.Addressline(mycompany.Name, mycontact.Name, mycontact.Gender, mycompany.Street, mycompany.City);
+            Contact contact = new Contact(txtContactName.Text, gender);
+            addressline = contact.Addressline(company.Name, contact.Name, contact.Gender, company.Street, company.City);
             Build build = new Build();
-            build.CreateApplicationConfig(myapplication.Jobtitle, mycompany.Name, mycontact.Name, mycompany.Street, mycompany.City, mycontact.Salutation, myuser.Subject, addressline);
+            string subject = build.GetSubject(myuser.Subject, myapplication.Jobtitle);
+            build.CreateApplicationConfig(myapplication.Jobtitle, company.Name, contact.Name, company.Street, company.City, contact.Salutation, subject, addressline);
             build.CompileApplication();
             build.CombineApplication(myuser.Firstname, myuser.Familyname);
+            
+            if(compemail_set == false)
+            {
+                build.OpenExplorer();
+
+            } else
+            {
+                string finalpdf = build.GetFinalPdfName(myuser.Firstname, myuser.Familyname);
+                Email email = new Email();
+                email.CreateMessage(myuser.Firstname, myuser.Familyname, myuser.Email, contact.Name, myapplication.Email, subject, contact.Salutation, finalpdf, myuser.SmtpServer, myuser.SmtpUser, myuser.SmtpPass);
+            }            
         }
 
         private void BtnExit_Click(object sender, EventArgs e)

@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Runtime.InteropServices;
-using Spire.Pdf;
-using Spire.Pdf.Graphics;
+using PdfSharpCore;
+using PdfSharpCore.Pdf;
+using PdfSharpCore.Pdf.IO;
 using System.Drawing;
 using System.Windows;
 
@@ -35,9 +36,15 @@ namespace latex_curriculum_vitae
 
         }
 
-        public void CreateApplicationConfig(string jobtitle, string company, string contact, string street, string city, string salutation, string subjectprefix, string addressstring)
+        public string GetSubject(string subjectprefix, string jobtitle)
         {
-            string[] lines = { "\\def\\jobtitle{" + jobtitle + "}", "\\def\\company{" + company + "}", "\\def\\contact{" + contact + "}", "\\def\\street{" + street + "}", "\\def\\city{" + city + "}", "\\def\\salutation{" + salutation + "}", "\\def\\subject{" + subjectprefix + " " + jobtitle + "}", "\\def\\addressstring{" + addressstring + "}" };
+            string subject = subjectprefix + " " + jobtitle;
+            return subject;
+        }
+
+        public void CreateApplicationConfig(string jobtitle, string company, string contact, string street, string city, string salutation, string subject, string addressstring)
+        {
+            string[] lines = { "\\def\\jobtitle{" + jobtitle + "}", "\\def\\company{" + company + "}", "\\def\\contact{" + contact + "}", "\\def\\street{" + street + "}", "\\def\\city{" + city + "}", "\\def\\salutation{" + salutation + "}", "\\def\\subject{" + subject + "}", "\\def\\addressstring{" + addressstring + "}" };
 
             string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
             using StreamWriter outputFile = new StreamWriter(Path.Combine(mytmpDir, "application_details.tex"));
@@ -66,6 +73,12 @@ namespace latex_curriculum_vitae
 
         }
 
+        public string GetFinalPdfName(string firstname, string familyname)
+        {
+            string finalpdf = "Bewerbungsunterlagen_" + firstname + "_" + familyname + ".pdf";
+            return finalpdf;
+        }
+
         public void CombineApplication(string firstname, string familyname)
         {
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -75,11 +88,11 @@ namespace latex_curriculum_vitae
 
             string cos = "Certificates_Application_" + firstname + "_" + familyname + ".pdf";
             string cert = "Certificates_" + firstname + "_" + familyname + ".pdf";
-            string finalpdf = "Bewerbungsunterlagen_" + firstname + "_" + familyname + ".pdf";
+            string finalpdf = GetFinalPdfName(firstname, familyname);
 
             string[] cosEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates_of_Employment"));
             string[] certEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates"));            
-            string[] final = { "letter_of_application.pdf", "curriculum_vitae.pdf", cos, cert };            
+            string[] finalEntries = { "letter_of_application.pdf", "curriculum_vitae.pdf", cos, cert };            
             
             // Sort array in ascending order. 
             Array.Sort(cosEntries);
@@ -94,64 +107,51 @@ namespace latex_curriculum_vitae
             Array.Reverse(certEntries);
 
             // Certificates of Employment
-            //open pdf documents                                 
-            PdfDocument[] docs = new PdfDocument[cosEntries.Length];
-            for (int i = 0; i < cosEntries.Length; i++)
-            {
-                docs[i] = new PdfDocument(cosEntries[i]);
-            }
-            //append document
-            docs[0].AppendPage(docs[1]);
-            //import pages
-            for (int i = 0; i < docs[2].Pages.Count; i = i + 2)
-            {
-                docs[0].InsertPage(docs[2], i);
-            }
-            docs[0].SaveToFile(cos);
-            foreach (PdfDocument doc in docs)
-            {
-                doc.Close();
-            }
-            
+            MergePDFs(Path.Combine(mytmpDir, cos), cosEntries);
+
             // Certificates
-            //open pdf documents           
-            PdfDocument[] docs1 = new PdfDocument[certEntries.Length];
-            for (int i = 0; i < certEntries.Length; i++)
-            {
-                docs1[i] = new PdfDocument(certEntries[i]);
-            }
-            //append document
-            docs1[0].AppendPage(docs1[1]);
-            //import pages
-            for (int i = 0; i < docs1[2].Pages.Count; i = i + 2)
-            {
-                docs1[0].InsertPage(docs1[2], i);
-            }
-            docs1[0].SaveToFile(cert);
-            foreach (PdfDocument doc in docs1)
-            {
-                doc.Close();
-            }            
+            MergePDFs(Path.Combine(mytmpDir, cert), certEntries);
+
 
             // Production of the final document
-            //open pdf documents           
-            PdfDocument[] docs2 = new PdfDocument[final.Length];
-            for (int i = 0; i < final.Length; i++)
+            MergePDFs(Path.Combine(mytmpDir, finalpdf), finalEntries);
+            
+        }
+
+        private void MergePDFs(string targetPath, params string[] pdfs)
+        {
+            using (PdfDocument targetDoc = new PdfDocument())
             {
-                docs2[i] = new PdfDocument(final[i]);
+                foreach (string pdf in pdfs)
+                {
+                    using (PdfDocument pdfDoc = PdfReader.Open(pdf, PdfDocumentOpenMode.Import))
+                    {
+                        for (int i = 0; i < pdfDoc.PageCount; i++)
+                        {
+                            targetDoc.AddPage(pdfDoc.Pages[i]);
+                        }
+                    }
+                }
+                targetDoc.Save(targetPath);
             }
-            //append document
-            docs2[0].AppendPage(docs2[1]);
-            //import pages
-            for (int i = 0; i < docs2[2].Pages.Count; i = i + 2)
+        }
+
+        public void OpenExplorer()
+        {
+            string path = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
+            if (Environment.OSVersion.Version.Major >= 6)
             {
-                docs2[0].InsertPage(docs2[2], i);
+                path = Directory.GetParent(path).ToString();
             }
-            docs2[0].SaveToFile(finalpdf);
-            foreach (PdfDocument doc in docs2)
-            {
-                doc.Close();
-            }            
-        }        
+
+            Process process = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            string _path = Path.Combine(path, "AppData", "Local", "Temp", "latex_curriculum_vitae");
+            startInfo.Arguments = string.Format("/C start {0}", _path);
+            process.StartInfo = startInfo;
+            process.Start();
+        }
     }
 }

@@ -10,8 +10,7 @@ namespace latex_curriculum_vitae
     {
         private string _name;
         private string _gender;
-        private string _salutation;
-        private string _addressLine;
+        private string _salutation;        
 
         public string Name   
         {
@@ -45,10 +44,10 @@ namespace latex_curriculum_vitae
             
             if (gname == "Male")
             {
-                salutation = "Sehr geehrter Herr " + cname;
+                salutation = "Sehr geehrter Herr " + cname + ",";
             }
             else if (gname == "Female") {
-                salutation = "Sehr geehrte Frau " + cname;
+                salutation = "Sehr geehrte Frau " + cname + ",";
             }
             else
             {

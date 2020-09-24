@@ -18,6 +18,9 @@ namespace latex_curriculum_vitae
         private string _email;
         private string _blog;
         private string _subjectprefix;
+        private string _smtpserver;
+        private string _smtpuser;
+        private string _smtppass;
 
         public string Subject
         {
@@ -37,6 +40,30 @@ namespace latex_curriculum_vitae
             set { _familyname = value; }
         }
 
+        public string Email
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
+
+        public string SmtpServer
+        {
+            get { return _smtpserver; }
+            set { _smtpserver = value; }
+        }
+
+        public string SmtpUser
+        {
+            get { return _smtpuser; ; }
+            set { _smtpuser = value; }
+        }
+
+        public string SmtpPass
+        {
+            get { return _smtppass; }
+            set { _smtppass = value; }
+        }
+
         public User()
         {
             _firstname = ConfigurationManager.AppSettings.Get("firstname");
@@ -47,6 +74,9 @@ namespace latex_curriculum_vitae
             _email = ConfigurationManager.AppSettings.Get("myemail");
             _blog = ConfigurationManager.AppSettings.Get("myblog");
             _subjectprefix = ConfigurationManager.AppSettings.Get("subject");
+            _smtpserver = ConfigurationManager.AppSettings.Get("smtp-server");
+            _smtpuser = ConfigurationManager.AppSettings.Get("smtp-user");
+            _smtppass = ConfigurationManager.AppSettings.Get("smtp-pass");
             
             UserFile();
         }
