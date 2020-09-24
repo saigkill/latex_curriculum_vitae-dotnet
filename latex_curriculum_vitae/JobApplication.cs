@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Windows;
 
 namespace latex_curriculum_vitae
 {
@@ -30,7 +32,14 @@ namespace latex_curriculum_vitae
         {
             URL = aurl;
             Email = aemail;
-            Jobtitle = ajobtitle;            
+            Jobtitle = FixJobApplication(ajobtitle);
+        }
+
+        public string FixJobApplication(string ajobtitle)
+        {
+            string _prepare = ajobtitle;            
+            _prepare = _prepare.Replace(@"#", @"\#");            
+            return _prepare;
         }
     }
 }

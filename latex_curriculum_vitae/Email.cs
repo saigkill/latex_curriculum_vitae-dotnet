@@ -27,6 +27,7 @@ namespace latex_curriculum_vitae
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress(myname, myemail));
             message.To.Add(new MailboxAddress(contactname, compemail));
+            message.Bcc.Add(new MailboxAddress(myname, myemail));
             message.Subject = subject;
           
 
