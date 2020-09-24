@@ -62,4 +62,4 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 
-Attachments/ linguist-documentation
+**/Attachments/* linguist-documentation
