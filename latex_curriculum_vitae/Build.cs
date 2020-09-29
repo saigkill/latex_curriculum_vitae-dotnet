@@ -14,7 +14,7 @@ namespace latex_curriculum_vitae
 {
     class Build
     {
-        string tmpDir = Path.GetTempPath();        
+        readonly string tmpDir = Path.GetTempPath();        
 
         public Build()
         {
@@ -42,6 +42,14 @@ namespace latex_curriculum_vitae
             return subject;
         }
 
+        public string GetEmailSubject(string subjectprefix, string jobtitle)
+        {
+            string subject = subjectprefix + " " + jobtitle;
+            subject = subject.Replace(@"\#", @"#");
+            subject = subject.Replace(@"\&", @"&");
+            return subject;
+        }
+
         public void CreateApplicationConfig(string jobtitle, string company, string contact, string street, string city, string salutation, string subject, string addressstring)
         {
             string[] lines = { "\\def\\jobtitle{" + jobtitle + "}", "\\def\\company{" + company + "}", "\\def\\contact{" + contact + "}", "\\def\\street{" + street + "}", "\\def\\city{" + city + "}", "\\def\\salutation{" + salutation + "}", "\\def\\subject{" + subject + "}", "\\def\\addressstring{" + addressstring + "}" };
@@ -62,10 +70,12 @@ namespace latex_curriculum_vitae
             foreach (string cmd in strCmdText)
             {
                 Process process = new Process();
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                startInfo.FileName = "cmd.exe";
-                startInfo.Arguments = cmd;
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    FileName = "cmd.exe",
+                    Arguments = cmd
+                };
                 process.StartInfo = startInfo;
                 process.Start();
                 process.WaitForExit();
@@ -120,20 +130,16 @@ namespace latex_curriculum_vitae
 
         private void MergePDFs(string targetPath, params string[] pdfs)
         {
-            using (PdfDocument targetDoc = new PdfDocument())
+            using PdfDocument targetDoc = new PdfDocument();
+            foreach (string pdf in pdfs)
             {
-                foreach (string pdf in pdfs)
+                using PdfDocument pdfDoc = PdfReader.Open(pdf, PdfDocumentOpenMode.Import);
+                for (int i = 0; i < pdfDoc.PageCount; i++)
                 {
-                    using (PdfDocument pdfDoc = PdfReader.Open(pdf, PdfDocumentOpenMode.Import))
-                    {
-                        for (int i = 0; i < pdfDoc.PageCount; i++)
-                        {
-                            targetDoc.AddPage(pdfDoc.Pages[i]);
-                        }
-                    }
+                    targetDoc.AddPage(pdfDoc.Pages[i]);
                 }
-                targetDoc.Save(targetPath);
             }
+            targetDoc.Save(targetPath);
         }
 
         public void OpenExplorer()
@@ -144,10 +150,13 @@ namespace latex_curriculum_vitae
                 path = Directory.GetParent(path).ToString();
             }
 
+            MessageBox.Show("I open now for you the directory in the explorer, what contains your PDFs", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
             Process process = new Process();
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.FileName = "cmd.exe";
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                WindowStyle = ProcessWindowStyle.Hidden,
+                FileName = "cmd.exe"
+            };
             string _path = Path.Combine(path, "AppData", "Local", "Temp", "latex_curriculum_vitae");
             startInfo.Arguments = string.Format("/C start {0}", _path);
             process.StartInfo = startInfo;

@@ -38,7 +38,8 @@ namespace latex_curriculum_vitae
         public string FixJobApplication(string ajobtitle)
         {
             string _prepare = ajobtitle;            
-            _prepare = _prepare.Replace(@"#", @"\#");            
+            _prepare = _prepare.Replace(@"#", @"\#");
+            _prepare = _prepare.Replace(@"&", @"\&");
             return _prepare;
         }
     }

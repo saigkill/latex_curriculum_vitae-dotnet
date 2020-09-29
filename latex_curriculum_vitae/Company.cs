@@ -40,5 +40,13 @@ namespace latex_curriculum_vitae
             ZIP = czip;
             City = cocity;
         }
+
+        public Company(string coname)
+        {
+            Name = coname;
+            Street = "";
+            ZIP = 0;
+            City = "";
+        }        
     }
 }

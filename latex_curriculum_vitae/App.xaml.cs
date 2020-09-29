@@ -1,4 +1,7 @@
-﻿using System;
+﻿using latex_curriculum_vitae.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +16,30 @@ namespace latex_curriculum_vitae
     /// </summary>
     public partial class App : Application
     {
+        #region Private members
+        private readonly ServiceProvider serviceProvider;
+        #endregion
+
+        #region Constructor
+        public App()
+        {
+            ServiceCollection services = new ServiceCollection();
+            services.AddDbContext<JobApplicationDbContext>(options =>
+            {
+                options.UseSqlite("Data Sources = JobApplications.db");
+            });
+
+            services.AddSingleton<DatabaseWindow>();
+            serviceProvider = services.BuildServiceProvider();
+        }
+        #endregion
+
+        #region Event Handlers
+        private void OnStartup(object s, StartupEventArgs e)
+        {
+            var mainWindow = serviceProvider.GetService<MainWindow>();
+            mainWindow.Show();
+        }
+        #endregion
     }
 }

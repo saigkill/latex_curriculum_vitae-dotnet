@@ -8,20 +8,30 @@ using System.Text.RegularExpressions;
 using Microsoft.VisualBasic;
 using System.Windows.Input;
 using System.Linq.Expressions;
+using System.Configuration;
 
 namespace latex_curriculum_vitae
 {
-    class Setup
+    static class Setup
     {
-        string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        static readonly string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);        
 
-        public Setup()
+        public static void CheckAppConfig()
         {
-            CheckLatexPath();
-            CheckDocumentsPath();            
+            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);            
+            
+            bool lcvConfigPathExists = File.Exists(config.FilePath);
+
+            if (lcvConfigPathExists == false)
+            {
+                MessageBox.Show("It looks like you havent set your user details. I open now a window, where you can do this.", "Check Configuration", MessageBoxButton.OK, MessageBoxImage.Information);                
+
+                Window settings = new UserSettingsWindow();
+                settings.Show();
+            }
         }
 
-        private void CheckLatexPath()
+        public static void CheckLatexPath()
         {
             string main = @"C:\texlive";
             try
@@ -37,7 +47,7 @@ namespace latex_curriculum_vitae
             }                            
         }
 
-        private void CheckDocumentsPath()
+        public static void CheckDocumentsPath()
         {            
             string lcvDocsPath = Path.Combine(appDataPath, "latex_curriculum_vitae", "Letter_of_Application", "letter_of_application.tex");
             bool lcvDocsPathExists = File.Exists(lcvDocsPath);            
@@ -51,7 +61,7 @@ namespace latex_curriculum_vitae
             }
         }
 
-        private void CreateDocumentsPath()
+        private static void CreateDocumentsPath()
         {                 
             string[] lcvDocsPath = {Path.Combine(appDataPath, "latex_curriculum_vitae", "Letter_of_Application"), Path.Combine(appDataPath, "latex_curriculum_vitae", "Curriculum_Vitae"), Path.Combine(appDataPath, "latex_curriculum_vitae", "Pictures"),
                 Path.Combine(appDataPath, "latex_curriculum_vitae", "Appendix"), Path.Combine(appDataPath, "latex_curriculum_vitae", "Appendix", "Bibliography"), Path.Combine(appDataPath, "latex_curriculum_vitae", "Appendix", "Certificates"),
@@ -62,7 +72,7 @@ namespace latex_curriculum_vitae
             }                        
         }
 
-        private void CopyDocuments()
+        private static void CopyDocuments()
         {
             // https://stackoverflow.com/questions/17782707/how-to-cut-out-a-part-of-a-path/17782741
             string currentDir = AppDomain.CurrentDomain.BaseDirectory;            
@@ -95,7 +105,7 @@ namespace latex_curriculum_vitae
             File.Copy(Path.Combine(main, "Attachments", "Appendix", "Bibliography", "bibliography.bib"), Path.Combine(targetPath, "Appendix", "Bibliography", "bibliography.bib"));
         }
 
-        public void Cleanup()
+        public static void Cleanup()
         {
             string tmpDir = Path.GetTempPath();
             string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");

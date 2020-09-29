@@ -12,15 +12,16 @@ namespace latex_curriculum_vitae
     {
         private string _firstname;
         private string _familyname;
-        private string _street;
-        private string _city;
-        private string _phone;
+        private readonly string _street;
+        private readonly string _city;
+        private readonly string _phone;
         private string _email;
-        private string _blog;
+        private readonly string _blog;
         private string _subjectprefix;
         private string _smtpserver;
         private string _smtpuser;
         private string _smtppass;
+        private int _smtpport;
 
         public string Subject
         {
@@ -64,20 +65,27 @@ namespace latex_curriculum_vitae
             set { _smtppass = value; }
         }
 
-        public User()
+        public int SmtpPort
         {
-            _firstname = ConfigurationManager.AppSettings.Get("firstname");
-            _familyname = ConfigurationManager.AppSettings.Get("familyname");
-            _street = ConfigurationManager.AppSettings.Get("mystreet");
-            _city = ConfigurationManager.AppSettings.Get("mycity");
-            _phone = ConfigurationManager.AppSettings.Get("myphone");
-            _email = ConfigurationManager.AppSettings.Get("myemail");
-            _blog = ConfigurationManager.AppSettings.Get("myblog");
-            _subjectprefix = ConfigurationManager.AppSettings.Get("subject");
-            _smtpserver = ConfigurationManager.AppSettings.Get("smtp-server");
-            _smtpuser = ConfigurationManager.AppSettings.Get("smtp-user");
-            _smtppass = ConfigurationManager.AppSettings.Get("smtp-pass");
-            
+            get { return _smtpport; }
+            set { _smtpport = value; }
+        }
+
+        public User()
+        {            
+            _firstname = Configuration.GetSetting("firstname");
+            _familyname = Configuration.GetSetting("familyname");
+            _street = Configuration.GetSetting("mystreet");
+            _city = Configuration.GetSetting("mycity");
+            _phone = Configuration.GetSetting("myphone");
+            _email = Configuration.GetSetting("myemail");
+            _blog = Configuration.GetSetting("myblog");
+            _subjectprefix = Configuration.GetSetting("subject");
+            _smtpserver = Configuration.GetSetting("smtp-server");
+            _smtpuser = Configuration.GetSetting("smtp-user");
+            _smtppass = Configuration.GetSetting("smtp-pass");
+            _smtpport = Convert.ToInt32(Configuration.GetSetting("smtp-port"));
+
             UserFile();
         }
 

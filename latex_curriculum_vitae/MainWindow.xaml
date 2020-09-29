@@ -22,7 +22,7 @@
         <Label Content="About Contact person" HorizontalAlignment="Left" Margin="64,191,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="356,237,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.655,0.05"/>
         <ComboBox x:Name="cboGender" HorizontalAlignment="Left" Margin="166,237,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.192,-0.613">
-            <ComboBoxItem Content="Male"/>
+            <ComboBoxItem IsSelected="True" Content="Male"/>
             <ComboBoxItem Content="Female"/>
             <ComboBoxItem Content="Unknown"/>
         </ComboBox>
@@ -43,8 +43,11 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="BtnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="549,384,0,0" VerticalAlignment="Top" Width="96" Click="BtnGenerate_Click"/>
-        <Button x:Name="BtnExit" Content="Exit" HorizontalAlignment="Left" Margin="669,384,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="BtnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="549,394,0,0" VerticalAlignment="Top" Width="96" Click="BtnGenerate_Click"/>
+        <Button x:Name="BtnExit" Content="Exit" HorizontalAlignment="Left" Margin="669,394,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="BtnConfiguration" Content="Configuration" Click="BtnConfiguration_Click" HorizontalAlignment="Left" Margin="426,394,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="BtnDatabase" Content="Data" Click="BtnDatabase_Click" HorizontalAlignment="Left" Margin="304,394,0,0" VerticalAlignment="Top" Width="96" RenderTransformOrigin="-0.715,0.398"/>
+
 
 
     </Grid>

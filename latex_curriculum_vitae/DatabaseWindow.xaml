@@ -1,0 +1,177 @@
+﻿<Window x:Class="latex_curriculum_vitae.DatabaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:latex_curriculum_vitae"
+        mc:Ignorable="d"
+        Title="Database Window - latex_curriculum_vitae" Height="550" Width="1600">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"
+               Grid.Row="0" Content="The current status of your job applications"/>
+
+        <DataGrid x:Name="JobApplicationDG" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"
+                  Grid.Row="1" ColumnWidth="*" Margin="5" IsSynchronizedWithCurrentItem="True" >
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Application Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Company" Binding="{Binding Company}"/>
+                <DataGridTextColumn Header="Jobitle" Binding="{Binding Jobtitle}"/>
+                <DataGridTextColumn Header="City" Binding="{Binding City}"/>
+                <DataGridTextColumn Header="Contact" Binding="{Binding Contact}"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+                <DataGridTextColumn Header="Sent" Binding="{Binding Sent}" />
+                <DataGridTextColumn Header="Confirmed" Binding="{Binding Confirmed}" />
+                <DataGridTextColumn Header="Last phone call" Binding="{Binding Phonecall}" />
+                <DataGridTextColumn Header="Jobinterview" Binding="{Binding Jobinterview}" />
+                <DataGridTextColumn Header="Job offer url" Binding="{Binding Joburll}" />
+
+                <DataGridTemplateColumn Header="Edit Application">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit" Click="SelectApplicationToEdit" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Delete Application">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Click="DeleteApplication"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Margin="6" BorderThickness="1" BorderBrush="Black">
+                <StackPanel  Margin="5">
+                    <Label Content="Add new application" FontWeight="Bold"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" Margin="5"/>
+
+                    <Grid Name="NewJobapplicationGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Content="Company"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Company}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Content="Jobtitle"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Jobtitle}"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Content="City"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding City}"/>
+
+                        <Label Grid.Row="3" Grid.Column="0" Content="Contact"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Contact}"/>
+
+                        <Label Grid.Row="4" Grid.Column="0" Content="Status"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Status}"/>
+
+                        <Label Grid.Row="0" Grid.Column="2" Content="Sent"/>
+                        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Sent}"/>
+
+                        <Label Grid.Row="1" Grid.Column="2" Content="Confirmed"/>
+                        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Confirmed}"/>
+
+                        <Label Grid.Row="2" Grid.Column="2" Content="Last phone call"/>
+                        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding Phonecall}"/>
+
+                        <Label Grid.Row="3" Grid.Column="2" Content="Jobinterview"/>
+                        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding Confirmed}"/>
+
+                        <Label Grid.Row="4" Grid.Column="2" Content="Job offer url"/>
+                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding Joburl}"/>
+
+                    </Grid>
+                    <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Content="Add" Click="AddItem" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" Margin="5" BorderThickness="1" BorderBrush="Black">
+                <StackPanel Margin="5">
+                    <Label Content="Edit application" FontWeight="Bold"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" Margin="5"/>
+
+                    <Grid Name="UpdateApplicationGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Content="Company"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Name}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Content="Jobtitle"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Jobtitle}"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Content="City"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding City}"/>
+
+                        <Label Grid.Row="3" Grid.Column="0" Content="Contact"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Contact}"/>
+
+                        <Label Grid.Row="4" Grid.Column="0" Content="Status"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Status}"/>
+
+                        <Label Grid.Row="0" Grid.Column="2" Content="Sent"/>
+                        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Sent}"/>
+
+                        <Label Grid.Row="1" Grid.Column="2" Content="Confirmed"/>
+                        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Confirmed}"/>
+
+                        <Label Grid.Row="2" Grid.Column="2" Content="Last phone call"/>
+                        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding Phonecall}"/>
+                        
+                        <Label Grid.Row="3" Grid.Column="2" Content="Jobinterview"/>
+                        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding Jobinterview}"/>
+
+                        <Label Grid.Row="4" Grid.Column="2" Content="Job offer url"/>
+                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding Joburl}"/>
+                    </Grid>
+                    <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Click="UpdateItem"
+                                Content="Edit" Margin="20"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

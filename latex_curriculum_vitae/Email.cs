@@ -16,7 +16,7 @@ namespace latex_curriculum_vitae
 
         }
 
-        public void CreateMessage(string firstname, string familyname, string myemail, string contactname, string compemail, string subject, string salutation, string attachment, string smtpserver, string smtpuser, string smtppass)
+        public void CreateMessage(string firstname, string familyname, string myemail, string contactname, string compemail, string subject, string salutation, string attachment, string smtpserver, string smtpuser, string smtppass, int smtpport)
         {
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string lcvPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
@@ -29,18 +29,20 @@ namespace latex_curriculum_vitae
             message.To.Add(new MailboxAddress(contactname, compemail));
             message.Bcc.Add(new MailboxAddress(myname, myemail));
             message.Subject = subject;
-          
 
-            var builder = new BodyBuilder();
 
-            // Set the plain-text version of the message text
-            builder.TextBody = string.Format(@"{0},
+            BodyBuilder builder = new BodyBuilder
+            {
+
+                // Set the plain-text version of the message text
+                TextBody = string.Format(@"{0},
 
 anbei sende ich Ihnen meine Bewerbungsunterlagen.
 
 Mit freundlichem Gruß
 Sascha Manns
-", salutation);
+", salutation)
+            };
 
             // In order to reference selfie.jpg from the html text, we'll need to add it
             // to builder.LinkedResources and then use its Content-Id value in the img src.
@@ -64,7 +66,7 @@ Sascha Manns
             // Sending out
             using (var client = new SmtpClient())
             {
-                client.Connect(smtpserver, 587, false);
+                client.Connect(smtpserver, smtpport, false);
 
                 // Note: only needed if the SMTP server requires authentication
                 client.Authenticate(smtpuser, smtppass);

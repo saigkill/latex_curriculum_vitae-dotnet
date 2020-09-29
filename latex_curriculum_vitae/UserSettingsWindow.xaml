@@ -1,0 +1,52 @@
+﻿<Window x:Class="latex_curriculum_vitae.UserSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:latex_curriculum_vitae"
+        mc:Ignorable="d"
+        Title="User Settings" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.5,0.435">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="611*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblFirstname" Content="Your Firstname" HorizontalAlignment="Left" Margin="38,52,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblFamilyname" Content="Your Familyname" HorizontalAlignment="Left" Margin="183,52,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lblStreet" Content="Your Street" HorizontalAlignment="Left" Margin="38,89,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCity" Content="Your ZIP and City" HorizontalAlignment="Left" Margin="183,89,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lblEmailaddress" Content="Your Emailaddress" HorizontalAlignment="Left" Margin="38,127,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBlog" Content="Your Blog" HorizontalAlignment="Left" Margin="183,127,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Personal Settings" HorizontalAlignment="Left" Margin="19,16,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtFirstname" HorizontalAlignment="Left" Margin="167,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtFamilyname" HorizontalAlignment="Left" Margin="314,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Grid.Column="1"/>
+        <TextBox x:Name="txtStreet" HorizontalAlignment="Left" Margin="167,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="314,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Grid.Column="1"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="167,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtBlog" HorizontalAlignment="Left" Margin="314,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Grid.Column="1"/>
+        <Label Content="Email Settings" HorizontalAlignment="Left" Margin="19,229,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Separator HorizontalAlignment="Left" Height="13" Margin="21,204,0,0" VerticalAlignment="Top" Width="756" RenderTransformOrigin="0.498,-2.363" Grid.ColumnSpan="2">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="3.028"/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Label x:Name="lblSMTPServer" Content="SMTP-Server" HorizontalAlignment="Left" Margin="38,260,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtSMTPServer" HorizontalAlignment="Left" Margin="167,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblSMTPUser" Content="SMTP-User" HorizontalAlignment="Left" Margin="183,255,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtSMTPUser" HorizontalAlignment="Left" Margin="314,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Grid.Column="1"/>
+        <Label x:Name="lblSMTPPort" Content="SMTP-Port" HorizontalAlignment="Left" Margin="38,300,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtSMTPPort" HorizontalAlignment="Left" Margin="167,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblSMTPPass" Content="SMTP-Password" HorizontalAlignment="Left" Margin="183,300,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtSMTPPass" HorizontalAlignment="Left" Margin="314,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Grid.Column="1"/>
+        <Button x:Name="BtnSave" Click="BtnSave_Click" Content="Save" HorizontalAlignment="Left" Margin="492,378,0,0" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
+        <Label x:Name="lblPhonenumber" Content="Your phone number" HorizontalAlignment="Left" Margin="38,168,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPhonenumber" HorizontalAlignment="Left" Margin="167,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+</Window>

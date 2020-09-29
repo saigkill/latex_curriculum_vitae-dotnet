@@ -59,10 +59,13 @@ namespace latex_curriculum_vitae
         public string Addressline(string company, string contactname, string cgender, string cstreet, string ccity)
         {
             string addressline;
+            company = company.Replace(@"#", @"\#");
+            company = company.Replace(@"&", @"\&");
+
             addressline = company + "\\\\";
             if (contactname == "" || cgender == "Unknown")
             {
-                addressline = addressline + "Personalabteilung \\\\";
+                addressline += "Personalabteilung \\\\";
             }
             else
             {
@@ -83,7 +86,7 @@ namespace latex_curriculum_vitae
 
             if (ccity != "")
             {
-                addressline = addressline + ccity;
+                addressline += ccity;
             }
 
             return addressline;
