@@ -6,10 +6,10 @@ using System.Text;
 
 namespace latex_curriculum_vitae.Data
 {
-    public class JobApplicationDbContext : DbContext
+    public class JobApplicationDataDbContext : DbContext
     {
         #region Constructor
-        public JobApplicationDbContext(DbContextOptions<JobApplicationDbContext> options) : base(options)
+        public JobApplicationDataDbContext(DbContextOptions<JobApplicationDataDbContext> options) : base(options)
         {
             Database.EnsureCreated();
         }

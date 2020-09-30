@@ -24,9 +24,9 @@ namespace latex_curriculum_vitae
         public App()
         {
             ServiceCollection services = new ServiceCollection();
-            services.AddDbContext<JobApplicationDbContext>(options =>
+            services.AddDbContext<JobApplicationDataDbContext>(options =>
             {
-                options.UseSqlite("Data Sources = JobApplications.db");
+                options.UseSqlite("Data Source = JobApplications.db");
             });
 
             services.AddSingleton<DatabaseWindow>();
@@ -38,6 +38,7 @@ namespace latex_curriculum_vitae
         private void OnStartup(object s, StartupEventArgs e)
         {
             var mainWindow = serviceProvider.GetService<MainWindow>();
+            var databaseWindow = serviceProvider.GetService<DatabaseWindow>();
             mainWindow.Show();
         }
         #endregion

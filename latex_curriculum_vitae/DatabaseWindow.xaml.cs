@@ -19,11 +19,11 @@ namespace latex_curriculum_vitae
     /// </summary>
     public partial class DatabaseWindow : Window
     {        
-        JobApplicationDbContext context;
+        JobApplicationDataDbContext context;
         JobApplicationData NewJobApplicationData = new JobApplicationData();
         JobApplicationData selectedJobApplicationData = new JobApplicationData();
 
-        public DatabaseWindow(JobApplicationDbContext context)
+        public DatabaseWindow(JobApplicationDataDbContext context)
         {
             this.context = context;
             InitializeComponent();

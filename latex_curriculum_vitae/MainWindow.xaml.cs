@@ -119,9 +119,9 @@ namespace latex_curriculum_vitae
 
         private void BtnDatabase_Click(object sender, EventArgs e)
         {
-            JobApplicationDbContext context;
-            Window database = new DatabaseWindow(context);
-            database.Show();
+            //Mycontext = new JobApplicationDataDbContext();
+            //Window database = new DatabaseWindow(Mycontext);
+            //database.Show();
         }
     }
 }

@@ -24,18 +24,18 @@
                 <DataGridTextColumn Header="Company" Binding="{Binding Company}"/>
                 <DataGridTextColumn Header="Jobitle" Binding="{Binding Jobtitle}"/>
                 <DataGridTextColumn Header="City" Binding="{Binding City}"/>
-                <DataGridTextColumn Header="Contact" Binding="{Binding Contact}"/>
+                <DataGridTextColumn Header="Contact" Binding="{Binding ContactName}"/>
                 <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
-                <DataGridTextColumn Header="Sent" Binding="{Binding Sent}" />
-                <DataGridTextColumn Header="Confirmed" Binding="{Binding Confirmed}" />
-                <DataGridTextColumn Header="Last phone call" Binding="{Binding Phonecall}" />
-                <DataGridTextColumn Header="Jobinterview" Binding="{Binding Jobinterview}" />
-                <DataGridTextColumn Header="Job offer url" Binding="{Binding Joburll}" />
+                <DataGridTextColumn Header="Sent" Binding="{Binding EmailSent}" />
+                <DataGridTextColumn Header="Confirmed" Binding="{Binding EmailConfirmation}" />
+                <DataGridTextColumn Header="Last phone call" Binding="{Binding LastPhonecall}" />
+                <DataGridTextColumn Header="Jobinterview" Binding="{Binding JobInterview}" />
+                <DataGridTextColumn Header="Job offer url" Binding="{Binding JobOfferUrl}" />
 
                 <DataGridTemplateColumn Header="Edit Application">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Edit" Click="SelectApplicationToEdit" />
+                            <Button Content="Edit" Click="SelectJobApplicationToEdit" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -89,25 +89,25 @@
                         <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding City}"/>
 
                         <Label Grid.Row="3" Grid.Column="0" Content="Contact"/>
-                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Contact}"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ContactName}"/>
 
                         <Label Grid.Row="4" Grid.Column="0" Content="Status"/>
                         <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Status}"/>
 
                         <Label Grid.Row="0" Grid.Column="2" Content="Sent"/>
-                        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Sent}"/>
+                        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding EmailSent}"/>
 
                         <Label Grid.Row="1" Grid.Column="2" Content="Confirmed"/>
-                        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Confirmed}"/>
+                        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding EmailConfirmation}"/>
 
                         <Label Grid.Row="2" Grid.Column="2" Content="Last phone call"/>
-                        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding Phonecall}"/>
+                        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding LastPhonecall}"/>
 
                         <Label Grid.Row="3" Grid.Column="2" Content="Jobinterview"/>
-                        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding Confirmed}"/>
+                        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding JobInterview}"/>
 
                         <Label Grid.Row="4" Grid.Column="2" Content="Job offer url"/>
-                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding Joburl}"/>
+                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding JobOfferUrl}"/>
 
                     </Grid>
                     <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Content="Add" Click="AddItem" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -138,7 +138,7 @@
                         </Grid.ColumnDefinitions>
 
                         <Label Grid.Row="0" Grid.Column="0" Content="Company"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Name}"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Company}"/>
 
                         <Label Grid.Row="1" Grid.Column="0" Content="Jobtitle"/>
                         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Jobtitle}"/>
@@ -147,25 +147,25 @@
                         <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding City}"/>
 
                         <Label Grid.Row="3" Grid.Column="0" Content="Contact"/>
-                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Contact}"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ContactName}"/>
 
                         <Label Grid.Row="4" Grid.Column="0" Content="Status"/>
                         <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Status}"/>
 
                         <Label Grid.Row="0" Grid.Column="2" Content="Sent"/>
-                        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Sent}"/>
+                        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding EmailSent}"/>
 
                         <Label Grid.Row="1" Grid.Column="2" Content="Confirmed"/>
-                        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Confirmed}"/>
+                        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding EmailConfirmation}"/>
 
                         <Label Grid.Row="2" Grid.Column="2" Content="Last phone call"/>
-                        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding Phonecall}"/>
+                        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding LastPhonecall}"/>
                         
                         <Label Grid.Row="3" Grid.Column="2" Content="Jobinterview"/>
-                        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding Jobinterview}"/>
+                        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding JobInterview}"/>
 
                         <Label Grid.Row="4" Grid.Column="2" Content="Job offer url"/>
-                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding Joburl}"/>
+                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding JobOfferUrl}"/>
                     </Grid>
                     <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Click="UpdateItem"
                                 Content="Edit" Margin="20"
