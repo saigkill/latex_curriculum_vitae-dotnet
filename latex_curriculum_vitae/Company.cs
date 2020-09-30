@@ -5,32 +5,11 @@ using System.Text;
 namespace latex_curriculum_vitae
 {
     class Company
-    {
-        private string _name;
-        private string _street;
-        private int _zip;
-        private string _city;
-
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-        public string Street
-        {
-            get { return _street; }
-            set { _street = value; }
-        }
-        public int ZIP
-        {
-            get { return _zip; }
-            set { _zip = value; }
-        }
-        public string City
-        {
-            get { return _city; }
-            set { _city = value; }
-        }
+    {                                
+        public string Name { get; set; }
+        public string Street { get; set; }
+        public int ZIP { get; set; }        
+        public string City { get; set; }        
 
 
         public Company(string coname, string costreet, int czip, string cocity)

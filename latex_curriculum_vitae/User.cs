@@ -9,89 +9,54 @@ using System.Security.Cryptography.X509Certificates;
 namespace latex_curriculum_vitae
 {
     class User
-    {
-        private string _firstname;
-        private string _familyname;
-        private readonly string _street;
-        private readonly string _city;
-        private readonly string _phone;
-        private string _email;
-        private readonly string _blog;
-        private string _subjectprefix;
-        private string _smtpserver;
-        private string _smtpuser;
-        private string _smtppass;
-        private int _smtpport;
+    {        
+        public string Subject { get; set; }        
 
-        public string Subject
-        {
-            get { return _subjectprefix; }
-            set { _subjectprefix = value; }
-        }
+        public string Firstname { get; set; }        
 
-        public string Firstname
-        {
-            get { return _firstname; }
-            set { _firstname = value; }
-        }
+        public string Familyname { get; set; }
+        
+        public string Street { get; set; }
 
-        public string Familyname
-        {
-            get { return _familyname; }
-            set { _familyname = value; }
-        }
+        public string City { get; set; }
 
-        public string Email
-        {
-            get { return _email; }
-            set { _email = value; }
-        }
+        public string Phone { get; set; }
 
-        public string SmtpServer
-        {
-            get { return _smtpserver; }
-            set { _smtpserver = value; }
-        }
+        public string Email { get; set; }        
 
-        public string SmtpUser
-        {
-            get { return _smtpuser; ; }
-            set { _smtpuser = value; }
-        }
+        public string Blog { get; set; }
 
-        public string SmtpPass
-        {
-            get { return _smtppass; }
-            set { _smtppass = value; }
-        }
+        public string Subjectprefix { get; set; }
 
-        public int SmtpPort
-        {
-            get { return _smtpport; }
-            set { _smtpport = value; }
-        }
+        public string SmtpServer { set; get; }        
+
+        public string SmtpUser { set; get; }        
+
+        public string SmtpPass { set; get; }        
+
+        public int SmtpPort { set; get; }        
 
         public User()
         {            
-            _firstname = Configuration.GetSetting("firstname");
-            _familyname = Configuration.GetSetting("familyname");
-            _street = Configuration.GetSetting("mystreet");
-            _city = Configuration.GetSetting("mycity");
-            _phone = Configuration.GetSetting("myphone");
-            _email = Configuration.GetSetting("myemail");
-            _blog = Configuration.GetSetting("myblog");
-            _subjectprefix = Configuration.GetSetting("subject");
-            _smtpserver = Configuration.GetSetting("smtp-server");
-            _smtpuser = Configuration.GetSetting("smtp-user");
-            _smtppass = Configuration.GetSetting("smtp-pass");
-            _smtpport = Convert.ToInt32(Configuration.GetSetting("smtp-port"));
+            Firstname = Configuration.GetSetting("firstname");
+            Familyname = Configuration.GetSetting("familyname");
+            Street = Configuration.GetSetting("mystreet");
+            City = Configuration.GetSetting("mycity");
+            Phone = Configuration.GetSetting("myphone");
+            Email = Configuration.GetSetting("myemail");
+            Blog = Configuration.GetSetting("myblog");
+            Subjectprefix = Configuration.GetSetting("subject");
+            SmtpServer = Configuration.GetSetting("smtp-server");
+            SmtpUser = Configuration.GetSetting("smtp-user");
+            SmtpPass = Configuration.GetSetting("smtp-pass");
+            SmtpPort = Convert.ToInt32(Configuration.GetSetting("smtp-port"));
 
             UserFile();
         }
 
         private void UserFile()
         {
-            string[] lines = { "\\def\\firstname{" + _firstname + "}", "\\def\\familyname{" + _familyname + "}" , "\\def\\mystreet{" + _street + "}", "\\def\\mycity{" + _city + "}", "\\def\\myphone{" + _phone + "}", "\\def\\myemail{" + _email + "}", "\\def\\myblog{" + _blog + "}" };
+            string[] lines = { "\\def\\firstname{" + Firstname + "}", "\\def\\familyname{" + Familyname + "}" , "\\def\\mystreet{" + Street + "}", "\\def\\mycity{" + City + "}", "\\def\\myphone{" + Phone + "}", "\\def\\myemail{" + Email + "}", "\\def\\myblog{" + Blog + "}" };
 
             // Set a variable to the Documents path.
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);

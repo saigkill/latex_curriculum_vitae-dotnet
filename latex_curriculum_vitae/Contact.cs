@@ -7,28 +7,12 @@ using System.Windows;
 namespace latex_curriculum_vitae
 {
     class Contact
-    {
-        private string _name;
-        private string _gender;
-        private string _salutation;        
+    {        
+        public string Name { get; set; }        
 
-        public string Name   
-        {
-            get { return _name; } 
-            set { _name = value; }
-        }
+        public string Gender { get; set; }        
 
-        public string Gender
-        {
-            get { return _gender; }
-            set { _gender = value; }
-        }
-
-        public string Salutation
-        {
-            get { return _salutation; }
-            set { _salutation = value; }
-        }       
+        public string Salutation { get; set; }         
 
         public Contact(string cname, string gname)
         {

@@ -7,26 +7,10 @@ using System.Windows;
 namespace latex_curriculum_vitae
 {
     class JobApplication
-    {
-        private string _url;
-        private string _email;
-        private string _jobtitle;
-
-        public string URL
-        {
-            get { return _url; }
-            set { _url = value; }
-        }
-        public string Email
-        {
-            get { return _email; }
-            set { _email = value; }
-        }
-        public string Jobtitle
-        {
-            get { return _jobtitle; }
-            set { _jobtitle = value; }
-        }        
+    {        
+        public string URL { get; set; }        
+        public string Email { get; set; }        
+        public string Jobtitle { get; set; }        
 
         public JobApplication(string aurl, string aemail, string ajobtitle)
         {
