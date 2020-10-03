@@ -1,12 +1,20 @@
-﻿using latex_curriculum_vitae.Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿// Copyright (C) 2020 Sascha Manns <Sascha.Manns@outlook.de>
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+// Dependencies
+
 using System.Windows;
 
 namespace latex_curriculum_vitae
@@ -16,31 +24,30 @@ namespace latex_curriculum_vitae
     /// </summary>
     public partial class App : Application
     {
-        #region Private members
-        private readonly ServiceProvider serviceProvider;
-        #endregion
+        //#region Private members
+        //private readonly ServiceProvider serviceProvider;
+        //#endregion
 
-        #region Constructor
-        public App()
-        {
-            ServiceCollection services = new ServiceCollection();
-            services.AddDbContext<JobApplicationDataDbContext>(options =>
-            {
-                options.UseSqlite("Data Source = JobApplications.db");
-            });
+        //#region Constructor
+        //public App()
+        //{
+        //    ServiceCollection services = new ServiceCollection();
+        //    services.AddDbContext<JobApplicationDataDbContext>(options =>
+        //    {
+        //        options.UseSqlite("Data Source = JobApplications.db");
+        //    });
 
-            services.AddSingleton<DatabaseWindow>();
-            serviceProvider = services.BuildServiceProvider();
-        }
-        #endregion
+        //    services.AddSingleton<DatabaseWindow>();
+        //    serviceProvider = services.BuildServiceProvider();
+        //}
+        //#endregion
 
-        #region Event Handlers
-        private void OnStartup(object s, StartupEventArgs e)
-        {
-            var mainWindow = serviceProvider.GetService<MainWindow>();
-            var databaseWindow = serviceProvider.GetService<DatabaseWindow>();
-            mainWindow.Show();
-        }
-        #endregion
+        //#region Event Handlers
+        //private void OnStartup(object s, StartupEventArgs e)
+        //{
+        //    var mainWindow = serviceProvider.GetService<MainWindow>();
+        //    mainWindow.Show();
+        //}
+        //#endregion
     }
 }

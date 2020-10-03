@@ -1,20 +1,23 @@
-﻿using latex_curriculum_vitae.Data;
+﻿// Copyright (C) 2020 Sascha Manns <Sascha.Manns@outlook.de>
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+// Dependencies
+
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace latex_curriculum_vitae
 {
@@ -40,7 +43,7 @@ namespace latex_curriculum_vitae
             #region Setup            
             Setup.Cleanup();
             Setup.CheckLatexPath();
-            Setup.CheckDocumentsPath();            
+            Setup.CheckDocumentsPath();
             #endregion
 
             #region Settings
@@ -49,11 +52,12 @@ namespace latex_curriculum_vitae
 
             #region JobApplication Data
             JobApplication myapplication = new JobApplication(txtURL.Text, txtEmail.Text, txtJobtitle.Text);
-            
+
             if (myapplication.Email == "")
             {
                 compemail_set = false;
-            } else
+            }
+            else
             {
                 compemail_set = true;
             }
@@ -62,35 +66,36 @@ namespace latex_curriculum_vitae
             if (txtCompanyStreet.Text == "" || txtZIP.Text == "" || txtCity.Text == "")
             {
                 company = new Company(txtCompanyName.Text);
-            } else
+            }
+            else
             {
                 company = new Company(txtCompanyName.Text, txtCompanyStreet.Text, Convert.ToInt32(txtZIP.Text), txtCity.Text);
             }
-                        
+
             ComboBoxItem typeItem = (ComboBoxItem)cboGender.SelectedItem;
-            string gender = typeItem.Content.ToString();            
-            
+            string gender = typeItem.Content.ToString();
+
             Contact contact = new Contact(txtContactName.Text, gender);
             addressline = contact.Addressline(company.Name, contact.Name, contact.Gender, company.Street, company.City);
             #endregion
 
             #region Build, Compile and Send
-            Build build = new Build();
-            string subject = build.GetSubject(myuser.Subject, myapplication.Jobtitle);
-            build.CreateApplicationConfig(myapplication.Jobtitle, company.Name, contact.Name, company.Street, company.City, contact.Salutation, subject, addressline);
-            build.CompileApplication();
-            build.CombineApplication(myuser.Firstname, myuser.Familyname);
-            
-            if(compemail_set == false)
-            {
-                build.OpenExplorer();
+            Build.PrepareBuild();
+            string subject = Build.GetSubject(myuser.Subjectprefix, myapplication.Jobtitle);
+            Build.CreateApplicationConfig(myapplication.Jobtitle, company.Name, contact.Name, company.Street, company.City, contact.Salutation, subject, addressline);
+            Build.CompileApplication();
+            Build.CombineApplication(myuser.Firstname, myuser.Familyname);
 
-            } else
+            if (compemail_set == false)
             {
-                subject = build.GetEmailSubject(myuser.Subject, myapplication.Jobtitle);
-                string finalpdf = build.GetFinalPdfName(myuser.Firstname, myuser.Familyname);
-                Email email = new Email();
-                email.CreateMessage(myuser.Firstname, myuser.Familyname, myuser.Email, contact.Name, myapplication.Email, subject, contact.Salutation, finalpdf, myuser.SmtpServer, myuser.SmtpUser, myuser.SmtpPass, myuser.SmtpPort);
+                Build.OpenExplorer();
+
+            }
+            else
+            {
+                subject = Build.GetEmailSubject(myuser.Subjectprefix, myapplication.Jobtitle);
+                string finalpdf = Build.GetFinalPdfName(myuser.Firstname, myuser.Familyname);
+                Email.CreateMessage(myuser.Firstname, myuser.Familyname, myuser.Email, contact.Name, myapplication.Email, subject, contact.Salutation, finalpdf, myuser.SmtpServer, myuser.SmtpUser, myuser.SmtpPass, myuser.SmtpPort);
             }
             #endregion
 

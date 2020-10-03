@@ -1,36 +1,57 @@
-﻿using System;
-using System.IO;
-using System.Diagnostics;
-using System.Windows;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-using Microsoft.VisualBasic;
-using System.Windows.Input;
-using System.Linq.Expressions;
+﻿// Copyright (C) 2020 Sascha Manns <Sascha.Manns@outlook.de>
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+// Dependencies
+
+using System;
 using System.Configuration;
+using System.Diagnostics;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Windows;
 
 namespace latex_curriculum_vitae
 {
+    /// <summary>
+    /// This class contains methods for doing the setup
+    /// </summary>
     static class Setup
     {
-        static readonly string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);        
+        static readonly string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
+        /// <summary>
+        /// This method checks, if the config file is already present. Otherwise it launches the UserSettings Window.
+        /// </summary>
         public static void CheckAppConfig()
         {
-            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);            
-            
+            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
             bool lcvConfigPathExists = File.Exists(config.FilePath);
 
             if (lcvConfigPathExists == false)
             {
-                MessageBox.Show("It looks like you havent set your user details. I open now a window, where you can do this.", "Check Configuration", MessageBoxButton.OK, MessageBoxImage.Information);                
+                MessageBox.Show("It looks like you havent set your user details. I open now a window, where you can do this.", "Check Configuration", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 Window settings = new UserSettingsWindow();
                 settings.Show();
             }
         }
 
+        /// <summary>
+        /// This method checks, if LaTEX is already installed. Otherwise it opens the installation website.
+        /// </summary>
         public static void CheckLatexPath()
         {
             string main = @"C:\texlive";
@@ -38,19 +59,22 @@ namespace latex_curriculum_vitae
             {
                 Directory.SetCurrentDirectory(main);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show("Sadly i havent found TexLive. Now i open a Browser where you can download it. Please close this app, download texlive and install it. Then rerun this app again" + e, "latex_curriculum_vitae-Check LaTEX", MessageBoxButton.OK, MessageBoxImage.Error);
                 string targetURL = @"https://www.tug.org/texlive/acquire-netinstall.html";
                 Process.Start(targetURL);
 
-            }                            
+            }
         }
 
+        /// <summary>
+        /// This method copies by the first run a couple of files to the AppData directory.
+        /// </summary>
         public static void CheckDocumentsPath()
-        {            
+        {
             string lcvDocsPath = Path.Combine(appDataPath, "latex_curriculum_vitae", "Letter_of_Application", "letter_of_application.tex");
-            bool lcvDocsPathExists = File.Exists(lcvDocsPath);            
+            bool lcvDocsPathExists = File.Exists(lcvDocsPath);
             if (lcvDocsPathExists == false)
             {
                 string targetPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
@@ -61,28 +85,34 @@ namespace latex_curriculum_vitae
             }
         }
 
+        /// <summary>
+        /// This method just creates the directory structure, what lcv expected.
+        /// </summary>
         private static void CreateDocumentsPath()
-        {                 
+        {
             string[] lcvDocsPath = {Path.Combine(appDataPath, "latex_curriculum_vitae", "Letter_of_Application"), Path.Combine(appDataPath, "latex_curriculum_vitae", "Curriculum_Vitae"), Path.Combine(appDataPath, "latex_curriculum_vitae", "Pictures"),
                 Path.Combine(appDataPath, "latex_curriculum_vitae", "Appendix"), Path.Combine(appDataPath, "latex_curriculum_vitae", "Appendix", "Bibliography"), Path.Combine(appDataPath, "latex_curriculum_vitae", "Appendix", "Certificates"),
                 Path.Combine(appDataPath, "latex_curriculum_vitae", "Appendix", "Certificates_of_Employment") };
             foreach (string docspath in lcvDocsPath)
             {
                 Directory.CreateDirectory(docspath);
-            }                        
+            }
         }
 
+        /// <summary>
+        /// This method copies a couple of needed files to the AppData directory.
+        /// </summary>
         private static void CopyDocuments()
         {
             // https://stackoverflow.com/questions/17782707/how-to-cut-out-a-part-of-a-path/17782741
-            string currentDir = AppDomain.CurrentDomain.BaseDirectory;            
+            string currentDir = AppDomain.CurrentDomain.BaseDirectory;
             String[] extract = Regex.Split(currentDir, "bin");
             String main = extract[0].TrimEnd('\\');
             string targetPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
-            
+
             // Letter of Application
             File.Copy(Path.Combine(main, "Attachments", "Letter_of_Application") + "\\letter_of_application.tex", Path.Combine(targetPath, "Letter_of_Application") + "\\letter_of_application.tex");
-            
+
             // Curriculum Vitae
             File.Copy(Path.Combine(main, "Attachments", "Curriculum_Vitae", "curriculum_vitae.tex"), Path.Combine(targetPath, "Curriculum_Vitae", "curriculum_vitae.tex"));
             File.Copy(Path.Combine(main, "Attachments", "Curriculum_Vitae", "friggeri-cv.cls"), Path.Combine(targetPath, "Curriculum_Vitae", "friggeri-cv.cls"));
@@ -105,6 +135,9 @@ namespace latex_curriculum_vitae
             File.Copy(Path.Combine(main, "Attachments", "Appendix", "Bibliography", "bibliography.bib"), Path.Combine(targetPath, "Appendix", "Bibliography", "bibliography.bib"));
         }
 
+        /// <summary>
+        /// This method cleans up the temporary directory.
+        /// </summary>
         public static void Cleanup()
         {
             string tmpDir = Path.GetTempPath();

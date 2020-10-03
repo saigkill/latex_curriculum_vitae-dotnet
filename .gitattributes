@@ -63,3 +63,5 @@
 #*.RTF   diff=astextplain
 
 **/Attachments/* linguist-documentation
+docs/** linguist-documentation
+docssrc/** linguist-documentation

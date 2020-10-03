@@ -1,25 +1,43 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
-using System.Runtime.InteropServices;
-using PdfSharpCore;
+﻿// Copyright (C) 2020 Sascha Manns <Sascha.Manns@outlook.de>
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+// Dependencies
+
 using PdfSharpCore.Pdf;
 using PdfSharpCore.Pdf.IO;
-using System.Drawing;
+using System;
+using System.Diagnostics;
+using System.IO;
 using System.Windows;
 
 namespace latex_curriculum_vitae
 {
-    class Build
+    /// <summary>
+    /// Class for compiling and building the LaTEX documents and it merges all pdfs in one.
+    /// </summary>
+    public static class Build
     {
-        readonly string tmpDir = Path.GetTempPath();        
+        readonly static string tmpDir = Path.GetTempPath();
 
-        public Build()
+        /// <summary>
+        /// This method copies the needed LaTEX documents to the temporary directory. It doesn't return anything.
+        /// </summary>
+        public static void PrepareBuild()
         {
             string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
-            Directory.CreateDirectory(mytmpDir);            
+            Directory.CreateDirectory(mytmpDir);
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string srcPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
 
@@ -36,13 +54,27 @@ namespace latex_curriculum_vitae
 
         }
 
-        public string GetSubject(string subjectprefix, string jobtitle)
+        /// <summary>
+        /// This method combines the language dependend subjectprefix with the Jobtitle. Ex: Application as Softwaredeveloper. It returns the combined subject for the LaTEX letter of application.
+        /// The returned string contains escaped characters like hash and ampersand.
+        /// </summary>
+        /// <param name="subjectprefix">comes from myuser.Subjectprefix</param>
+        /// <param name="jobtitle">comes from myapplication.Jobtitle</param>
+        /// <returns>subject</returns> 
+        public static string GetSubject(string subjectprefix, string jobtitle)
         {
             string subject = subjectprefix + " " + jobtitle;
             return subject;
         }
 
-        public string GetEmailSubject(string subjectprefix, string jobtitle)
+        /// <summary>
+        /// This method combines the language dependend subjectprefix with the Jobtitle. Ex: Application as Softwaredeveloper. It returns the combined subject for the LaTEX letter of application.
+        /// The returned string comes without the escape sequences.
+        /// </summary>
+        /// <param name="subjectprefix">comes from myuser.Subjectprefix</param>
+        /// <param name="jobtitle">comes from myapplication.Jobtitle (contains the Jobtitle)</param>
+        /// <returns>string subject</returns> 
+        public static string GetEmailSubject(string subjectprefix, string jobtitle)
         {
             string subject = subjectprefix + " " + jobtitle;
             subject = subject.Replace(@"\#", @"#");
@@ -50,7 +82,18 @@ namespace latex_curriculum_vitae
             return subject;
         }
 
-        public void CreateApplicationConfig(string jobtitle, string company, string contact, string street, string city, string salutation, string subject, string addressstring)
+        /// <summary>
+        /// This method creates the job application specific LaTEX file "application_details.tex". It will be used in letter of application. The method doesn't return anything.        
+        /// </summary>
+        /// <param name="jobtitle">comes from myapplication.Jobtitle (contains the Jobtitle)</param>
+        /// <param name="company">comes from company.Name (contains the company name)</param>
+        /// <param name="contact">comes from contact.Name (contains the name of companies contact person)</param>
+        /// <param name="street">comes from company.Street (contains companies street)</param>
+        /// <param name="city">comes from company.City (contains companies city)</param>
+        /// <param name="salutation">comes from contact.Salutation (contains letters salutation)</param>
+        /// <param name="subject">comes originary from GetSubject() method.</param>
+        /// <param name="addressstring">comes originary from contact.Addressline() method.</param>
+        public static void CreateApplicationConfig(string jobtitle, string company, string contact, string street, string city, string salutation, string subject, string addressstring)
         {
             string[] lines = { "\\def\\jobtitle{" + jobtitle + "}", "\\def\\company{" + company + "}", "\\def\\contact{" + contact + "}", "\\def\\street{" + street + "}", "\\def\\city{" + city + "}", "\\def\\salutation{" + salutation + "}", "\\def\\subject{" + subject + "}", "\\def\\addressstring{" + addressstring + "}" };
 
@@ -60,13 +103,16 @@ namespace latex_curriculum_vitae
                 outputFile.WriteLine(line);
         }
 
-        public void CompileApplication()
+        /// <summary>
+        /// This methods uses pdflatex and xelatex for compiling the LaTEX documents. It doesn't returns anything.
+        /// </summary>
+        public static void CompileApplication()
         {
             string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
             Directory.SetCurrentDirectory(mytmpDir);
-            
+
             string[] strCmdText = { "/C pdflatex letter_of_application.tex", "/C xelatex curriculum_vitae.tex", "/C biber curriculum_vitae.bcf", "/C xelatex curriculum_vitae.tex" };
-            
+
             foreach (string cmd in strCmdText)
             {
                 Process process = new Process();
@@ -83,13 +129,25 @@ namespace latex_curriculum_vitae
 
         }
 
-        public string GetFinalPdfName(string firstname, string familyname)
+        /// <summary>
+        /// This method combines the language specific string for "application documents" with users firstname and familyname. Ex: Application_Documents_Sascha_Manns.pdf
+        /// </summary>
+        /// <param name="firstname">comes from myuser.firstname (contains users first name)</param>
+        /// <param name="familyname">comes from myuser.familyname (contains users surname)</param>
+        /// <returns>string finalpdf</returns>
+        public static string GetFinalPdfName(string firstname, string familyname)
         {
             string finalpdf = "Bewerbungsunterlagen_" + firstname + "_" + familyname + ".pdf";
             return finalpdf;
         }
 
-        public void CombineApplication(string firstname, string familyname)
+        /// <summary>
+        /// This method combines pdfs. So you get a pdf for your certificates of employment, a seperate pdf for other certificates and a final pdf what contains
+        /// letter of application, curriculum vitae and certs. It doesn't returns anything.
+        /// </summary>
+        /// <param name="firstname">comes from myuser.firstname (contains users first name)</param>
+        /// <param name="familyname">comes from myuser.familyname (contains users surname)</param
+        public static void CombineApplication(string firstname, string familyname)
         {
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string srcPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
@@ -101,9 +159,9 @@ namespace latex_curriculum_vitae
             string finalpdf = GetFinalPdfName(firstname, familyname);
 
             string[] cosEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates_of_Employment"));
-            string[] certEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates"));            
-            string[] finalEntries = { "letter_of_application.pdf", "curriculum_vitae.pdf", cos, cert };            
-            
+            string[] certEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates"));
+            string[] finalEntries = { "letter_of_application.pdf", "curriculum_vitae.pdf", cos, cert };
+
             // Sort array in ascending order. 
             Array.Sort(cosEntries);
 
@@ -125,10 +183,15 @@ namespace latex_curriculum_vitae
 
             // Production of the final document
             MergePDFs(Path.Combine(mytmpDir, finalpdf), finalEntries);
-            
+
         }
 
-        private void MergePDFs(string targetPath, params string[] pdfs)
+        /// <summary>
+        /// This method is only for merging pdfs. It doesn't returns anything.
+        /// </summary>
+        /// <param name="targetPath">defines the path where the needed pdfs come from.</param>
+        /// <param name="pdfs">is a array of pdf pathes to merge.</param>
+        private static void MergePDFs(string targetPath, params string[] pdfs)
         {
             using PdfDocument targetDoc = new PdfDocument();
             foreach (string pdf in pdfs)
@@ -142,7 +205,10 @@ namespace latex_curriculum_vitae
             targetDoc.Save(targetPath);
         }
 
-        public void OpenExplorer()
+        /// <summary>
+        /// This method opens the Windows Explorer after merging the pdfs in that case, that you haven't set a company email address.
+        /// </summary>
+        public static void OpenExplorer()
         {
             string path = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
             if (Environment.OSVersion.Version.Major >= 6)
