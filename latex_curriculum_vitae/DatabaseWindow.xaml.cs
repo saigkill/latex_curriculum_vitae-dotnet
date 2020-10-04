@@ -72,5 +72,10 @@ namespace latex_curriculum_vitae
             context.SaveChanges();
             GetJobApplicationData();
         }
+
+        private void BtnExit_Click(object s, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

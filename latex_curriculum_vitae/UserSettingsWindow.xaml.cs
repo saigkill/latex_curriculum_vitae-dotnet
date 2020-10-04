@@ -47,7 +47,7 @@ namespace latex_curriculum_vitae
         #endregion
 
         #region Save Settings
-        private void BtnSave_Click(object sender, EventArgs e)
+        public void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {
@@ -68,6 +68,13 @@ namespace latex_curriculum_vitae
                 MessageBox.Show("Error writing app settings: " + c, "latex_curriculum_vitae", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
+            this.Close();
+        }
+        #endregion
+
+        #region Exit Application
+        public void BtnExit_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
         #endregion

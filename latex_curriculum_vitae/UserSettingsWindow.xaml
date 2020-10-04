@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:latex_curriculum_vitae"
         mc:Ignorable="d"
-        Title="User Settings" Height="450" Width="800">
+        Title="Latex Curriculum Vitae - Your Settings" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.5,0.435">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="189*"/>
@@ -43,9 +43,14 @@
         <TextBox x:Name="txtSMTPPort" HorizontalAlignment="Left" Margin="167,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
         <Label x:Name="lblSMTPPass" Content="SMTP-Password" HorizontalAlignment="Left" Margin="183,300,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="txtSMTPPass" HorizontalAlignment="Left" Margin="314,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Grid.Column="1"/>
-        <Button x:Name="BtnSave" Click="BtnSave_Click" Content="Save" HorizontalAlignment="Left" Margin="492,378,0,0" VerticalAlignment="Top" Width="96" Grid.Column="1"/>
+        <Button x:Name="BtnSave" Click="BtnSave_Click" HorizontalAlignment="Left" Margin="382,378,0,0" VerticalAlignment="Top" Width="93" Grid.Column="1" Content="Save"/>
+
+
         <Label x:Name="lblPhonenumber" Content="Your phone number" HorizontalAlignment="Left" Margin="38,168,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtPhonenumber" HorizontalAlignment="Left" Margin="167,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="45" Margin="511,5,0,0" VerticalAlignment="Top" Width="100" Source="/images/cover.png" Grid.Column="1"/>
+        <Button x:Name="BtnExit" Click="BtnExit_Click" Grid.Column="1" HorizontalAlignment="Left" Margin="495,378,0,0" VerticalAlignment="Top" Height="20" Width="93" Content="Exit"/>
+
 
 
     </Grid>

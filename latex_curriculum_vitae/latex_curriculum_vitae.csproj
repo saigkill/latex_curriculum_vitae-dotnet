@@ -5,12 +5,24 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <StartupObject>latex_curriculum_vitae.App</StartupObject>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/saigkill/latex_curriculum_vitae-dotnet/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/saigkill/latex_curriculum_vitae-dotnet/</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <PackageIcon>profile.png</PackageIcon>
+    <Copyright>(c) 2020 Sascha Manns &lt;Sascha.Manns@outlook.de&gt;</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <ApplicationIcon>images\profile.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Attachements\**" />
     <EmbeddedResource Remove="Attachements\**" />
     <None Remove="Attachements\**" />
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <Page Remove="Attachements\**" />
   </ItemGroup>
 

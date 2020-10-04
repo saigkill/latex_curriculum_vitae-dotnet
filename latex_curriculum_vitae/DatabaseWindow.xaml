@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:latex_curriculum_vitae"
         mc:Ignorable="d"
-        Title="Database Window - latex_curriculum_vitae" Height="550" Width="1600">
+        Title="Latex Curriculum Vitae - Explore your Applications" Height="550" Width="1600">
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
@@ -110,7 +110,8 @@
                         <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding JobOfferUrl}"/>
 
                     </Grid>
-                    <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Content="Add" Click="AddItem" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Click="AddItem" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Add Application"/>
+
                 </StackPanel>
             </Border>
 
@@ -160,18 +161,24 @@
 
                         <Label Grid.Row="2" Grid.Column="2" Content="Last phone call"/>
                         <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding LastPhonecall}"/>
-                        
+
                         <Label Grid.Row="3" Grid.Column="2" Content="Jobinterview"/>
                         <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding JobInterview}"/>
 
                         <Label Grid.Row="4" Grid.Column="2" Content="Job offer url"/>
                         <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding JobOfferUrl}"/>
                     </Grid>
-                    <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Click="UpdateItem"
-                                Content="Edit" Margin="20"
-                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Grid>
+                        <Button Width="150" Click="UpdateItem" Margin="20,20,0,0"
+                            HorizontalAlignment="Left" VerticalAlignment="Center" Content="Edit Application">
+                        </Button>
+                        <Button Click="BtnExit_Click" Width="150" HorizontalAlignment="Right" VerticalAlignment="Center" IsCancel="True" Margin="20,20,0,0" Content="Exit"/>
+
+                    </Grid>
+
                 </StackPanel>
             </Border>
         </Grid>
+        <Image HorizontalAlignment="Left" Height="44" Margin="1495,2,0,0" VerticalAlignment="Top" Width="100" Source="/images//cover.png" Grid.RowSpan="2"/>
     </Grid>
 </Window>

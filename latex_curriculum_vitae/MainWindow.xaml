@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:latex_curriculum_vitae"
         mc:Ignorable="d"
-        Title="Latex Curriculum Vitae" Height="450" Width="800">
+        Title="Latex Curriculum Vitae - Write Job Application" Height="450" Width="800">
     <Grid>
         <Label Content="Jobtitle of your application:" HorizontalAlignment="Left" Margin="64,52,0,0" VerticalAlignment="Top"/>
         <Label Content="Enter Company Name:" HorizontalAlignment="Left" Margin="64,83,0,0" VerticalAlignment="Top"/>
@@ -43,10 +43,13 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="BtnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="549,394,0,0" VerticalAlignment="Top" Width="96" Click="BtnGenerate_Click"/>
-        <Button x:Name="BtnExit" Content="Exit" HorizontalAlignment="Left" Margin="669,394,0,0" VerticalAlignment="Top" Width="96"/>
-        <Button x:Name="BtnConfiguration" Content="Configuration" Click="BtnConfiguration_Click" HorizontalAlignment="Left" Margin="426,394,0,0" VerticalAlignment="Top" Width="96"/>
-        <Button x:Name="BtnDatabase" Content="Data" Click="BtnDatabase_Click" HorizontalAlignment="Left" Margin="304,394,0,0" VerticalAlignment="Top" Width="96" RenderTransformOrigin="-0.715,0.398"/>
+        <Button x:Name="BtnGenerate" HorizontalAlignment="Left" Margin="549,394,0,0" VerticalAlignment="Top" Width="96" Click="BtnGenerate_Click" Content="Generate"/>
+        <Button x:Name="BtnExit" Click="BtnExit_Click" HorizontalAlignment="Left" Margin="669,394,0,0" VerticalAlignment="Top" Width="96" Content="Exit"/>
+        <Button x:Name="BtnConfiguration" Click="BtnConfiguration_Click" HorizontalAlignment="Left" Margin="426,394,0,0" VerticalAlignment="Top" Width="96" Content="Configuration"/>
+
+        <Button x:Name="BtnDatabase" Click="BtnDatabase_Click" HorizontalAlignment="Left" Margin="304,394,0,0" VerticalAlignment="Top" Width="96" RenderTransformOrigin="-0.715,0.398" Content="Data"/>
+
+        <Image HorizontalAlignment="Left" Height="45" Margin="700,6,0,0" VerticalAlignment="Top" Width="100" Source="/images/cover.png"/>
 
 
 

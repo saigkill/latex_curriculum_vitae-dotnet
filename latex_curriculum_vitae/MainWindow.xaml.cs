@@ -102,6 +102,10 @@ namespace latex_curriculum_vitae
             }
             #endregion
 
+            #region Add Information to CSV
+            JobApplicationCSV.WriteCSV(company.Name, myapplication.Jobtitle, company.City, myapplication.URL);
+            #endregion
+
             #region Clean UI
             txtCity.Text = "";
             txtCompanyName.Text = "";
