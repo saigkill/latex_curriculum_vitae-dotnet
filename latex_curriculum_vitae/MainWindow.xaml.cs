@@ -26,13 +26,16 @@ namespace latex_curriculum_vitae
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Initialize Main
         public MainWindow()
         {
             InitializeComponent();
             Setup.CheckAppConfig();
 
         }
+        #endregion
 
+        #region Generating job application
         private void BtnGenerate_Click(object sender, EventArgs e)
         {
             #region Private Variables
@@ -110,23 +113,30 @@ namespace latex_curriculum_vitae
             txtZIP = null;
             #endregion
         }
+        #endregion
 
+        #region Exit App
         private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
 
+        #region Configure App
         private void BtnConfiguration_Click(object sender, EventArgs e)
         {
             Window settings = new UserSettingsWindow();
             settings.Show();
         }
+        #endregion
 
+        #region Open Dataview
         private void BtnDatabase_Click(object sender, EventArgs e)
         {
             //Mycontext = new JobApplicationDataDbContext();
             //Window database = new DatabaseWindow(Mycontext);
             //database.Show();
         }
+        #endregion
     }
 }

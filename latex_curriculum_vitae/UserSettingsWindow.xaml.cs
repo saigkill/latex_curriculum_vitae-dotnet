@@ -27,6 +27,7 @@ namespace latex_curriculum_vitae
     /// </summary>
     public partial class UserSettingsWindow : Window
     {
+        #region Construct User Settings Window
         public UserSettingsWindow()
         {
             InitializeComponent();
@@ -43,7 +44,9 @@ namespace latex_curriculum_vitae
             txtSMTPPass.Text = Configuration.GetSetting("smtp-pass");
             txtSMTPPort.Text = Configuration.GetSetting("smtp-port");
         }
+        #endregion
 
+        #region Save Settings
         private void BtnSave_Click(object sender, EventArgs e)
         {
             try
@@ -67,5 +70,6 @@ namespace latex_curriculum_vitae
 
             this.Close();
         }
+        #endregion
     }
 }
