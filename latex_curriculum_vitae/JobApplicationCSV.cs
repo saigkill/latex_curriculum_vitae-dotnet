@@ -12,7 +12,7 @@ namespace latex_curriculum_vitae
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string srcPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
 
-            var csvParserService = new CsvParserService();
+            var csvParserService = new CsvParserService();            
             var path = Path.Combine(srcPath, "JobApplications.csv");
             var result = csvParserService.ReadCsvFileToJobApplicationModel(path);
 

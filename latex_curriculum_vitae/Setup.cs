@@ -106,8 +106,8 @@ namespace latex_curriculum_vitae
         {
             // https://stackoverflow.com/questions/17782707/how-to-cut-out-a-part-of-a-path/17782741
             string currentDir = AppDomain.CurrentDomain.BaseDirectory;
-            String[] extract = Regex.Split(currentDir, "bin");
-            String main = extract[0].TrimEnd('\\');
+            string[] extract = Regex.Split(currentDir, "bin");
+            string main = extract[0].TrimEnd('\\');
             string targetPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
 
             // Letter of Application
@@ -133,6 +133,9 @@ namespace latex_curriculum_vitae
 
             // Bibliography
             File.Copy(Path.Combine(main, "Attachments", "Appendix", "Bibliography", "bibliography.bib"), Path.Combine(targetPath, "Appendix", "Bibliography", "bibliography.bib"));
+
+            // Empty CSV file
+            File.Copy(Path.Combine(main, "Attachments", "CSV", "JobApplications.csv"), Path.Combine(targetPath, "JobApplications.csv"));
         }
 
         /// <summary>
