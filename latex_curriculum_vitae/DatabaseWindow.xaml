@@ -179,6 +179,6 @@
                 </StackPanel>
             </Border>
         </Grid>
-        <Image HorizontalAlignment="Left" Height="44" Margin="1495,2,0,0" VerticalAlignment="Top" Width="100" Source="/images//cover.png" Grid.RowSpan="2"/>
+        <Image HorizontalAlignment="Center" Height="44" Margin="1495,2,0,0" VerticalAlignment="Top" Width="100" Source="/profile.png" Grid.RowSpan="2"/>
     </Grid>
 </Window>

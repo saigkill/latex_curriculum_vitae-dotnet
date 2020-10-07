@@ -58,12 +58,12 @@ namespace latex_curriculum_vitae
             message.Bcc.Add(new MailboxAddress(myname, myemail));
             message.Subject = subject;
 
-
+            // TODO: Lokalisierung 
             BodyBuilder builder = new BodyBuilder
             {
 
                 // Set the plain-text version of the message text
-                TextBody = string.Format(@"{0},
+                TextBody = string.Format(@"{0}
 
 anbei sende ich Ihnen meine Bewerbungsunterlagen.
 
@@ -78,7 +78,7 @@ Sascha Manns
             image.ContentId = MimeUtils.GenerateMessageId();
 
             // Set the html version of the message text
-            builder.HtmlBody = string.Format(@"<p>{0},<br>
+            builder.HtmlBody = string.Format(@"<p>{0}<br>
 <p>anbei sende ich Ihnen meine Bewerbungsunterlagen.<br>
 
 <p align=left>Sascha Manns<br>
@@ -103,7 +103,7 @@ Sascha Manns
                 client.Disconnect(true);
             }
 
-            MessageBox.Show("Your email is now sent. You can do the next job application.");
+            MessageBox.Show(Properties.Resources.msgemailsent, Properties.Resources.msgheaderinfo);
         }
     }
 }

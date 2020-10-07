@@ -48,7 +48,7 @@
 
         <Label x:Name="lblPhonenumber" Content="Your phone number" HorizontalAlignment="Left" Margin="38,168,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtPhonenumber" HorizontalAlignment="Left" Margin="167,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="45" Margin="511,5,0,0" VerticalAlignment="Top" Width="100" Source="/images/cover.png" Grid.Column="1"/>
+        <Image HorizontalAlignment="Center" Height="45" Margin="511,5,0,0" VerticalAlignment="Top" Width="100" Source="/profile.png" Grid.Column="1"/>
         <Button x:Name="BtnExit" Click="BtnExit_Click" Grid.Column="1" HorizontalAlignment="Left" Margin="495,378,0,0" VerticalAlignment="Top" Height="20" Width="93" Content="Exit"/>
 
 

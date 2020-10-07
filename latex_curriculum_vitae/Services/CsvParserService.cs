@@ -34,6 +34,7 @@ namespace latex_curriculum_vitae.Services
             {
                 using var reader = new StreamReader(path, Encoding.Default);
                 using var csv = new CsvReader(reader);
+                csv.Configuration.Delimiter = ",";
                 csv.Configuration.RegisterClassMap<JobApplicationMap>();
                 var records = csv.GetRecords<JobApplicationModel>().ToList();
                 return records;
@@ -60,6 +61,7 @@ namespace latex_curriculum_vitae.Services
         {
             using StreamWriter sw = new StreamWriter(path, false, new UTF8Encoding(true));
             using CsvWriter cw = new CsvWriter(sw);
+            cw.Configuration.Delimiter = ",";
             cw.WriteHeader<JobApplicationModel>();
             cw.NextRecord();
             foreach (JobApplicationModel app in jobApplicationModels)

@@ -8,11 +8,14 @@
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/saigkill/latex_curriculum_vitae-dotnet/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/saigkill/latex_curriculum_vitae-dotnet/</RepositoryUrl>
-    <RepositoryType>Github</RepositoryType>
+    <RepositoryType>Git</RepositoryType>
     <PackageIcon>profile.png</PackageIcon>
     <Copyright>(c) 2020 Sascha Manns &lt;Sascha.Manns@outlook.de&gt;</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <ApplicationIcon>images\profile.ico</ApplicationIcon>
+    <ApplicationIcon>default.ico</ApplicationIcon>
+    <Authors>Sascha Manns</Authors>
+    <Description>A simple helper for writing job applications.</Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,12 +30,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="profile.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CsvHelper" Version="12.2.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0-rc.1.20451.13" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0-rc.1.20451.14" />
     <PackageReference Include="MimeKit" Version="2.9.2" />
     <PackageReference Include="NETCore.MailKit" Version="2.0.3" />
     <PackageReference Include="PdfSharpCore" Version="1.2.6" />
+    <PackageReference Include="WPFLocalizeExtension" Version="3.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="profile.png" />
   </ItemGroup>
 
   <ItemGroup>

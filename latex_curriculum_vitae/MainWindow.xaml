@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:latex_curriculum_vitae"
+        xmlns:p="clr-namespace:latex_curriculum_vitae.Properties"
         mc:Ignorable="d"
-        Title="Latex Curriculum Vitae - Write Job Application" Height="450" Width="800">
+        Title="Latex Curriculum Vitae - {ns:Loc mwheader}" Height="480" Width="800">
     <Grid>
-        <Label Content="Jobtitle of your application:" HorizontalAlignment="Left" Margin="64,52,0,0" VerticalAlignment="Top"/>
+        <Label Content="{x:Static p:Resources.mwjobtitle}" HorizontalAlignment="Left" Margin="64,52,0,0" VerticalAlignment="Top"/>
         <Label Content="Enter Company Name:" HorizontalAlignment="Left" Margin="64,83,0,0" VerticalAlignment="Top"/>
         <Label Content="Enter companies street:" HorizontalAlignment="Left" Margin="64,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.52,-0.663"/>
         <Label Content="ZIP Code:" HorizontalAlignment="Left" Margin="64,135,0,0" VerticalAlignment="Top"/>
@@ -49,7 +50,7 @@
 
         <Button x:Name="BtnDatabase" Click="BtnDatabase_Click" HorizontalAlignment="Left" Margin="304,394,0,0" VerticalAlignment="Top" Width="96" RenderTransformOrigin="-0.715,0.398" Content="Data"/>
 
-        <Image HorizontalAlignment="Left" Height="45" Margin="700,6,0,0" VerticalAlignment="Top" Width="100" Source="/images/cover.png"/>
+        <Image HorizontalAlignment="Center" Height="45" Margin="700,6,0,0" VerticalAlignment="Top" Width="100" Source="/profile.png"/>
 
 
 

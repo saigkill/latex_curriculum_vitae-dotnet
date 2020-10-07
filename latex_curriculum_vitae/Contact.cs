@@ -51,17 +51,17 @@ namespace latex_curriculum_vitae
         {
             string salutation;
 
-            if (gname == "Male")
+            if (gname == Properties.Resources.gendermale)
             {
-                salutation = "Sehr geehrter Herr " + cname + ",";
+                salutation = Properties.Resources.salutationmale + " " + cname + ",";
             }
-            else if (gname == "Female")
+            else if (gname == Properties.Resources.genderfemale)
             {
-                salutation = "Sehr geehrte Frau " + cname + ",";
+                salutation = Properties.Resources.salutationfemale + " " + cname + ",";
             }
             else
             {
-                salutation = "Sehr geehrte Damen und Herren,";
+                salutation = Properties.Resources.salutationunknown + ",";
             }
             return salutation;
         }
@@ -82,19 +82,19 @@ namespace latex_curriculum_vitae
             company = company.Replace(@"&", @"\&");
 
             addressline = company + "\\\\";
-            if (contactname == "" || cgender == "Unknown")
+            if (contactname == "" || cgender == Properties.Resources.genderunknown)
             {
-                addressline += "Personalabteilung \\\\";
+                addressline += Properties.Resources.hrdepartment + " \\\\";
             }
             else
             {
-                if (cgender == "Male")
+                if (cgender == Properties.Resources.gendermale)
                 {
-                    addressline = addressline + "Herrn " + contactname + "\\\\";
+                    addressline = addressline + Properties.Resources.addressmale + " " + contactname + "\\\\";
                 }
                 else
                 {
-                    addressline = addressline + "Frau " + contactname + "\\\\";
+                    addressline = addressline + Properties.Resources.addressfemale + " " + contactname + "\\\\";
                 }
             }
 
