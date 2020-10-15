@@ -58,18 +58,10 @@ namespace latex_curriculum_vitae
             message.Bcc.Add(new MailboxAddress(myname, myemail));
             message.Subject = subject;
 
-            // TODO: Lokalisierung 
             BodyBuilder builder = new BodyBuilder
             {
-
                 // Set the plain-text version of the message text
-                TextBody = string.Format(@"{0}
-
-anbei sende ich Ihnen meine Bewerbungsunterlagen.
-
-Mit freundlichem Gruß
-Sascha Manns
-", salutation)
+                TextBody = string.Format(@Properties.Resources.EmailPlain, salutation, myname)
             };
 
             // In order to reference selfie.jpg from the html text, we'll need to add it
@@ -78,11 +70,7 @@ Sascha Manns
             image.ContentId = MimeUtils.GenerateMessageId();
 
             // Set the html version of the message text
-            builder.HtmlBody = string.Format(@"<p>{0}<br>
-<p>anbei sende ich Ihnen meine Bewerbungsunterlagen.<br>
-
-<p align=left>Sascha Manns<br>
-<center><img src=""cid:{1}"" width=""10%""></center></p>", salutation, image.ContentId);
+            builder.HtmlBody = string.Format(@Properties.Resources.EmailHTML, salutation, myname, image.ContentId);
 
             // We may also want to attach a calendar event for Monica's party...
             builder.Attachments.Add(Path.Combine(mytmpDir, attachment));
@@ -90,10 +78,16 @@ Sascha Manns
             // Now we just need to set the message body and we're done
             message.Body = builder.ToMessageBody();
 
-
-            // Sending out
-            using (var client = new SmtpClient())
+            if (smtpserver == "" || smtpport.ToString() == "" || smtpuser == "" || smtppass == "")
             {
+                MessageBox.Show(Properties.Resources.EmailNotSet, Properties.Resources.EmailNotSetHeader, MessageBoxButton.OK, MessageBoxImage.Error);
+                Window settings = new UserSettingsWindow();
+                settings.Show();
+            }
+            else
+            {
+                // Sending out
+                using var client = new SmtpClient();
                 client.Connect(smtpserver, smtpport, false);
 
                 // Note: only needed if the SMTP server requires authentication
@@ -103,7 +97,7 @@ Sascha Manns
                 client.Disconnect(true);
             }
 
-            MessageBox.Show(Properties.Resources.msgemailsent, Properties.Resources.msgheaderinfo);
+            MessageBox.Show(Properties.Resources.MsgEmailSent, Properties.Resources.MsgHeaderInfo);
         }
     }
 }

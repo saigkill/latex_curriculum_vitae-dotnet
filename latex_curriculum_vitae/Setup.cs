@@ -42,7 +42,7 @@ namespace latex_curriculum_vitae
 
             if (lcvConfigPathExists == false)
             {
-                MessageBox.Show("It looks like you havent set your user details. I open now a window, where you can do this.", "Check Configuration", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Properties.Resources.MsgSetupCheckConfig, Properties.Resources.MsgSetupCheckConfigHeader, MessageBoxButton.OK, MessageBoxImage.Information);
 
                 Window settings = new UserSettingsWindow();
                 settings.Show();
@@ -61,7 +61,7 @@ namespace latex_curriculum_vitae
             }
             catch (Exception e)
             {
-                MessageBox.Show("Sadly i havent found TexLive. Now i open a Browser where you can download it. Please close this app, download texlive and install it. Then rerun this app again" + e, "latex_curriculum_vitae-Check LaTEX", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Properties.Resources.MsgSetupCheckLatex + e, Properties.Resources.MsgSetupCheckLatexHeader, MessageBoxButton.OK, MessageBoxImage.Error);
                 string targetURL = @"https://www.tug.org/texlive/acquire-netinstall.html";
                 Process.Start(targetURL);
 
@@ -78,11 +78,23 @@ namespace latex_curriculum_vitae
             if (lcvDocsPathExists == false)
             {
                 string targetPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
-                MessageBox.Show("It looks like you started this app the first time. I prepare now the directory structure and copy the needed files to: " + targetPath + ".", "latex_curriculum_vitae-Setup", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Properties.Resources.MsgSetupCheckDocumentsCopy + " " + targetPath + ".", Properties.Resources.MsgSetupCheckDocumentHeader, MessageBoxButton.OK, MessageBoxImage.Information);
                 CreateDocumentsPath();
                 CopyDocuments();
-                MessageBox.Show("Please close the App and follow the documentation on:", "latex_curriculum_vitae-Setup", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Properties.Resources.MsgSetupCheckDocument, Properties.Resources.MsgSetupCheckDocumentHeader, MessageBoxButton.OK, MessageBoxImage.Information);
+                GetOnlineDocumentation();
+                Configuration.SetSetting("firstrun", "false");
             }
+        }
+        
+        /// <summary>
+        /// This method launches the online documentation.
+        /// </summary>
+        
+        public static void GetOnlineDocumentation()
+        {
+            string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/";
+            Process.Start(targetURL);
         }
 
         /// <summary>

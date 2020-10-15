@@ -97,79 +97,231 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="appdoc" xml:space="preserve">
-    <value>Application_documents_</value>
-    <comment>A bundle of documents for apply to a job with final _</comment>
-  </data>
-  <data name="cos" xml:space="preserve">
-    <value>Job_References_</value>
-    <comment>Bundle of job references with final _</comment>
-  </data>
-  <data name="cert" xml:space="preserve">
-    <value>Additional_Certificates_</value>
-    <comment>A bundle of additional certificates final _</comment>
-  </data>
-  <data name="msgdirfinalpdf" xml:space="preserve">
-    <value>Now i open for you the directory in the explorer, what contains your PDFs.</value>
-    <comment>Information about open directory</comment>
-  </data>
-  <data name="msgheaderinfo" xml:space="preserve">
-    <value>Information</value>
-    <comment>Messagebox Headertitle</comment>
-  </data>
-  <data name="gendermale" xml:space="preserve">
-    <value>Male</value>
-    <comment>Gender Male</comment>
-  </data>
-  <data name="genderfemale" xml:space="preserve">
-    <value>Female</value>
-    <comment>Gender Female</comment>
-  </data>
-  <data name="salutationmale" xml:space="preserve">
-    <value>Dear Mr</value>
-    <comment>Salutation for writing to a Mr.</comment>
-  </data>
-  <data name="salutationfemale" xml:space="preserve">
-    <value>Dear Mrs</value>
-    <comment>Salutation for writing to a Ms.</comment>
-  </data>
-  <data name="salutationunknown" xml:space="preserve">
-    <value>Dear Sir or Madam</value>
-    <comment>Salutation if unknown</comment>
-  </data>
-  <data name="genderunknown" xml:space="preserve">
-    <value>Unknown</value>
-    <comment>Unknown gender</comment>
-  </data>
-  <data name="hrdepartment" xml:space="preserve">
-    <value>HR department</value>
-    <comment>The human ressources department</comment>
-  </data>
-  <data name="addressmale" xml:space="preserve">
-    <value>Mr</value>
-    <comment>Adress male</comment>
-  </data>
-  <data name="addressfemale" xml:space="preserve">
+  <data name="AddressFemale" xml:space="preserve">
     <value>Mrs</value>
     <comment>Adress female</comment>
   </data>
-  <data name="emailplain" xml:space="preserve">
-    <value>{0}</value>
-    <comment>Plain Text Version of Email</comment>
+  <data name="AddressMale" xml:space="preserve">
+    <value>Mr</value>
+    <comment>Adress male</comment>
   </data>
-  <data name="msgemailsent" xml:space="preserve">
-    <value>Your email is now sent. You can do the next job application.</value>
-    <comment>Messagebox Info about Email sent</comment>
+  <data name="AppDoc" xml:space="preserve">
+    <value>Application_documents_</value>
+    <comment>A bundle of documents for apply to a job with final _</comment>
   </data>
-  <data name="csvemailsent" xml:space="preserve">
+  <data name="BtnExit" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Cert" xml:space="preserve">
+    <value>Additional_Certificates_</value>
+    <comment>A bundle of additional certificates final _</comment>
+  </data>
+  <data name="Cos" xml:space="preserve">
+    <value>Job_References_</value>
+    <comment>Bundle of job references with final _</comment>
+  </data>
+  <data name="CsvEmailSent" xml:space="preserve">
     <value>Email sent</value>
     <comment>Email sent entry in CSV</comment>
   </data>
-  <data name="mwheader" xml:space="preserve">
+  <data name="EmailHTML" xml:space="preserve">
+    <value>&lt;p&gt;{0}&lt;br&gt;
+&lt;p&gt;I am sending you my application documents attached.&lt;br&gt;
+&lt;p&gt;Sincerly&lt;/p&gt;
+&lt;p align=left&gt;{1}&lt;br&gt;
+&lt;center&gt;&lt;img src=""cid:{2}"" width=""10%""&gt;&lt;/center&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="EmailNotSet" xml:space="preserve">
+    <value>You haven't set all needed fields for sending emails. I open for you the Usersettings Window.</value>
+  </data>
+  <data name="EmailNotSetHeader" xml:space="preserve">
+    <value>Can't send email.</value>
+  </data>
+  <data name="EmailPlain" xml:space="preserve">
+    <value>{0}
+
+I am sending you my application documents attached.
+
+Sincerely
+{1}</value>
+    <comment>Plain Text Version of Email with NEWLINE on the end.</comment>
+  </data>
+  <data name="EnumStatus0" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="EnumStatus1" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="EnumStatus2" xml:space="preserve">
+    <value>Invited</value>
+  </data>
+  <data name="EnumStatus3" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="GenderFemale" xml:space="preserve">
+    <value>Female</value>
+    <comment>Gender Female</comment>
+  </data>
+  <data name="GenderMale" xml:space="preserve">
+    <value>Male</value>
+    <comment>Gender Male</comment>
+  </data>
+  <data name="GenderUnknown" xml:space="preserve">
+    <value>Unknown</value>
+    <comment>Unknown gender</comment>
+  </data>
+  <data name="HRDepartment" xml:space="preserve">
+    <value>HR department</value>
+    <comment>The human ressources department</comment>
+  </data>
+  <data name="MsgDirFinalPdf" xml:space="preserve">
+    <value>Now i open for you the directory in the explorer, what contains your PDFs.</value>
+    <comment>Information about open directory</comment>
+  </data>
+  <data name="MsgEmailSent" xml:space="preserve">
+    <value>Your email is now sent. You can do the next job application.</value>
+    <comment>Messagebox Info about Email sent</comment>
+  </data>
+  <data name="MsgHeaderInfo" xml:space="preserve">
+    <value>Information</value>
+    <comment>Messagebox Headertitle</comment>
+  </data>
+  <data name="MsgSetupCheckConfig" xml:space="preserve">
+    <value>You starting the app the first time. Please add your user settings in the window.</value>
+  </data>
+  <data name="MsgSetupCheckConfigHeader" xml:space="preserve">
+    <value>Check Configuration</value>
+  </data>
+  <data name="MsgSetupCheckDocument" xml:space="preserve">
+    <value>Please close the App and follow the documentation. I open it for you.</value>
+  </data>
+  <data name="MsgSetupCheckDocumentHeader" xml:space="preserve">
+    <value>Check documents path</value>
+  </data>
+  <data name="MsgSetupCheckDocumentsCopy" xml:space="preserve">
+    <value>You starting the app the first time. I prepare now the directory structure and copy the needed files to:</value>
+  </data>
+  <data name="MsgSetupCheckLatex" xml:space="preserve">
+    <value>I haven't found TeXLive. Now i open a Browser, where you can download it. Please close this app and install TexLive.</value>
+  </data>
+  <data name="MsgSetupCheckLatexHeader" xml:space="preserve">
+    <value>Check LaTEX</value>
+  </data>
+  <data name="MWApplication" xml:space="preserve">
+    <value>Application details</value>
+  </data>
+  <data name="MWBtnConfig" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="MWBtnDatabase" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="MWBtnGenerate" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="MWCity" xml:space="preserve">
+    <value>City:</value>
+  </data>
+  <data name="MWCompanyDetails" xml:space="preserve">
+    <value>Companydetails</value>
+  </data>
+  <data name="MWCompanyName" xml:space="preserve">
+    <value>Company Name:</value>
+    <comment>Name of the Company</comment>
+  </data>
+  <data name="MWCompanyStreet" xml:space="preserve">
+    <value>Companies Street:</value>
+    <comment>Street of the Company</comment>
+  </data>
+  <data name="MWContact" xml:space="preserve">
+    <value>Contact person</value>
+  </data>
+  <data name="MWContactName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="MWEmail" xml:space="preserve">
+    <value>Emailaddress:</value>
+  </data>
+  <data name="MWGender" xml:space="preserve">
+    <value>Gender:</value>
+  </data>
+  <data name="MWHeader" xml:space="preserve">
     <value>Write your Job Applications</value>
     <comment>Main Window Title</comment>
   </data>
-  <data name="mwjobtitle" xml:space="preserve">
-    <value>Jobtitle of your application:</value>
+  <data name="MWJobtitle" xml:space="preserve">
+    <value>Jobtitle:</value>
+  </data>
+  <data name="MwTitle" xml:space="preserve">
+    <value>Write your Job Application</value>
+  </data>
+  <data name="MWUrl" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+  <data name="MWZip" xml:space="preserve">
+    <value>ZIP Code:</value>
+  </data>
+  <data name="SalutationFemale" xml:space="preserve">
+    <value>Dear Mrs</value>
+    <comment>Salutation for writing to a Ms.</comment>
+  </data>
+  <data name="SalutationMale" xml:space="preserve">
+    <value>Dear Mr</value>
+    <comment>Salutation for writing to a Mr.</comment>
+  </data>
+  <data name="SalutationUnknown" xml:space="preserve">
+    <value>Dear Sir or Madam</value>
+    <comment>Salutation if unknown</comment>
+  </data>
+  <data name="Subjectprefix" xml:space="preserve">
+    <value>Application as</value>
+  </data>
+  <data name="UsBlog" xml:space="preserve">
+    <value>Your Blog:</value>
+  </data>
+  <data name="UsBtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="UsEmailaddress" xml:space="preserve">
+    <value>Your Emailaddress:</value>
+  </data>
+  <data name="UsEmailSettings" xml:space="preserve">
+    <value>Email settings</value>
+  </data>
+  <data name="UsFamilyname" xml:space="preserve">
+    <value>Your Familyname:</value>
+  </data>
+  <data name="UsFirstname" xml:space="preserve">
+    <value>Your Firstname:</value>
+  </data>
+  <data name="UsHeader" xml:space="preserve">
+    <value>Your User settings</value>
+  </data>
+  <data name="UsPersonalSettings" xml:space="preserve">
+    <value>Personal Settings</value>
+  </data>
+  <data name="UsPhonenumber" xml:space="preserve">
+    <value>Your Phonenumber:</value>
+  </data>
+  <data name="UsSmtpPassword" xml:space="preserve">
+    <value>SMTP-Password:</value>
+  </data>
+  <data name="UsSmtpPort" xml:space="preserve">
+    <value>SMTP-Port:</value>
+  </data>
+  <data name="UsSmtpServer" xml:space="preserve">
+    <value>SMTP-Server:</value>
+  </data>
+  <data name="UsSmtpUser" xml:space="preserve">
+    <value>SMTP-Username:</value>
+  </data>
+  <data name="UsStreet" xml:space="preserve">
+    <value>Your Address:</value>
+  </data>
+  <data name="UsTitle" xml:space="preserve">
+    <value>User Settings</value>
+  </data>
+  <data name="UsZipCity" xml:space="preserve">
+    <value>Your ZIP and City:</value>
   </data>
 </root>

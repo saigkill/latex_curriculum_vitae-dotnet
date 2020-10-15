@@ -61,8 +61,7 @@ namespace latex_curriculum_vitae
             Phone = Configuration.GetSetting("myphone");
             Email = Configuration.GetSetting("myemail");
             Blog = Configuration.GetSetting("myblog");
-            //Subjectprefix = Configuration.GetSetting("subject");
-            Subjectprefix = "Bewerbung als";
+            Subjectprefix = Properties.Resources.Subjectprefix;
             SmtpServer = Configuration.GetSetting("smtp-server");
             SmtpUser = Configuration.GetSetting("smtp-user");
             SmtpPass = Configuration.GetSetting("smtp-pass");

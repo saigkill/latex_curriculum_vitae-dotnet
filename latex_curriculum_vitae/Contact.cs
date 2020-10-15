@@ -51,17 +51,17 @@ namespace latex_curriculum_vitae
         {
             string salutation;
 
-            if (gname == Properties.Resources.gendermale)
+            if (gname == Properties.Resources.GenderMale)
             {
-                salutation = Properties.Resources.salutationmale + " " + cname + ",";
+                salutation = Properties.Resources.SalutationMale + " " + cname + ",";
             }
-            else if (gname == Properties.Resources.genderfemale)
+            else if (gname == Properties.Resources.GenderFemale)
             {
-                salutation = Properties.Resources.salutationfemale + " " + cname + ",";
+                salutation = Properties.Resources.SalutationFemale + " " + cname + ",";
             }
             else
             {
-                salutation = Properties.Resources.salutationunknown + ",";
+                salutation = Properties.Resources.SalutationUnknown + ",";
             }
             return salutation;
         }
@@ -73,34 +73,40 @@ namespace latex_curriculum_vitae
         /// <param name="contactname">comes from contact.Name (Contains the contact name)</param>
         /// <param name="cgender">comes from contact.Gender (Contains contacts gender)</param>
         /// <param name="cstreet">comes from company.Street (Contains companies street)</param>
+        /// <param name="czip">comes from company.ZIP (contains companies zip)</param>
         /// <param name="ccity">comes from company.City (Contains companies city)</param>
         /// <returns>string addressline</returns>
-        public string Addressline(string company, string contactname, string cgender, string cstreet, string ccity)
+        public string Addressline(string company, string contactname, string cgender, string cstreet, int? czip, string ccity)
         {
             string addressline;
             company = company.Replace(@"#", @"\#");
             company = company.Replace(@"&", @"\&");
 
             addressline = company + "\\\\";
-            if (contactname == "" || cgender == Properties.Resources.genderunknown)
+            if (contactname == "" || cgender == Properties.Resources.GenderUnknown)
             {
-                addressline += Properties.Resources.hrdepartment + " \\\\";
+                addressline += Properties.Resources.HRDepartment + " \\\\";
             }
             else
             {
-                if (cgender == Properties.Resources.gendermale)
+                if (cgender == Properties.Resources.GenderMale)
                 {
-                    addressline = addressline + Properties.Resources.addressmale + " " + contactname + "\\\\";
+                    addressline = addressline + Properties.Resources.AddressMale + " " + contactname + "\\\\";
                 }
                 else
                 {
-                    addressline = addressline + Properties.Resources.addressfemale + " " + contactname + "\\\\";
+                    addressline = addressline + Properties.Resources.AddressFemale + " " + contactname + "\\\\";
                 }
             }
 
             if (cstreet != "")
             {
                 addressline = addressline + cstreet + "\\\\";
+            }
+
+            if (czip != null)
+            {
+                addressline += czip + " ";
             }
 
             if (ccity != "")

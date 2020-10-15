@@ -137,7 +137,7 @@ namespace latex_curriculum_vitae
         /// <returns>string finalpdf</returns>
         public static string GetFinalPdfName(string firstname, string familyname)
         {
-            string finalpdf = Properties.Resources.appdoc + firstname + "_" + familyname + ".pdf";
+            string finalpdf = Properties.Resources.AppDoc + firstname + "_" + familyname + ".pdf";
             return finalpdf;
         }
 
@@ -154,8 +154,8 @@ namespace latex_curriculum_vitae
             string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
             Directory.SetCurrentDirectory(mytmpDir);
 
-            string cos = Properties.Resources.cos + firstname + "_" + familyname + ".pdf";
-            string cert = Properties.Resources.cert + firstname + "_" + familyname + ".pdf";
+            string cos = Properties.Resources.Cos + firstname + "_" + familyname + ".pdf";
+            string cert = Properties.Resources.Cert + firstname + "_" + familyname + ".pdf";
             string finalpdf = GetFinalPdfName(firstname, familyname);
 
             string[] cosEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates_of_Employment"));
@@ -216,7 +216,7 @@ namespace latex_curriculum_vitae
                 path = Directory.GetParent(path).ToString();
             }
 
-            MessageBox.Show(Properties.Resources.msgdirfinalpdf, Properties.Resources.msgheaderinfo, MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(Properties.Resources.MsgDirFinalPdf, Properties.Resources.MsgHeaderInfo, MessageBoxButton.OK, MessageBoxImage.Information);
             Process process = new Process();
             ProcessStartInfo startInfo = new ProcessStartInfo
             {

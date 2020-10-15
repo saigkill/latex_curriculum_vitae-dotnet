@@ -16,6 +16,7 @@
 // Dependencies
 
 using System.Configuration;
+using System.Reflection;
 using System.Windows;
 
 namespace latex_curriculum_vitae
@@ -32,7 +33,17 @@ namespace latex_curriculum_vitae
         /// <returns>string ConfigurationManager.AppSettings[key]</returns>
         public static string GetSetting(string key)
         {
-            return ConfigurationManager.AppSettings[key];
+            try
+            {
+                return ConfigurationManager.AppSettings[key];
+            }
+            catch (ConfigurationErrorsException c)
+            {
+                MessageBox.Show("Error getting setting: " + key + c, "latex_curriculum_vitae", MessageBoxButton.OK, MessageBoxImage.Error);
+                string empty = "";
+                return empty;
+            }
+
         }
 
         /// <summary>
@@ -42,15 +53,31 @@ namespace latex_curriculum_vitae
         /// <param name="value"></param>
         public static void SetSetting(string key, string value)
         {
-            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            MessageBox.Show(config.FilePath);
-            var entry = config.AppSettings.Settings[key];
-            if (entry == null)
-                config.AppSettings.Settings.Add(key, value);
-            else
-                config.AppSettings.Settings[key].Value = value;
+            try
+            {
+                var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                MessageBox.Show(config.FilePath);
+                var entry = config.AppSettings.Settings[key];
+                if (entry == null)
+                    config.AppSettings.Settings.Add(key, value);
+                else
+                    config.AppSettings.Settings[key].Value = value;
 
-            config.Save(ConfigurationSaveMode.Modified);
+                config.Save(ConfigurationSaveMode.Modified);
+            }
+            catch (ConfigurationErrorsException c)
+            {
+                MessageBox.Show("Error writing setting: " + key + c, "latex_curriculum_vitae", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /// <summary>
+        /// Gets Assembly version number
+        /// </summary>
+        public static string GetVersionNumber()
+        {
+            string vnumber = $"{Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}";
+            return vnumber;
         }
     }
 }

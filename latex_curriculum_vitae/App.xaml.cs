@@ -15,6 +15,8 @@
 
 // Dependencies
 
+using System.Globalization;
+using System.Threading;
 using System.Windows;
 
 namespace latex_curriculum_vitae
@@ -24,6 +26,7 @@ namespace latex_curriculum_vitae
     /// </summary>
     public partial class App : Application
     {
+
         //#region Private members
         //private readonly ServiceProvider serviceProvider;
         //#endregion
@@ -42,12 +45,20 @@ namespace latex_curriculum_vitae
         //}
         //#endregion
 
-        //#region Event Handlers
-        //private void OnStartup(object s, StartupEventArgs e)
-        //{
-        //    var mainWindow = serviceProvider.GetService<MainWindow>();
-        //    mainWindow.Show();
-        //}
-        //#endregion
+        #region Event Handlers
+        private void OnStartup(object s, StartupEventArgs e)
+        {
+#if DEBUG
+            var vCulture = new CultureInfo("en-US");
+
+            Thread.CurrentThread.CurrentCulture = vCulture;
+            Thread.CurrentThread.CurrentUICulture = vCulture;
+            CultureInfo.DefaultThreadCurrentCulture = vCulture;
+            CultureInfo.DefaultThreadCurrentUICulture = vCulture;
+#endif
+            Window settings = new MainWindow();
+            settings.Show();
+        }
+        #endregion
     }
 }

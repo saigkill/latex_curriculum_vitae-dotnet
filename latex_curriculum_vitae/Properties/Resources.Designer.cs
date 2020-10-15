@@ -22,7 +22,7 @@ namespace latex_curriculum_vitae.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace latex_curriculum_vitae.Properties {
         ///   Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("latex_curriculum_vitae.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace latex_curriculum_vitae.Properties {
         ///   Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,171 +63,603 @@ namespace latex_curriculum_vitae.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Mrs ähnelt.
         /// </summary>
-        internal static string addressfemale {
+        public static string AddressFemale {
             get {
-                return ResourceManager.GetString("addressfemale", resourceCulture);
+                return ResourceManager.GetString("AddressFemale", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Mr ähnelt.
         /// </summary>
-        internal static string addressmale {
+        public static string AddressMale {
             get {
-                return ResourceManager.GetString("addressmale", resourceCulture);
+                return ResourceManager.GetString("AddressMale", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Application_documents_ ähnelt.
         /// </summary>
-        internal static string appdoc {
+        public static string AppDoc {
             get {
-                return ResourceManager.GetString("appdoc", resourceCulture);
+                return ResourceManager.GetString("AppDoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Close ähnelt.
+        /// </summary>
+        public static string BtnExit {
+            get {
+                return ResourceManager.GetString("BtnExit", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Additional_Certificates_ ähnelt.
         /// </summary>
-        internal static string cert {
+        public static string Cert {
             get {
-                return ResourceManager.GetString("cert", resourceCulture);
+                return ResourceManager.GetString("Cert", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Job_References_ ähnelt.
         /// </summary>
-        internal static string cos {
+        public static string Cos {
             get {
-                return ResourceManager.GetString("cos", resourceCulture);
+                return ResourceManager.GetString("Cos", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Email sent ähnelt.
         /// </summary>
-        internal static string csvemailsent {
+        public static string CsvEmailSent {
             get {
-                return ResourceManager.GetString("csvemailsent", resourceCulture);
+                return ResourceManager.GetString("CsvEmailSent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die {0} ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die &lt;p&gt;{0}&lt;br&gt;
+        ///&lt;p&gt;I am sending you my application documents attached.&lt;br&gt;
+        ///&lt;p&gt;Sincerly&lt;/p&gt;
+        ///&lt;p align=left&gt;{1}&lt;br&gt;
+        ///&lt;center&gt;&lt;img src=&quot;&quot;cid:{2}&quot;&quot; width=&quot;&quot;10%&quot;&quot;&gt;&lt;/center&gt;&lt;/p&gt; ähnelt.
         /// </summary>
-        internal static string emailplain {
+        public static string EmailHTML {
             get {
-                return ResourceManager.GetString("emailplain", resourceCulture);
+                return ResourceManager.GetString("EmailHTML", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die You haven&apos;t set all needed fields for sending emails. I open for you the Usersettings Window. ähnelt.
+        /// </summary>
+        public static string EmailNotSet {
+            get {
+                return ResourceManager.GetString("EmailNotSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Can&apos;t send email. ähnelt.
+        /// </summary>
+        public static string EmailNotSetHeader {
+            get {
+                return ResourceManager.GetString("EmailNotSetHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die {0}
+        ///
+        ///I am sending you my application documents attached.
+        ///
+        ///Sincerely
+        ///{1} ähnelt.
+        /// </summary>
+        public static string EmailPlain {
+            get {
+                return ResourceManager.GetString("EmailPlain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sent ähnelt.
+        /// </summary>
+        public static string EnumStatus0 {
+            get {
+                return ResourceManager.GetString("EnumStatus0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Confirmed ähnelt.
+        /// </summary>
+        public static string EnumStatus1 {
+            get {
+                return ResourceManager.GetString("EnumStatus1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Invited ähnelt.
+        /// </summary>
+        public static string EnumStatus2 {
+            get {
+                return ResourceManager.GetString("EnumStatus2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Rejected ähnelt.
+        /// </summary>
+        public static string EnumStatus3 {
+            get {
+                return ResourceManager.GetString("EnumStatus3", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Female ähnelt.
         /// </summary>
-        internal static string genderfemale {
+        public static string GenderFemale {
             get {
-                return ResourceManager.GetString("genderfemale", resourceCulture);
+                return ResourceManager.GetString("GenderFemale", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Male ähnelt.
         /// </summary>
-        internal static string gendermale {
+        public static string GenderMale {
             get {
-                return ResourceManager.GetString("gendermale", resourceCulture);
+                return ResourceManager.GetString("GenderMale", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Unknown ähnelt.
         /// </summary>
-        internal static string genderunknown {
+        public static string GenderUnknown {
             get {
-                return ResourceManager.GetString("genderunknown", resourceCulture);
+                return ResourceManager.GetString("GenderUnknown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die HR department ähnelt.
         /// </summary>
-        internal static string hrdepartment {
+        public static string HRDepartment {
             get {
-                return ResourceManager.GetString("hrdepartment", resourceCulture);
+                return ResourceManager.GetString("HRDepartment", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Now i open for you the directory in the explorer, what contains your PDFs. ähnelt.
         /// </summary>
-        internal static string msgdirfinalpdf {
+        public static string MsgDirFinalPdf {
             get {
-                return ResourceManager.GetString("msgdirfinalpdf", resourceCulture);
+                return ResourceManager.GetString("MsgDirFinalPdf", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your email is now sent. You can do the next job application. ähnelt.
         /// </summary>
-        internal static string msgemailsent {
+        public static string MsgEmailSent {
             get {
-                return ResourceManager.GetString("msgemailsent", resourceCulture);
+                return ResourceManager.GetString("MsgEmailSent", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Information ähnelt.
         /// </summary>
-        internal static string msgheaderinfo {
+        public static string MsgHeaderInfo {
             get {
-                return ResourceManager.GetString("msgheaderinfo", resourceCulture);
+                return ResourceManager.GetString("MsgHeaderInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die You starting the app the first time. Please add your user settings in the window. ähnelt.
+        /// </summary>
+        public static string MsgSetupCheckConfig {
+            get {
+                return ResourceManager.GetString("MsgSetupCheckConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check Configuration ähnelt.
+        /// </summary>
+        public static string MsgSetupCheckConfigHeader {
+            get {
+                return ResourceManager.GetString("MsgSetupCheckConfigHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Please close the App and follow the documentation. I open it for you. ähnelt.
+        /// </summary>
+        public static string MsgSetupCheckDocument {
+            get {
+                return ResourceManager.GetString("MsgSetupCheckDocument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check documents path ähnelt.
+        /// </summary>
+        public static string MsgSetupCheckDocumentHeader {
+            get {
+                return ResourceManager.GetString("MsgSetupCheckDocumentHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die You starting the app the first time. I prepare now the directory structure and copy the needed files to: ähnelt.
+        /// </summary>
+        public static string MsgSetupCheckDocumentsCopy {
+            get {
+                return ResourceManager.GetString("MsgSetupCheckDocumentsCopy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die I haven&apos;t found TeXLive. Now i open a Browser, where you can download it. Please close this app and install TexLive. ähnelt.
+        /// </summary>
+        public static string MsgSetupCheckLatex {
+            get {
+                return ResourceManager.GetString("MsgSetupCheckLatex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check LaTEX ähnelt.
+        /// </summary>
+        public static string MsgSetupCheckLatexHeader {
+            get {
+                return ResourceManager.GetString("MsgSetupCheckLatexHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Application details ähnelt.
+        /// </summary>
+        public static string MWApplication {
+            get {
+                return ResourceManager.GetString("MWApplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Configuration ähnelt.
+        /// </summary>
+        public static string MWBtnConfig {
+            get {
+                return ResourceManager.GetString("MWBtnConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Database ähnelt.
+        /// </summary>
+        public static string MWBtnDatabase {
+            get {
+                return ResourceManager.GetString("MWBtnDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Generate ähnelt.
+        /// </summary>
+        public static string MWBtnGenerate {
+            get {
+                return ResourceManager.GetString("MWBtnGenerate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die City: ähnelt.
+        /// </summary>
+        public static string MWCity {
+            get {
+                return ResourceManager.GetString("MWCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Companydetails ähnelt.
+        /// </summary>
+        public static string MWCompanyDetails {
+            get {
+                return ResourceManager.GetString("MWCompanyDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Company Name: ähnelt.
+        /// </summary>
+        public static string MWCompanyName {
+            get {
+                return ResourceManager.GetString("MWCompanyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Companies Street: ähnelt.
+        /// </summary>
+        public static string MWCompanyStreet {
+            get {
+                return ResourceManager.GetString("MWCompanyStreet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contact person ähnelt.
+        /// </summary>
+        public static string MWContact {
+            get {
+                return ResourceManager.GetString("MWContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Name: ähnelt.
+        /// </summary>
+        public static string MWContactName {
+            get {
+                return ResourceManager.GetString("MWContactName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Emailaddress: ähnelt.
+        /// </summary>
+        public static string MWEmail {
+            get {
+                return ResourceManager.GetString("MWEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gender: ähnelt.
+        /// </summary>
+        public static string MWGender {
+            get {
+                return ResourceManager.GetString("MWGender", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Write your Job Applications ähnelt.
         /// </summary>
-        internal static string mwheader {
+        public static string MWHeader {
             get {
-                return ResourceManager.GetString("mwheader", resourceCulture);
+                return ResourceManager.GetString("MWHeader", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Jobtitle of your application: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Jobtitle: ähnelt.
         /// </summary>
-        internal static string mwjobtitle {
+        public static string MWJobtitle {
             get {
-                return ResourceManager.GetString("mwjobtitle", resourceCulture);
+                return ResourceManager.GetString("MWJobtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Write your Job Application ähnelt.
+        /// </summary>
+        public static string MwTitle {
+            get {
+                return ResourceManager.GetString("MwTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die URL: ähnelt.
+        /// </summary>
+        public static string MWUrl {
+            get {
+                return ResourceManager.GetString("MWUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die ZIP Code: ähnelt.
+        /// </summary>
+        public static string MWZip {
+            get {
+                return ResourceManager.GetString("MWZip", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Dear Mrs ähnelt.
         /// </summary>
-        internal static string salutationfemale {
+        public static string SalutationFemale {
             get {
-                return ResourceManager.GetString("salutationfemale", resourceCulture);
+                return ResourceManager.GetString("SalutationFemale", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Dear Mr ähnelt.
         /// </summary>
-        internal static string salutationmale {
+        public static string SalutationMale {
             get {
-                return ResourceManager.GetString("salutationmale", resourceCulture);
+                return ResourceManager.GetString("SalutationMale", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Dear Sir or Madam ähnelt.
         /// </summary>
-        internal static string salutationunknown {
+        public static string SalutationUnknown {
             get {
-                return ResourceManager.GetString("salutationunknown", resourceCulture);
+                return ResourceManager.GetString("SalutationUnknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Application as ähnelt.
+        /// </summary>
+        public static string Subjectprefix {
+            get {
+                return ResourceManager.GetString("Subjectprefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Blog: ähnelt.
+        /// </summary>
+        public static string UsBlog {
+            get {
+                return ResourceManager.GetString("UsBlog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Save ähnelt.
+        /// </summary>
+        public static string UsBtnSave {
+            get {
+                return ResourceManager.GetString("UsBtnSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Emailaddress: ähnelt.
+        /// </summary>
+        public static string UsEmailaddress {
+            get {
+                return ResourceManager.GetString("UsEmailaddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Email settings ähnelt.
+        /// </summary>
+        public static string UsEmailSettings {
+            get {
+                return ResourceManager.GetString("UsEmailSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Familyname: ähnelt.
+        /// </summary>
+        public static string UsFamilyname {
+            get {
+                return ResourceManager.GetString("UsFamilyname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Firstname: ähnelt.
+        /// </summary>
+        public static string UsFirstname {
+            get {
+                return ResourceManager.GetString("UsFirstname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your User settings ähnelt.
+        /// </summary>
+        public static string UsHeader {
+            get {
+                return ResourceManager.GetString("UsHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Personal Settings ähnelt.
+        /// </summary>
+        public static string UsPersonalSettings {
+            get {
+                return ResourceManager.GetString("UsPersonalSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Phonenumber: ähnelt.
+        /// </summary>
+        public static string UsPhonenumber {
+            get {
+                return ResourceManager.GetString("UsPhonenumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SMTP-Password: ähnelt.
+        /// </summary>
+        public static string UsSmtpPassword {
+            get {
+                return ResourceManager.GetString("UsSmtpPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SMTP-Port: ähnelt.
+        /// </summary>
+        public static string UsSmtpPort {
+            get {
+                return ResourceManager.GetString("UsSmtpPort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SMTP-Server: ähnelt.
+        /// </summary>
+        public static string UsSmtpServer {
+            get {
+                return ResourceManager.GetString("UsSmtpServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die SMTP-Username: ähnelt.
+        /// </summary>
+        public static string UsSmtpUser {
+            get {
+                return ResourceManager.GetString("UsSmtpUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Address: ähnelt.
+        /// </summary>
+        public static string UsStreet {
+            get {
+                return ResourceManager.GetString("UsStreet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die User Settings ähnelt.
+        /// </summary>
+        public static string UsTitle {
+            get {
+                return ResourceManager.GetString("UsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your ZIP and City: ähnelt.
+        /// </summary>
+        public static string UsZipCity {
+            get {
+                return ResourceManager.GetString("UsZipCity", resourceCulture);
             }
         }
     }
