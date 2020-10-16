@@ -26,59 +26,37 @@ The official website is:
 | What | Status |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |code quality | [![Maintainability](https://api.codeclimate.com/v1/badges/976914ee0f04dbd277c2/maintainability)](https://codeclimate.com/github/saigkill/latex_curriculum_vitae-dotnet/maintainability) |
-|continuous integration | tbf |
+|continuous integration | ![.NET Core](https://github.com/saigkill/latex_curriculum_vitae-dotnet/workflows/.NET%20Core/badge.svg) |
 |dependencies|[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=saigkill/latex_curriculum_vitae-dotnet)](https://dependabot.com) |
 
 ## SCREENSHOT
 
-### Main
+### Create a job application
 
-[![Screenshot](https://raw.githubusercontent.com/saigkill/publican_creators/master/docs/PublicanCreators.png)](https://github.com/saigkill/publican_creators)
+[![Screenshot](https://raw.githubusercontent.com/saigkill/latex_curriculum_vitae-dotnet/master/docssrc/images/src/png/WriteJobApplication.png)](https://github.com/saigkill/latex_curriculum_vitae-dotnet)
 
-### Revision Creator
+### Main Menu
 
-[![Screenshot](https://raw.githubusercontent.com/saigkill/publican_creators/master/docs/RevisionCreator.png)](https://github.com/saigkill/publican_creators)
+[![Screenshot](https://raw.githubusercontent.com/saigkill/latex_curriculum_vitae-dotnet/master/docssrc/images/src/png/MainWindow.png)](https://github.com/saigkill/latex_curriculum_vitae-dotnet)
 
 ## FEATURES/PROBLEMS
 
-* GUI to control publican
-
-## SYNOPSIS
-
-    $ publican_creators.rb (Main program)
-    $ revision_creator.rb (The revision updater)
-
-    Or just use the Launcher.
-
-This Gem was programmed and tested on Linux systems. If anyone would like to make the methods also fit for other OS, 
-I'm happy about Pull requests.
+* Provides a LaTEX driven PDF bundle of documents
+* Sends the email directly from the app
+* Stores all applications in a CSV file
 
 ## REQUIREMENTS
 
-* nokogiri
-* parseconfig
-* rainbow
-* notifier
+* Windows 10
+* All other dependencies are bundled in the package.
 
 ## REQUIREMENTS (hard dependencies)
 
-* yad
-* publican (a 4.x version is needed)
+* TexLive
 
 ## INSTALL
 
 The installation is very easy.
 
-    gem install publican_creators
-    cd /path/to/gem (In case of using RVM ~/.rvm/gems/ruby-$RUBYVERSION/gems/publican_creators)
-    rake
-
-You have to run the setup after each gem update.
-
-## DEVELOPERS
-
-After checking out the source, run:
-
- `$ rake newb`
-This task will install any missing dependencies, run the tests/specs, 
-and generate the RDoc.
+    Download the nuget package or the exe
+    Doubleclick on it
