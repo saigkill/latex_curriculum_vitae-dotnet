@@ -35,7 +35,9 @@ namespace latex_curriculum_vitae
         {
             try
             {
-                return ConfigurationManager.AppSettings[key];
+                var appSettings = ConfigurationManager.AppSettings;
+                string result = appSettings[key] ?? "Not Found";
+                return result;
             }
             catch (ConfigurationErrorsException c)
             {
@@ -56,7 +58,7 @@ namespace latex_curriculum_vitae
             try
             {
                 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                MessageBox.Show(config.FilePath);
+                //MessageBox.Show(config.FilePath);
                 var entry = config.AppSettings.Settings[key];
                 if (entry == null)
                     config.AppSettings.Settings.Add(key, value);

@@ -48,16 +48,27 @@ namespace latex_curriculum_vitae
         #region Event Handlers
         private void OnStartup(object s, StartupEventArgs e)
         {
+            string firstrun = Configuration.GetSetting("firstrun");
+            if (firstrun == "Not Found")
+            {
+                Setup.CheckAppConfig();
+                Setup.CheckLatexPath();
+                Setup.CheckDocumentsPath();
+                Configuration.SetSetting("firstrun", "false");
+            }
+            else
+            {
 #if DEBUG
-            var vCulture = new CultureInfo("en-US");
+                var vCulture = new CultureInfo("en-US");
 
-            Thread.CurrentThread.CurrentCulture = vCulture;
-            Thread.CurrentThread.CurrentUICulture = vCulture;
-            CultureInfo.DefaultThreadCurrentCulture = vCulture;
-            CultureInfo.DefaultThreadCurrentUICulture = vCulture;
+                Thread.CurrentThread.CurrentCulture = vCulture;
+                Thread.CurrentThread.CurrentUICulture = vCulture;
+                CultureInfo.DefaultThreadCurrentCulture = vCulture;
+                CultureInfo.DefaultThreadCurrentUICulture = vCulture;
 #endif
-            Window settings = new MainWindow();
-            settings.Show();
+                Window settings = new MainWindow();
+                settings.Show();
+            }
         }
         #endregion
     }

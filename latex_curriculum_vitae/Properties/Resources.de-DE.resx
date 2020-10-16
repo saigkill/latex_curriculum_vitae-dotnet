@@ -213,56 +213,17 @@ Mit freundlichem Gruß
   <data name="MsgSetupCheckLatexHeader" xml:space="preserve">
     <value>Prüfe LaTEX</value>
   </data>
-  <data name="MWApplication" xml:space="preserve">
-    <value>Bewerbungsdetails</value>
+  <data name="MWGoDatabase" xml:space="preserve">
+    <value>Öffne Datenbank</value>
   </data>
-  <data name="MWBtnConfig" xml:space="preserve">
-    <value>Konfiguration</value>
-  </data>
-  <data name="MWBtnDatabase" xml:space="preserve">
-    <value>Datenbank</value>
-  </data>
-  <data name="MWBtnGenerate" xml:space="preserve">
-    <value>Generieren</value>
-  </data>
-  <data name="MWCity" xml:space="preserve">
-    <value>Stadt:</value>
-  </data>
-  <data name="MWCompanyDetails" xml:space="preserve">
-    <value>Firmendetails</value>
-  </data>
-  <data name="MWCompanyName" xml:space="preserve">
-    <value>Firmenname:</value>
-  </data>
-  <data name="MWCompanyStreet" xml:space="preserve">
-    <value>Adresse der Firma:</value>
-  </data>
-  <data name="MWContact" xml:space="preserve">
-    <value>Kontaktperson</value>
-  </data>
-  <data name="MWContactName" xml:space="preserve">
-    <value>Name:</value>
-  </data>
-  <data name="MWEmail" xml:space="preserve">
-    <value>Emailadresse:</value>
-  </data>
-  <data name="MWGender" xml:space="preserve">
-    <value>Geschlecht:</value>
-  </data>
-  <data name="MWHeader" xml:space="preserve">
-    <value>Schreiben Sie Ihre Bewerbungen</value>
-  </data>
-  <data name="MWJobtitle" xml:space="preserve">
-    <value>Titel des Jobs:</value>
-  </data>
-  <data name="MwTitle" xml:space="preserve">
+  <data name="MWStartWriteJobApplication" xml:space="preserve">
     <value>Schreiben Sie Ihre Bewerbung</value>
   </data>
-  <data name="MWUrl" xml:space="preserve">
-    <value>Webseite:</value>
+  <data name="MWTitle" xml:space="preserve">
+    <value>Hauptmenü</value>
   </data>
-  <data name="MWZip" xml:space="preserve">
-    <value>Postleitzahl:</value>
+  <data name="MWUsersettings" xml:space="preserve">
+    <value>Benutzereinstellungen ansehen oder ändern</value>
   </data>
   <data name="SalutationFemale" xml:space="preserve">
     <value>Sehr geehrte Frau</value>
@@ -323,5 +284,53 @@ Mit freundlichem Gruß
   </data>
   <data name="UsZipCity" xml:space="preserve">
     <value>Ihre PLZ und Stadt:</value>
+  </data>
+  <data name="WJAApplication" xml:space="preserve">
+    <value>Bewerbungsdetails</value>
+  </data>
+  <data name="WJABtnConfig" xml:space="preserve">
+    <value>Konfiguration</value>
+  </data>
+  <data name="WJABtnDatabase" xml:space="preserve">
+    <value>Datenbank</value>
+  </data>
+  <data name="WJABtnGenerate" xml:space="preserve">
+    <value>Generieren</value>
+  </data>
+  <data name="WJACity" xml:space="preserve">
+    <value>Stadt:</value>
+  </data>
+  <data name="WJACompanyDetails" xml:space="preserve">
+    <value>Firmendetails</value>
+  </data>
+  <data name="WJACompanyName" xml:space="preserve">
+    <value>Firmenname:</value>
+  </data>
+  <data name="WJACompanyStreet" xml:space="preserve">
+    <value>Adresse der Firma:</value>
+  </data>
+  <data name="WJAContact" xml:space="preserve">
+    <value>Kontaktperson</value>
+  </data>
+  <data name="WJAContactName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="WJAEmail" xml:space="preserve">
+    <value>Emailadresse:</value>
+  </data>
+  <data name="WJAGender" xml:space="preserve">
+    <value>Geschlecht:</value>
+  </data>
+  <data name="WJAHeader" xml:space="preserve">
+    <value>Schreiben Sie Ihre Bewerbungen</value>
+  </data>
+  <data name="WJAJobtitle" xml:space="preserve">
+    <value>Titel des Jobs:</value>
+  </data>
+  <data name="WJAUrl" xml:space="preserve">
+    <value>Webseite:</value>
+  </data>
+  <data name="WJAZip" xml:space="preserve">
+    <value>Postleitzahl:</value>
   </data>
 </root>

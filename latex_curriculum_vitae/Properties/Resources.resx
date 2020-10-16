@@ -207,59 +207,17 @@ Sincerely
   <data name="MsgSetupCheckLatexHeader" xml:space="preserve">
     <value>Check LaTEX</value>
   </data>
-  <data name="MWApplication" xml:space="preserve">
-    <value>Application details</value>
+  <data name="MWGoDatabase" xml:space="preserve">
+    <value>Open Database</value>
   </data>
-  <data name="MWBtnConfig" xml:space="preserve">
-    <value>Configuration</value>
+  <data name="MWStartWriteJobApplication" xml:space="preserve">
+    <value>Write your Job-Application</value>
   </data>
-  <data name="MWBtnDatabase" xml:space="preserve">
-    <value>Database</value>
+  <data name="MWTitle" xml:space="preserve">
+    <value>Main Menue</value>
   </data>
-  <data name="MWBtnGenerate" xml:space="preserve">
-    <value>Generate</value>
-  </data>
-  <data name="MWCity" xml:space="preserve">
-    <value>City:</value>
-  </data>
-  <data name="MWCompanyDetails" xml:space="preserve">
-    <value>Companydetails</value>
-  </data>
-  <data name="MWCompanyName" xml:space="preserve">
-    <value>Company Name:</value>
-    <comment>Name of the Company</comment>
-  </data>
-  <data name="MWCompanyStreet" xml:space="preserve">
-    <value>Companies Street:</value>
-    <comment>Street of the Company</comment>
-  </data>
-  <data name="MWContact" xml:space="preserve">
-    <value>Contact person</value>
-  </data>
-  <data name="MWContactName" xml:space="preserve">
-    <value>Name:</value>
-  </data>
-  <data name="MWEmail" xml:space="preserve">
-    <value>Emailaddress:</value>
-  </data>
-  <data name="MWGender" xml:space="preserve">
-    <value>Gender:</value>
-  </data>
-  <data name="MWHeader" xml:space="preserve">
-    <value>Write your Job Applications</value>
-    <comment>Main Window Title</comment>
-  </data>
-  <data name="MWJobtitle" xml:space="preserve">
-    <value>Jobtitle:</value>
-  </data>
-  <data name="MwTitle" xml:space="preserve">
-    <value>Write your Job Application</value>
-  </data>
-  <data name="MWUrl" xml:space="preserve">
-    <value>URL:</value>
-  </data>
-  <data name="MWZip" xml:space="preserve">
-    <value>ZIP Code:</value>
+  <data name="MWUsersettings" xml:space="preserve">
+    <value>View or Change User Settings</value>
   </data>
   <data name="SalutationFemale" xml:space="preserve">
     <value>Dear Mrs</value>
@@ -323,5 +281,56 @@ Sincerely
   </data>
   <data name="UsZipCity" xml:space="preserve">
     <value>Your ZIP and City:</value>
+  </data>
+  <data name="WJAApplication" xml:space="preserve">
+    <value>Application details</value>
+  </data>
+  <data name="WJABtnConfig" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="WJABtnDatabase" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="WJABtnGenerate" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="WJACity" xml:space="preserve">
+    <value>City:</value>
+  </data>
+  <data name="WJACompanyDetails" xml:space="preserve">
+    <value>Companydetails</value>
+  </data>
+  <data name="WJACompanyName" xml:space="preserve">
+    <value>Company Name:</value>
+    <comment>Name of the Company</comment>
+  </data>
+  <data name="WJACompanyStreet" xml:space="preserve">
+    <value>Companies Street:</value>
+    <comment>Street of the Company</comment>
+  </data>
+  <data name="WJAContact" xml:space="preserve">
+    <value>Contact person</value>
+  </data>
+  <data name="WJAContactName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="WJAEmail" xml:space="preserve">
+    <value>Emailaddress:</value>
+  </data>
+  <data name="WJAGender" xml:space="preserve">
+    <value>Gender:</value>
+  </data>
+  <data name="WJAHeader" xml:space="preserve">
+    <value>Write your Job Applications</value>
+    <comment>Main Window Title</comment>
+  </data>
+  <data name="WJAJobtitle" xml:space="preserve">
+    <value>Jobtitle:</value>
+  </data>
+  <data name="WJAUrl" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+  <data name="WJAZip" xml:space="preserve">
+    <value>ZIP Code:</value>
   </data>
 </root>

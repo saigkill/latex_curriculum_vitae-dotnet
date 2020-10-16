@@ -83,14 +83,13 @@ namespace latex_curriculum_vitae
                 CopyDocuments();
                 MessageBox.Show(Properties.Resources.MsgSetupCheckDocument, Properties.Resources.MsgSetupCheckDocumentHeader, MessageBoxButton.OK, MessageBoxImage.Information);
                 GetOnlineDocumentation();
-                Configuration.SetSetting("firstrun", "false");
             }
         }
-        
+
         /// <summary>
         /// This method launches the online documentation.
         /// </summary>
-        
+
         public static void GetOnlineDocumentation()
         {
             string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/";

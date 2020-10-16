@@ -23,7 +23,7 @@
 
 <!-- 0. Parameters for External Manipulation =================== -->
   <!-- Add a link to a product/company homepage to the logo -->
-  <xsl:param name="homepage" select="''"/>
+  <xsl:param name="homepage" select="'https://github.com/saigkill/latex_curriculum_vitae-dotnet/'"/>
     <!-- Override this parameter from the command line by adding
              ––stringparam="homepage=http://www.example.com"
          (don't copy from here, for technical reasons I can't use hyphens and
@@ -40,7 +40,7 @@
 
   <!-- Toggle the SUSE footer and SUSE e-mail button. Set to 0 if the
        documentation won't be available at a suse.com address.-->
-  <xsl:param name="suse.content" select="1"/>
+  <xsl:param name="suse.content" select="0"/>
     <!-- Override with:
             ––param="suse.content=0"
          (don't copy from here, for technical reasons I can't use hyphens and
@@ -141,7 +141,7 @@ set       toc,title
   <xsl:param name="footer.rule" select="0"/>
 
 <!-- 9. Meta/*Info and Titlepages =============================== -->
-  <xsl:param name="generate.legalnotice.link" select="0"/>
+  <xsl:param name="generate.legalnotice.link" select="1"/>
 
 <!-- 10. Reference Pages ======================================== -->
 

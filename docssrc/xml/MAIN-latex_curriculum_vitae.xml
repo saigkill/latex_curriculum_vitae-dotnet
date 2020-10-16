@@ -8,9 +8,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 <book xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns="http://docbook.org/ns/docbook" xml:id="latex_curriculum_vitae" xml:lang="en" version="5.0">
   <info>
-    <title>How to use latex_curriculum_vitae</title>
+    <title>How to use Latex Curriculum Vitae</title>
     <productnumber>0.9.0</productnumber>
-    <productname>latex_curriculum_vitae</productname>
+    <productname>Latex Curriculum Vitae</productname>
     <subtitle>A job-application creator with LaTEX</subtitle>
     <releaseinfo>Version 1.0.0 - Revision: 1</releaseinfo>
     <date>
@@ -28,17 +28,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
         </affiliation>
         <email>Sascha.Manns@outlook.de</email>
       </author>
-    </authorgroup>
-    <mediaobject>
-      <imageobject role="fo">
-        <imagedata fileref="cover.png" width="5%" align="center"/>
-      </imageobject>
-      <imageobject role="html">
-        <imagedata fileref="cover.png" width="5%" align="center"/>
-      </imageobject>
-    </mediaobject>
-    <abstract>
+    </authorgroup>    
+    <abstract>      
       <para>
+        <mediaobject>
+          <imageobject role="fo">
+            <imagedata fileref="cover.png" width="50%" align="center"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata fileref="cover.png" width="50%" align="center"/>
+          </imageobject>
+        </mediaobject>
         <productname>latex_curriculum_vitae</productname> creates a job-application by using LaTEX.
       </para>
     </abstract>
@@ -73,13 +73,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
     <info>
       <title>Round about</title>
     </info>
-    <xi:include href="common_intro_typografie.xml"/>
-    <xi:include href="common_intro_feedback.xml"/>
-    <xi:include href="common_intro_making.xml"/>
-    <xi:include href="common_intro_source_code.xml"/>
+    <xi:include href="common_intro_typografie.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="common_intro_feedback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="common_intro_making.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="common_intro_source_code.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
   </chapter>
   <xi:include href="installation.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
   <xi:include href="usage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-  <xi:include href="app.revision_update.xml"/>
-  <xi:include href="app.gfdl.xml"/>
+  <xi:include href="app.revision_update.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="app.gfdl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </book>

@@ -331,155 +331,38 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Application details ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open Database ähnelt.
         /// </summary>
-        public static string MWApplication {
+        public static string MWGoDatabase {
             get {
-                return ResourceManager.GetString("MWApplication", resourceCulture);
+                return ResourceManager.GetString("MWGoDatabase", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Configuration ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Write your Job-Application ähnelt.
         /// </summary>
-        public static string MWBtnConfig {
+        public static string MWStartWriteJobApplication {
             get {
-                return ResourceManager.GetString("MWBtnConfig", resourceCulture);
+                return ResourceManager.GetString("MWStartWriteJobApplication", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Database ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Main Menue ähnelt.
         /// </summary>
-        public static string MWBtnDatabase {
+        public static string MWTitle {
             get {
-                return ResourceManager.GetString("MWBtnDatabase", resourceCulture);
+                return ResourceManager.GetString("MWTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Generate ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die View or Change User Settings ähnelt.
         /// </summary>
-        public static string MWBtnGenerate {
+        public static string MWUsersettings {
             get {
-                return ResourceManager.GetString("MWBtnGenerate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die City: ähnelt.
-        /// </summary>
-        public static string MWCity {
-            get {
-                return ResourceManager.GetString("MWCity", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Companydetails ähnelt.
-        /// </summary>
-        public static string MWCompanyDetails {
-            get {
-                return ResourceManager.GetString("MWCompanyDetails", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Company Name: ähnelt.
-        /// </summary>
-        public static string MWCompanyName {
-            get {
-                return ResourceManager.GetString("MWCompanyName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Companies Street: ähnelt.
-        /// </summary>
-        public static string MWCompanyStreet {
-            get {
-                return ResourceManager.GetString("MWCompanyStreet", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Contact person ähnelt.
-        /// </summary>
-        public static string MWContact {
-            get {
-                return ResourceManager.GetString("MWContact", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Name: ähnelt.
-        /// </summary>
-        public static string MWContactName {
-            get {
-                return ResourceManager.GetString("MWContactName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Emailaddress: ähnelt.
-        /// </summary>
-        public static string MWEmail {
-            get {
-                return ResourceManager.GetString("MWEmail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Gender: ähnelt.
-        /// </summary>
-        public static string MWGender {
-            get {
-                return ResourceManager.GetString("MWGender", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Write your Job Applications ähnelt.
-        /// </summary>
-        public static string MWHeader {
-            get {
-                return ResourceManager.GetString("MWHeader", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Jobtitle: ähnelt.
-        /// </summary>
-        public static string MWJobtitle {
-            get {
-                return ResourceManager.GetString("MWJobtitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Write your Job Application ähnelt.
-        /// </summary>
-        public static string MwTitle {
-            get {
-                return ResourceManager.GetString("MwTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die URL: ähnelt.
-        /// </summary>
-        public static string MWUrl {
-            get {
-                return ResourceManager.GetString("MWUrl", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die ZIP Code: ähnelt.
-        /// </summary>
-        public static string MWZip {
-            get {
-                return ResourceManager.GetString("MWZip", resourceCulture);
+                return ResourceManager.GetString("MWUsersettings", resourceCulture);
             }
         }
         
@@ -660,6 +543,150 @@ namespace latex_curriculum_vitae.Properties {
         public static string UsZipCity {
             get {
                 return ResourceManager.GetString("UsZipCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Application details ähnelt.
+        /// </summary>
+        public static string WJAApplication {
+            get {
+                return ResourceManager.GetString("WJAApplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Configuration ähnelt.
+        /// </summary>
+        public static string WJABtnConfig {
+            get {
+                return ResourceManager.GetString("WJABtnConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Database ähnelt.
+        /// </summary>
+        public static string WJABtnDatabase {
+            get {
+                return ResourceManager.GetString("WJABtnDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Generate ähnelt.
+        /// </summary>
+        public static string WJABtnGenerate {
+            get {
+                return ResourceManager.GetString("WJABtnGenerate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die City: ähnelt.
+        /// </summary>
+        public static string WJACity {
+            get {
+                return ResourceManager.GetString("WJACity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Companydetails ähnelt.
+        /// </summary>
+        public static string WJACompanyDetails {
+            get {
+                return ResourceManager.GetString("WJACompanyDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Company Name: ähnelt.
+        /// </summary>
+        public static string WJACompanyName {
+            get {
+                return ResourceManager.GetString("WJACompanyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Companies Street: ähnelt.
+        /// </summary>
+        public static string WJACompanyStreet {
+            get {
+                return ResourceManager.GetString("WJACompanyStreet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contact person ähnelt.
+        /// </summary>
+        public static string WJAContact {
+            get {
+                return ResourceManager.GetString("WJAContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Name: ähnelt.
+        /// </summary>
+        public static string WJAContactName {
+            get {
+                return ResourceManager.GetString("WJAContactName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Emailaddress: ähnelt.
+        /// </summary>
+        public static string WJAEmail {
+            get {
+                return ResourceManager.GetString("WJAEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gender: ähnelt.
+        /// </summary>
+        public static string WJAGender {
+            get {
+                return ResourceManager.GetString("WJAGender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Write your Job Applications ähnelt.
+        /// </summary>
+        public static string WJAHeader {
+            get {
+                return ResourceManager.GetString("WJAHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Jobtitle: ähnelt.
+        /// </summary>
+        public static string WJAJobtitle {
+            get {
+                return ResourceManager.GetString("WJAJobtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die URL: ähnelt.
+        /// </summary>
+        public static string WJAUrl {
+            get {
+                return ResourceManager.GetString("WJAUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die ZIP Code: ähnelt.
+        /// </summary>
+        public static string WJAZip {
+            get {
+                return ResourceManager.GetString("WJAZip", resourceCulture);
             }
         }
     }

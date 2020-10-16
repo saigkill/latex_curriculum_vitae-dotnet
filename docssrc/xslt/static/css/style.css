@@ -1,5 +1,5 @@
-@import "http://saigkill.tuxfamily.org/dotclear/webfonts/css/stafford.css";
-@import "http://saigkill.tuxfamily.org/dotclear/webfonts/css/arezzo.css";
+@import "http://saschamanns.de/css/stafford.css";
+@import "http://saschamanns.de/css/arezzo.css";
 /* Reset, from http://meyerweb.com/eric/tools/css/reset/, v2.0, modified */
 html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre,
 a, abbr, acronym, big, code, em, img, ins, kbd, q, s, small, strike, strong,
@@ -125,14 +125,14 @@ html, body {
 
 #_logo {
     float: left;
-    margin: 22px 22px 27px 0;
+    margin: 22px 22px 27px 0; /* 22px 22px 27px */
     width: 81px;
-    height: 38px;
+    height: 45px; /* 38px */
 }
 
 #_logo img {
-    width: 81px;
-    height: 38px;
+    width: 81px; /* 81px */
+    height: 45px; /38px */
     color: #439239;
     line-height: 55px;
     font-weight: 600;
@@ -1150,7 +1150,7 @@ button:focus::-moz-focus-inner, button::-moz-focus-inner {
 /* Footer contents */
 
 #_footer {
-    font-family: Helvetica, FreeSans, sans-serif;
+    font-family: Arezzo, Helvetica, FreeSans, sans-serif;
     z-index: 2; /* Else, #_inward overlays the footer */
     min-width: 130px;
     max-width: 988px;

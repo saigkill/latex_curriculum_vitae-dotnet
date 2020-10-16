@@ -22,7 +22,7 @@
 
 
         <Border Grid.Row="1" Margin="10" BorderThickness="1" BorderBrush="#FF619640">
-            <Grid Grid.Row="1" Name="grdPersonalSettings">
+            <Grid Grid.Row="1" Name="grdPersonalSettings" Background="#FFDAEBD0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
@@ -60,7 +60,7 @@
         </Border>
 
         <Border Grid.Row="2" Margin="10" BorderThickness="1" BorderBrush="#FF619640">
-            <Grid Grid.Row="2" Name="grdSmtpSettings" Margin="2">
+            <Grid Grid.Row="2" Name="grdSmtpSettings" Margin="2" Background="#FFDAEBD0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />

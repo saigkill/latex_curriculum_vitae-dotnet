@@ -78,4 +78,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Views\WriteJobApplication.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

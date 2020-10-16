@@ -15,7 +15,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
     	<procedure xml:id="proc.pre">
     		<step><para>Download LaTEX for Windows on: <link xlink:href="https://www.tug.org/texlive/acquire-netinstall.html">https://www.tug.org/texlive/acquire-netinstall.html</link>.</para></step>
     		<step><para>Download the App on: <link xlink:href="https://saigkill.github.io/latex_curriculum_vitae-dotnet/latex_curriculum_vitae.exe">https://saigkill.github.io/latex_curriculum_vitae-dotnet/latex_curriculum_vitae.exe</link>.</para></step>
-    		<step><para>Move the executable to the place, where you want (eg: Desktop or Userdirectory). The app will be executed there, without any installation. Also it delivers all needed dependencies in this one file.</para></step>
+    		<step><para>Move the executable to the place, where you want (eg: Desktop or Userdirectory). The app will be executed there, without any installation.</para></step>
     	</procedure>
     	</para>
 
@@ -68,7 +68,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 			<remark>In the most countries you have to order your material anti-chronologic. That means the first certificate is the last one, ordered to the oldest certificate. To provide this, you have to add a Prefix for each certificate. Lets say, you have three certificates from jobs in 2018, 2019 and 2020. Then prefix the certificates so:
 			</remark><itemizedlist>
 				<listitem>
-					<para>3_your_2018job.pdf</para>
+					<para>1_your_2018job.pdf</para>
 				</listitem>
 				<listitem>
 					<para>2_your_2019job.pdf</para>
