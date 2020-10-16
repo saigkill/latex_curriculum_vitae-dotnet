@@ -7,6 +7,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "latex_curriculum_vitae", "l
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "latex_curriculum_vitae-Setup", "latex_curriculum_vitae-Setup\latex_curriculum_vitae-Setup.wixproj", "{DFB557A4-0FC2-4228-803E-2B7704D6DB50}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD02FB94-E7B3-4840-BAEC-8EBEEF1043CC}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		CHANGELOG.md = CHANGELOG.md
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE.md = LICENSE.md
+		MAINTENANCE.md = MAINTENANCE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,8 +46,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C78BB2F2-1BB1-4F05-A99E-DF3E94547651}
-		RESX_SortFileContentOnSave = True
 		RESX_AutoCreateNewLanguageFiles = True
+		RESX_SortFileContentOnSave = True
+		SolutionGuid = {C78BB2F2-1BB1-4F05-A99E-DF3E94547651}
 	EndGlobalSection
 EndGlobal
