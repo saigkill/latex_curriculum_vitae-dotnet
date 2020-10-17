@@ -702,14 +702,14 @@ hljs.configure({
       <xsl:if test="$generate.footer.links != 0">
         <ul>
           <li>
-            <a href="http://saigkill.tuxfamily.org" target="_top">
+            <a href="http://saschamanns.de" target="_top">
               <xsl:call-template name="gentext">
                 <xsl:with-param name="key">authorsblog</xsl:with-param>
               </xsl:call-template>
             </a>
           </li>
           <li>
-            <a href="https://saigkill.tuxfamily.org/dotclear/?contact"
+            <a href="mailto:Sascha.Manns@outlook.de"
               target="_top">
               <xsl:call-template name="gentext">
                 <xsl:with-param name="key">authorscontact</xsl:with-param>

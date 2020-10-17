@@ -14,7 +14,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
     <para>Please follow the steps for the best user experience:
     	<procedure xml:id="proc.pre">
     		<step><para>Download LaTEX for Windows on: <link xlink:href="https://www.tug.org/texlive/acquire-netinstall.html">https://www.tug.org/texlive/acquire-netinstall.html</link>.</para></step>
-    		<step><para>Download the App on: <link xlink:href="https://saigkill.github.io/latex_curriculum_vitae-dotnet/latex_curriculum_vitae.exe">https://saigkill.github.io/latex_curriculum_vitae-dotnet/latex_curriculum_vitae.exe</link>.</para></step>
+    		<step><para>Download the App on: <link xlink:href="https://github.com/saigkill/latex_curriculum_vitae-dotnet/releases">https://github.com/saigkill/latex_curriculum_vitae-dotnet/releases</link>.</para></step>
     		<step><para>Move the executable to the place, where you want (eg: Desktop or Userdirectory). The app will be executed there, without any installation.</para></step>
     	</procedure>
     	</para>

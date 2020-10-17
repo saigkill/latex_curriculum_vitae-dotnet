@@ -41,7 +41,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
     </cover>    
     <abstract>      
       <para>        
-        <productname>latex_curriculum_vitae</productname> creates a job-application by using LaTEX.
+        <productname>Latex Curriculum Vitae</productname> is a simple solution for writing job applications with producing beautiful documents with LaTEX.
+You can write, compile and send the stuff directly within the app. Also you get a simple CSV file, what contains all sent stuff. You can use it as example in a Excel-Sheet.
       </para>
     </abstract>
     <legalnotice>
