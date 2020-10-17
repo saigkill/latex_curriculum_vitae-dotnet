@@ -44,18 +44,7 @@ namespace latex_curriculum_vitae
 
             #region Cleanup
             Setup.Cleanup();
-            #endregion
-
-            if (txtJobtitle.Text == "" || txtCompanyName.Text == "")
-            {
-                BtnGenerate.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                BtnGenerate.Visibility = Visibility.Visible;
-            }
-
-
+            #endregion            
 
             #region Settings
             User myuser = new User();

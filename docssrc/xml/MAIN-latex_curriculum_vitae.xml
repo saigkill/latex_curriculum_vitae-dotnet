@@ -28,17 +28,19 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
         </affiliation>
         <email>Sascha.Manns@outlook.de</email>
       </author>
-    </authorgroup>    
+    </authorgroup>
+    <cover>
+      <mediaobject>
+        <imageobject role="fo">
+          <imagedata fileref="cover.png" width="50%" align="center"/>
+        </imageobject>
+        <imageobject role="html">
+          <imagedata fileref="cover.png" width="50%" align="center"/>
+        </imageobject>
+      </mediaobject>
+    </cover>    
     <abstract>      
-      <para>
-        <mediaobject>
-          <imageobject role="fo">
-            <imagedata fileref="cover.png" width="50%" align="center"/>
-          </imageobject>
-          <imageobject role="html">
-            <imagedata fileref="cover.png" width="50%" align="center"/>
-          </imageobject>
-        </mediaobject>
+      <para>        
         <productname>latex_curriculum_vitae</productname> creates a job-application by using LaTEX.
       </para>
     </abstract>

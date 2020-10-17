@@ -10,8 +10,10 @@
     <RepositoryUrl>https://github.com/saigkill/latex_curriculum_vitae-dotnet/</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageIcon>profile.png</PackageIcon>
-    <Copyright>(c) 2020 Sascha Manns &lt;Sascha.Manns@outlook.de&gt;</Copyright>
+	<Configurations>Debug;Release</Configurations>
+    <Copyright>Copyright © 2020 Sascha Manns &lt;Sascha.Manns@outlook.de&gt;</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
+	<SatelliteResourceLanguages>en;de</SatteliteResourceLanguage>
     <ApplicationIcon>profile.ico</ApplicationIcon>
     <Authors>Sascha Manns</Authors>
     <Description>A simple helper for writing job applications.</Description>
