@@ -96,6 +96,12 @@ namespace latex_curriculum_vitae
             Process.Start(targetURL);
         }
 
+        public static void GetOnlineDocumentation(string target)
+        {
+            string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/" + "#" + target;
+            Process.Start(targetURL);
+        }
+
         /// <summary>
         /// This method just creates the directory structure, what lcv expected.
         /// </summary>
@@ -122,15 +128,15 @@ namespace latex_curriculum_vitae
             string targetPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
 
             // Letter of Application
-            File.Copy(Path.Combine(main, "Attachments", "Letter_of_Application") + "\\letter_of_application.tex", Path.Combine(targetPath, "Letter_of_Application") + "\\letter_of_application.tex");
+            File.Copy(Path.Combine(main, "Assets", "Letter_of_Application") + "\\letter_of_application.tex", Path.Combine(targetPath, "Letter_of_Application") + "\\letter_of_application.tex");
 
             // Curriculum Vitae
-            File.Copy(Path.Combine(main, "Attachments", "Curriculum_Vitae", "curriculum_vitae.tex"), Path.Combine(targetPath, "Curriculum_Vitae", "curriculum_vitae.tex"));
-            File.Copy(Path.Combine(main, "Attachments", "Curriculum_Vitae", "friggeri-cv.cls"), Path.Combine(targetPath, "Curriculum_Vitae", "friggeri-cv.cls"));
+            File.Copy(Path.Combine(main, "Assets", "Curriculum_Vitae", "curriculum_vitae.tex"), Path.Combine(targetPath, "Curriculum_Vitae", "curriculum_vitae.tex"));
+            File.Copy(Path.Combine(main, "Assets", "Curriculum_Vitae", "friggeri-cv.cls"), Path.Combine(targetPath, "Curriculum_Vitae", "friggeri-cv.cls"));
 
             // Pictures
-            string[] picList = Directory.GetFiles(Path.Combine(main, "Attachments", "Pictures"), "*");
-            string srcDir = Path.Combine(main, "Attachments", "Pictures");
+            string[] picList = Directory.GetFiles(Path.Combine(main, "Assets", "Pictures"), "*");
+            string srcDir = Path.Combine(main, "Assets", "Pictures");
             string destDir = Path.Combine(targetPath, "Pictures");
             foreach (string pic in picList)
             {
@@ -143,10 +149,10 @@ namespace latex_curriculum_vitae
             }
 
             // Bibliography
-            File.Copy(Path.Combine(main, "Attachments", "Appendix", "Bibliography", "bibliography.bib"), Path.Combine(targetPath, "Appendix", "Bibliography", "bibliography.bib"));
+            File.Copy(Path.Combine(main, "Assets", "Appendix", "Bibliography", "bibliography.bib"), Path.Combine(targetPath, "Appendix", "Bibliography", "bibliography.bib"));
 
             // Empty CSV file
-            File.Copy(Path.Combine(main, "Attachments", "CSV", "JobApplications.csv"), Path.Combine(targetPath, "JobApplications.csv"));
+            File.Copy(Path.Combine(main, "Assets", "CSV", "JobApplications.csv"), Path.Combine(targetPath, "JobApplications.csv"));
         }
 
         /// <summary>

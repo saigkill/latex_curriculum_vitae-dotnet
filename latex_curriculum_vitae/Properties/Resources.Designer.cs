@@ -664,6 +664,24 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Initiative application as ähnelt.
+        /// </summary>
+        public static string WJAInitiative {
+            get {
+                return ResourceManager.GetString("WJAInitiative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Initiative application ähnelt.
+        /// </summary>
+        public static string WJAInitiativeLabel {
+            get {
+                return ResourceManager.GetString("WJAInitiativeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Jobtitle: ähnelt.
         /// </summary>
         public static string WJAJobtitle {

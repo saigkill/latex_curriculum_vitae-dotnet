@@ -324,6 +324,12 @@ Mit freundlichem Gruß
   <data name="WJAHeader" xml:space="preserve">
     <value>Schreiben Sie Ihre Bewerbungen</value>
   </data>
+  <data name="WJAInitiative" xml:space="preserve">
+    <value>Initiativbewerbung als</value>
+  </data>
+  <data name="WJAInitiativeLabel" xml:space="preserve">
+    <value>Initiativbewerbung</value>
+  </data>
   <data name="WJAJobtitle" xml:space="preserve">
     <value>Titel des Jobs:</value>
   </data>

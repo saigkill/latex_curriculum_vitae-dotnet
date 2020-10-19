@@ -58,7 +58,6 @@ namespace latex_curriculum_vitae
             try
             {
                 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                //MessageBox.Show(config.FilePath);
                 var entry = config.AppSettings.Settings[key];
                 if (entry == null)
                     config.AppSettings.Settings.Add(key, value);

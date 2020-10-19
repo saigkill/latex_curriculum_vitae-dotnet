@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://docbook.org/xml/5.0/rng/docbookxi.rng"
             schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!DOCTYPE sect1
-[
-  <!ENTITY % entities SYSTEM "entity-decl.ent">
-    %entities;
-]>
 <sect1 version="5.0" xml:lang="en" xml:id="common_intro_making"
     xmlns="http://docbook.org/ns/docbook"
     xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -13,7 +8,7 @@
     <title>About the Making of This Documentation</title>
     
     <para>This documentation is written in <link xlink:show="new"
-            xlink:href="http://www.docbook.org">DocBook&nbsp;5</link>. The XML source files were
+            xlink:href="http://www.docbook.org">DocBook5</link>. The XML source files were
         validated by <command>jing</command> (see <link
             xlink:href="https://code.google.com/p/jing-trang/"/>), processed by
             <command>xsltproc</command>, and converted into XSL-FO using a customized version of

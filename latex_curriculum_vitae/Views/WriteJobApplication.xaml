@@ -98,15 +98,18 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Margin="5,-4,10,21" Height="30" Grid.ColumnSpan="6" Grid.RowSpan="2">
                     <Label Content="{x:Static p:Resources.WJAApplication}" FontWeight="Bold" HorizontalAlignment="Center"
                        Height="29"/>
                 </StackPanel>
                 <Label Content="{x:Static p:Resources.WJAUrl}" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtURL" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Margin="5"/>
+                <TextBox x:Name="txtURL" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Margin="5"/>
+                
                 <Label Content="{x:Static p:Resources.WJAEmail}" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtEmail" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" Margin="5"/>
+                <TextBox x:Name="txtEmail" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Margin="5"/>
+                <CheckBox x:Name="chkInitiative"  Content="{x:Static p:Resources.WJAInitiativeLabel}" Grid.Column="5" HorizontalAlignment="Left" Margin="5" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" IsThreeState="False" Checked="ChkInititativeChecked" Unchecked="ChkInitiativeUnchecked"/>
             </Grid>
         </Border>
 
@@ -121,7 +124,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Button x:Name="BtnExit" Width="150" Click="BtnExit_Click" Grid.Row="0" Grid.Column="3" Content="{x:Static p:Resources.BtnExit}"/>
-            <Button x:Name="BtnGenerate" Width="150" Grid.Row="0" Grid.Column="2" Content="{x:Static p:Resources.WJABtnGenerate}"/>
+            <Button x:Name="BtnGenerate" Click="BtnGenerate_Click" Width="150" Grid.Row="0" Grid.Column="2" Content="{x:Static p:Resources.WJABtnGenerate}"/>
             <Button Click="BtnGetOnlineHelp_Click" Width="150" Grid.Row="0" Grid.Column="0">
                 <Image Height="15" Width="15" Source="/Views/F1Help_16x.png" RenderTransformOrigin="0.172,0.489"/>
             </Button>

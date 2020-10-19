@@ -26,17 +26,21 @@ namespace latex_curriculum_vitae
     /// </summary>
     public partial class WriteJobApplicationWindow : Window
     {
+        public string SubjectPrefixGlob { get; set; }
 
         #region Initialize Main
         public WriteJobApplicationWindow()
         {
             InitializeComponent();
+            this.Title = "Latex Curriculum Vitae" + " - " + Properties.Resources.WJAHeader;
+            SubjectPrefixGlob = Properties.Resources.Subjectprefix;
         }
         #endregion
 
         #region Generating job application
         private void BtnGenerate_Click(object sender, EventArgs e)
         {
+
             #region Private Variables
             string addressline;
             bool compemail_set;
@@ -81,7 +85,7 @@ namespace latex_curriculum_vitae
 
             #region Build, Compile and Send
             Build.PrepareBuild();
-            string subject = Build.GetSubject(myuser.Subjectprefix, myapplication.Jobtitle);
+            string subject = Build.GetSubject(SubjectPrefixGlob, myapplication.Jobtitle);
             Build.CreateApplicationConfig(myapplication.Jobtitle, company.Name, contact.Name, company.Street, company.City, contact.Salutation, subject, addressline);
             Build.CompileApplication();
             Build.CombineApplication(myuser.Firstname, myuser.Familyname);
@@ -93,7 +97,7 @@ namespace latex_curriculum_vitae
             }
             else
             {
-                subject = Build.GetEmailSubject(myuser.Subjectprefix, myapplication.Jobtitle);
+                subject = Build.GetEmailSubject(SubjectPrefixGlob, myapplication.Jobtitle);
                 string finalpdf = Build.GetFinalPdfName(myuser.Firstname, myuser.Familyname);
                 Email.CreateMessage(myuser.Firstname, myuser.Familyname, myuser.Email, contact.Name, myapplication.Email, subject, contact.Salutation, finalpdf, myuser.SmtpServer, myuser.SmtpUser, myuser.SmtpPass, myuser.SmtpPort);
             }
@@ -112,7 +116,9 @@ namespace latex_curriculum_vitae
             txtJobtitle.Clear();
             txtURL.Clear();
             txtZIP.Clear();
-            #endregion
+            chkInitiative.IsChecked = false;
+            SubjectPrefixGlob = Properties.Resources.Subjectprefix;
+            #endregion            
         }
         #endregion
 
@@ -129,5 +135,14 @@ namespace latex_curriculum_vitae
             Setup.GetOnlineDocumentation();
         }
         #endregion        
+        private void ChkInititativeChecked(object sender, EventArgs e)
+        {
+            SubjectPrefixGlob = Properties.Resources.WJAInitiative;
+        }
+
+        private void ChkInitiativeUnchecked(object sender, EventArgs e)
+        {
+            SubjectPrefixGlob = Properties.Resources.Subjectprefix;
+        }
     }
 }

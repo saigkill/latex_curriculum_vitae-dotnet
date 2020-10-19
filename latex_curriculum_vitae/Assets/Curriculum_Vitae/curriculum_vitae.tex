@@ -29,15 +29,15 @@ pdfauthor={Sascha Manns}, %%
 pdfsubject={Bewerbungsunterlagen}, %%
 pdfcreator={XeLaTEX and Biber with hyperref-package.},
 pdfproducer={Sascha Manns, Mayen}, %%
-pdfkeywords={Manns, Mayen, Bewerbung, IT-Support, Community, Linux, Programmierer, Dispatcher, Buchautor, Schriftsteller, Geschäftsprozess} %%
+pdfkeywords={Manns, Mayen, Bewerbung, IT-Support, Linux, Windows, Programmierer, Buchautor, Schriftsteller, Geschäftsprozess} %%
 }
 \usepackage{graphicx}
 \usepackage{xltxtra}
 \usepackage{progressbar}
 \usepackage{pdfpages}
 
-\addbibresource{./bibliography.bib} % Specify the bibliography file to include publications
-\input{$HOME/AppData/Roaming/latex_curriculum_vitae/personal_data.tex}
+\addbibresource{bibliography.bib}
+\input{personal_data.tex}
 
 \begin{document}
 
@@ -62,7 +62,7 @@ Germany
 %\href{http://saschamanns.de}{saschamanns.de}\includegraphics[width=0.3cm]{../Pictures/aboutme.png}
 Geburtsdatum: 01.10.1979
 \section{Social Media}
-\href{https://www.xing.com/profile/SaschaZyroslawKyrill_Manns}{Sascha\_Manns}\includegraphics[width=0.4cm]{$HOME/AppData/Roaming/latex_curriculum_vitae/Pictures/xing.png}
+%\href{https://www.xing.com/profile/SaschaZyroslawKyrill_Manns}{SaschaManns}\includegraphics[width=0.4cm]{$HOME/AppData/Roaming/latex_curriculum_vitae/Pictures/xing.png}
 \href{https://www.linkedin.com/in/saigkill}{saigkill}\includegraphics[width=0.4cm]{$HOME/AppData/Roaming/latex_curriculum_vitae/Pictures/linkedin.png}
 \href{https://www.facebook.com/sascha.manns}{sascha.manns}\includegraphics[width=0.4cm]{$HOME/AppData/Roaming/latex_curriculum_vitae/Pictures/facebook.png}
 \href{https://twitter.com/saigkill}{saigkill}\includegraphics[width=0.4cm]{$HOME/AppData/Roaming/latex_curriculum_vitae/Pictures/twitter.png}
@@ -88,6 +88,7 @@ Geburtsdatum: 01.10.1979
 		\item Konzeption \& Programmierung betriebswirtschaftlicher Anwendungen und Prozesse
 		\item Realisierung \& Anpassung Belegerstellung
 	\end{itemize}
+	Stack: \textbf{C\#, Visual Basic 6, Cachè, Windows}
 }
 %------------------------------------------------
 \entry
@@ -102,6 +103,7 @@ Geburtsdatum: 01.10.1979
         	\item Erstellung Dokumentation
         	\item telefonischer Support
 	\end{itemize}
+	Stack: \textbf{JavaScript, PHP, Wordpress, Windows}
 }
 %------------------------------------------------
 \entry
@@ -122,6 +124,7 @@ Geburtsdatum: 01.10.1979
 		\item Produktion Präsentationen für Mandanten und interne Schulungen
 		\item Modellierung von Geschäftsprozessen nach BPMN
 	\end{itemize}
+	Stack: \textbf{XML, DocBook, Ruby, Linux C\#}
 }
 %------------------------------------------------
 \entry
@@ -140,6 +143,7 @@ Geburtsdatum: 01.10.1979
         \item Annahme, Erfassung und Bearbeitung eingehender Benutzeranträge
         \item Benutzerkontenverwaltung im Active Directory
     \end{itemize}
+		Stack: \textbf{Windows, SAP Amsys IDM, Active Directory}
 }
 %------------------------------------------------
 \entry
@@ -153,6 +157,7 @@ Geburtsdatum: 01.10.1979
         \item Einführung des Lektorenteams in das Projekt
         \item Einführung einer Google Code-In Studentin in den Textsatz (Teilnahme als Mentor)
     \end{itemize}
+		Stack: \textbf{Linux, DocBook}
 }
 \end{entrylist}
 \begin{entrylist}
@@ -174,6 +179,7 @@ Geburtsdatum: 01.10.1979
         \item Paketverwaltung einiger RPM-Pakete
         \item openSUSE Membership Application Team
     \end{itemize}
+		Stack: \textbf{Linux, DocBook, Shell (Bash), Make}
 }
 %------------------------------------------------
 \entry
@@ -190,13 +196,21 @@ Geburtsdatum: 01.10.1979
         \item Compiling und Packaging neuer Binärpakete
         \item Verteilung via Buildservice
     \end{itemize}
+		Stack: \textbf{Linux, Shell (Bash), Make, Portable Objects}
 }
 %-----------------------------------------------
 \entry
 {07/2000 -- 06/2007}
 {Ersatzdienst zum Zivildienst}
 {Selters/Ts.}
-{\emph{Geistlicher eines religiösen Ordens}}
+{Orden der Vollzeitdiener der ZJ\\
+		 Detailierte Aufgaben:
+    \begin{itemize}
+        \item Linux-Verfügbarmachung der eigenen Bibelsoftware
+        \item Betatesting der Software        
+    \end{itemize}
+		Stack: \textbf{Windows, Linux}
+}
 %------------------------------------------------
 \entry
 {08/1998 -- 07/2000}
@@ -211,6 +225,7 @@ Geburtsdatum: 01.10.1979
         \item Rechnungserstellung
         \item Projektplanung
     \end{itemize}
+		Stack: \textbf{Unix, BASIC}
 }
 %------------------------------------------------
 \end{entrylist}
@@ -257,34 +272,37 @@ Allgemeine kaufm. Tätigkeiten.
 %-----------------------------------------------
 \end{entrylist}
 \newpage
+
 %----------------------------------------------------------------------------------------
 % COMPUTER SKILLS
 % ---------------------------------------------------------------------------------------
 
 \section{Fremdsprachen}
-Deutsch \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=blue]{1.0}
-Englisch \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=blue]{0.6}
+Deutsch %\progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=blue]{1.0}
+Englisch %\progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=blue]{0.6}
 
 \section{IT-Kenntnisse}
 \begin {itemize}
-	\item Office: Microsoft365 \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.8}
-    	\item Cloud Computing: Microsoft Azure \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.3}
-	\item OS: Linux \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.7}, Windows 10 \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.9}
-	\item CMS: Wordpress \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.7}
-	\item Agile: SCRUM \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.7}
+	\item Office: Microsoft365 
+  \item Cloud Computing: Microsoft Azure
+	\item OS: Linux, Windows 10
+	\item CMS: Wordpress 
+	\item Agile: SCRUM 
 \end{itemize}
 
 \section{Programmierung}
 \begin{itemize}
-	\item .NET Framework (C\# \& Visual Basic) \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.8}
-	\item .NET Core (C\#) \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.4}
-	\item Ruby \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.4}
-	\item JAVA \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.2}
-	\item HTML5, CSS, JavaScript \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.6}
-	\item SOAP \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.6}
-	\item Jasper Report \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.6}, List \& Label \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.5}
-	\item TSQL/MSSQL \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.9}
-	\item Intersystems Caché \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledcolor=green]{0.5}
+	\item .NET Framework (C\# \& Visual Basic) 
+	\item .NET Core (C\#) 
+	\item Windows Presentation Foundation
+	\item Ruby 
+	%\item JAVA 
+	\item HTML5, CSS, JavaScript 
+	\item SOAP 
+	\item DocBook/XML
+	\item Jasper Report, List \& Label
+	\item TSQL/MSSQL 
+	\item Intersystems Caché
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -301,15 +319,25 @@ Englisch \progressbar[linecolor=blue,tickscolor=orange,emptycolor=white,filledco
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
+%	MEMBERSHIPS SECTION
+%----------------------------------------------------------------------------------------
+\section{Mitgliedschaften}
+\begin{itemize}
+	\item Gesellschaft für Informatik
+	\item Forum Informatiker für Frieden und Gesellschaftliche Verantwortung
+\end{itemize}
+
+\newpage
+%----------------------------------------------------------------------------------------
 %	PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
-%\section{Publikationen}
+\section{Publikationen}
 
-%\printbibsection{article}{Artikel} % Print all articles from the bibliography
+\printbibsection{article}{Artikel} % Print all articles from the bibliography
 
-%\printbibsection{book}{Bücher} % Print all books from the bibliography
+\printbibsection{book}{Bücher} % Print all books from the bibliography
 
-%\printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
+\printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
 
 %\printbibsection{report}{research reports} % Print all research reports from the bibliography
 

@@ -25,6 +25,7 @@ namespace latex_curriculum_vitae
         public string URL { get; set; }
         public string Email { get; set; }
         public string Jobtitle { get; set; }
+        public string SubjectPrefix { get; set; }
 
         /// <summary>
         /// That Constructor creates the JobApplication object by using the arguments.        
@@ -37,6 +38,7 @@ namespace latex_curriculum_vitae
             URL = aurl;
             Email = aemail;
             Jobtitle = FixJobApplication(ajobtitle);
+            SubjectPrefix = Properties.Resources.Subjectprefix;
         }
 
         /// <summary>

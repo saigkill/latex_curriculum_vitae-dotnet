@@ -16,6 +16,7 @@
 // Dependencies
 
 using System;
+using System.Configuration;
 using System.Windows;
 //using System.Windows.Shapes;
 
@@ -30,7 +31,9 @@ namespace latex_curriculum_vitae
         public UserSettingsWindow()
         {
             InitializeComponent();
+            this.Title = "Latex Curriculum Vitae" + " - " + Properties.Resources.UsHeader;
 
+            ConfigurationManager.RefreshSection("appSettings");
             txtFirstname.Text = Configuration.GetSetting("firstname");
             txtFamilyname.Text = Configuration.GetSetting("familyname");
             txtStreet.Text = Configuration.GetSetting("mystreet");
@@ -59,6 +62,7 @@ namespace latex_curriculum_vitae
             Configuration.SetSetting("smtp-user", txtSMTPUser.Text);
             Configuration.SetSetting("smtp-pass", txtSMTPPass.Text);
             Configuration.SetSetting("smtp-port", txtSMTPPort.Text);
+            ConfigurationManager.RefreshSection("appSettings");
 
             this.Close();
         }

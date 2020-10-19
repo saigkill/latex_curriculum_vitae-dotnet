@@ -30,6 +30,7 @@ namespace latex_curriculum_vitae
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = Properties.Resources.MWTitle;
 
         }
         #endregion       

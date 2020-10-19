@@ -51,6 +51,9 @@ namespace latex_curriculum_vitae
             // Bibliography
             File.Copy(Path.Combine(srcPath, "Appendix", "Bibliography", "bibliography.bib"), Path.Combine(mytmpDir, "bibliography.bib"));
 
+            // Personal Data
+            File.Copy(Path.Combine(srcPath, "personal_data.tex"), Path.Combine(mytmpDir, "personal_data.tex"));
+
 
         }
 

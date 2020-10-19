@@ -14,37 +14,36 @@
 %---------------------------------------------------------------------------
 \documentclass%%
 %---------------------------------------------------------------------------
-  [fontsize=11pt,%%          Schriftgroesse
+  [fontsize=11pt,%%          Fontsize
 %---------------------------------------------------------------------------
 % Satzspiegel
-   paper=a4,%%               Papierformat
-   enlargefirstpage=on,%%    Erste Seite anders
-   %pagenumber=headright,%%   Seitenzahl oben mittig
+   paper=a4,%%               Paperformat
+   enlargefirstpage=on,%%    Firstpage other
 %---------------------------------------------------------------------------
 % Layout
-   headsepline=off,%%         Linie unter der Seitenzahl
-   parskip=half,%%           Abstand zwischen Absaetzen
+   parskip=half,%%           Spacing between paragraphs
 %---------------------------------------------------------------------------
-% Was kommt in den Briefkopf und in die Anschrift
-   fromalign=right,%%        Plazierung des Briefkopfs
-   fromphone=on,%%           Telefonnummer im Absender
-   fromrule=aftername,%%     Linie im Absender (aftername, afteraddress)
-   fromfax=off,%%            Faxnummer
-   fromemail=on,%%           Emailadresse
-   fromurl=off,%%            Homepage
-   fromlogo=off,%%            Firmenlogo
-   addrfield=on,%%           Adressfeld fuer Fensterkuverts
-   backaddress=off,%%         ...und Absender im Fenster
-   subject=beforeopening,%%  Plazierung der Betreffzeile
-   locfield=narrow,%%        zusaetzliches Feld fuer Absender
-   foldmarks=on,%%           Faltmarken setzen
-   numericaldate=off,%%      Datum numerisch ausgeben
+% What to place in the letter header and the addressfield
+   fromalign=right,%%        Align of letter header
+   fromphone=on,%%           Phonenumber in header (on/off)
+   fromrule=aftername,%%     Line in sender (aftername, afteraddress)
+   fromfax=off,%%            Faxnumber (on/off)
+   fromemail=on,%%           Emailaddress (on/off)
+   fromurl=off,%%            Homepage (on/off)
+   addrfield=on,%%           Adressfield for window envelope (on/off)
+   backaddress=off,%%        Senderadress above the adressfield (o/off)
+   subject=beforeopening,%%  Subject before opening
+   locfield=narrow,%%        
+   foldmarks=on,%%           Foldmarks (on/off)
+   numericaldate=off,%%      Print date numerical (on/off)
    refline=narrow,%%         Geschaeftszeile im Satzspiegel
-   firstfoot=off,%%           Footerbereich
+   firstfoot=off,%%          Print footer (on/off)
 %---------------------------------------------------------------------------
 % Formatierung
-   draft=off%%                Entwurfsmodus
+   draft=off%%               Draft mode (on/off)
 ]{scrlttr2}
+%---------------------------------------------------------------------------
+% Used Latex Packages
 %---------------------------------------------------------------------------
 \usepackage[english, ngerman]{babel}
 \usepackage{url}
@@ -58,11 +57,9 @@
 \usepackage[T1]{fontenc}
 
 %---------------------------------------------------------------------------
-% Schriften werden hier definiert
+% Defining fonts
 \renewcommand*\familydefault{\sfdefault} % Latin Modern Sans
-%\setmainfont[Mapping=tex-text]{KoblenzPro}
 \setkomafont{fromname}{\sffamily\color{mygray}\LARGE}
-%\setkomafont{pagenumber}{\sffamily}
 \setkomafont{subject}{\mdseries}
 \setkomafont{backaddress}{\mdseries}
 \setkomafont{fromaddress}{\small\sffamily\mdseries\color{mygray}}
@@ -70,25 +67,25 @@
 % -------------------------------------------------
 % Personal Data
 % -------------------------------------------------
-\input{$HOME/AppData/Roaming/latex_curriculum_vitae/personal_data.tex}
+\input{personal_data.tex}
 
 % -------------------------------------------------
 % Details from Job Offer
 % -------------------------------------------------
-\input{./application_details.tex}
+\input{application_details.tex}
 
 %---------------------------------------------------------------------------
 \begin{document}
 %---------------------------------------------------------------------------
-% Briefstil und Position des Briefkopfs
-\LoadLetterOption{DIN} %% oder: DINmtext, SN, SNleft, KOMAold.
+% Style and Position if letter header
+\LoadLetterOption{DIN} %% or: DINmtext, SN, SNleft, KOMAold.
 \makeatletter
-\@setplength{sigbeforevskip}{17mm} % Abstand der Signatur von dem closing
-\@setplength{firstheadvpos}{12mm} % Abstand des Absenderfeldes vom Top
-\@setplength{firstfootvpos}{275mm} % Abstand des Footers von oben
+\@setplength{sigbeforevskip}{17mm} % Spacing from Signature to Closing
+\@setplength{firstheadvpos}{12mm} % Spacing from Top to adressfield
+\@setplength{firstfootvpos}{275mm} % Spacing from Top to Footer
 \@setplength{firstheadwidth}{\paperwidth}
 \@setplength{locwidth}{70mm}   % Breite des Locationfeldes
-\@setplength{locvpos}{65mm}    % Abstand des Locationfeldes von oben
+\@setplength{locvpos}{65mm}    % Spacing des Locationfeldes von oben
 \ifdim \useplength{toaddrhpos}>\z@
   \@addtoplength[-2]{firstheadwidth}{\useplength{toaddrhpos}}
 \else
@@ -97,15 +94,12 @@
 \@setplength{foldmarkhpos}{6.5mm}
 \makeatother
 %---------------------------------------------------------------------------
-% Farben werden hier definiert
-% define gray for header
+% Defining colors
 \definecolor{mygray}{gray}{.55}
-% define blue for address
 \definecolor{myblue}{rgb}{0.25,0.50,0.75}
 \definecolor{mygruen}{rgb}{0.35,0.70,0.30}
-%\setkomavar{fromlogo}{\includegraphics[scale=0.2]{pabook.jpg}}
 %---------------------------------------------------------------------------
-% Absender Daten +49\,(0)\,2651\,40\,14\,045
+% Sender Data
 \setkomavar{fromname}{\firstname\ \familyname}
 \setkomavar{fromaddress}{\mystreet\\\mycity}
 \setkomavar{fromphone}[\Telefon~]{\myphone}
@@ -116,29 +110,15 @@
 
 \setkomavar{backaddressseparator}{ - }
 \setkomavar{signature}{\\[-4\baselineskip]%
-%\rule{10em}{2\baselineskip}\\
 \includegraphics[scale=0.5]{$HOME/AppData/Roaming/latex_curriculum_vitae/Pictures/signatur.png}}
-%\setkomavar{backaddress}{Tim Metzner, Felderhof 112, 40880 Ratingen} % wenn erwünscht kann hier eine andere Backaddress eingetragen werden
-%\setkomavar{signature}{SASCHA MANNS}
-% signature same indention level as rest
-%\renewcommand*{\raggedsignature}{\raggedright}
-%\setkomavar{location}{\raggedleft
-
-%Kundennummer: 12345678 \\}
-
-% Anlage neu definieren
-%\renewcommand{\enclname}{Anlagen}
-%\setkomavar{enclseparator}{: }
 %---------------------------------------------------------------------------
-% Seitenstil
-%pagenumber=footmiddle
-\pagestyle{plain}%% keine Header in der Kopfzeile bzw. plain
+% Pagestyle
+\pagestyle{plain}
 \pagenumbering{arabic}
 %---------------------------------------------------------------------------
 %---------------------------------------------------------------------------
 \firstfoot{\footnotesize%
 \textcolor{mygray}{\rule[3pt]{\textwidth}{.4pt} \\}
-%\rule[3pt]{\textwidth}{.4pt} \\
 \begin{tabular}[t]{l@{}}%
 \usekomavar{fromname}\\
 \usekomavar{fromaddress}\\
@@ -156,34 +136,20 @@
 }%
 }%
 %---------------------------------------------------------------------------
-% Bankverbindung
-%\setkomavar{frombank}{Kto. 198\ 242\ 620\\
-%BLZ 576\,500\,10\\
-%Kreissparkasse Mayen}
-\setkomavar{frombank}{\mybank}
-%---------------------------------------------------------------------------
-%\setkomavar{yourref}{}
-%\setkomavar{yourmail}{}
-%\setkomavar{myref}{}
-%\setkomavar{customer}{}
-%\setkomavar{invoice}{}
-%---------------------------------------------------------------------------
-% Datum und Ort werden hier eingetragen
-\setkomavar{date}{den \today}
+% Date and Place
+\setkomavar{date}{den \today} % using todays date
 \setkomavar{place}{Mayen}
 %---------------------------------------------------------------------------
 
 
 %---------------------------------------------------------------------------
-% Hier beginnt der Brief, mit der Anschrift des Empfängers
-
+% Receivers adress
 \begin{letter}{\addressstring}
 
 %---------------------------------------------------------------------------
-% Der Betreff des Briefes
+% Subject of the letter
 \setkomavar{subject}{\textbf{\subject}}
 %---------------------------------------------------------------------------
-%\opening{Sehr geehrter \Ansprechpartner,}
 \opening{\salutation}
 Ich bin Fachinformatiker in der Anwendungsentwicklung und bereits 10 Jahre im IT-Bereich tätig. Seit meinem ersten Heimcomputer (Commodore 64) beschäftige ich mich mit Computern. Erfahrungen konnte ich bereits in den Branchen Bankwesen, Gesundheit, Bauwesen und Automotive sammeln. Gearbeitet habe ich hier im Bereich der Desktop-Anwendungsentwicklung, der mobilen Appentwicklung, der Webentwicklung, der Dokumentation und des Supports. 
 
@@ -191,13 +157,8 @@ In den letzten beiden Stellen war ich als Softwareentwickler tätig, und sowohl 
 
 Ausserdem habe ich ein ausgeprägtes Qualitätsbewusstsein. Gerade beim Programmieren spielt es eine Rolle, seine Programme so zu gestalten, das jeder andere damit zurechtkommt. Insgesamt wende ich die Möglichkeiten des Clean-Codes an, um meine Codebasis wartbar zu halten, bei minimalem Aufwand. Auch neue Technologien probiere ich gerne aus, um Lösungen für künftige Probleme zu haben, oder Kostenminimierungen zu bewirken.
 
-Ich wäre kurzfristig für Sie verfügbar. Auf Ihre Einladung freue ich mich sehr.
+Ich wäre kurzfristig für Sie verfügbar. Auf Ihre Einladung freue ich mich sehr. %Die Gehaltsvorstellung läge bei 36.000€ p.a.
 \closing{Mit freundlichen Grüßen}
-
-%---------------------------------------------------------------------------
-%\ps{PS:}
-%\encl{Bewerbungsunterlagen}
-%\cc{}
 %---------------------------------------------------------------------------
 \end{letter}
 %---------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<?xml-model href="http://docbook.org/xml/5.0CR3/rng/docbookxi.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<chapter version="5.0" xml:id="installation" xmlns="http://docbook.org/ns/docbook"
+<?xml-model href="http://docbook.org/xml/5.0CR3/rng/docbookxi.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<chapter version="5.0" xml:id="cha.installation"
+	xmlns="http://docbook.org/ns/docbook"
 	xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info>
 		<title>Download, Installation &amp; Configuration</title>
@@ -9,15 +9,31 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 	<indexterm>
 		<primary>Download</primary>
 		<secondary>Installation</secondary>
-	</indexterm>	
-    
-    <para>Please follow the steps for the best user experience:
-    	<procedure xml:id="proc.pre">
-    		<step><para>Download LaTEX for Windows on: <link xlink:href="https://www.tug.org/texlive/acquire-netinstall.html">https://www.tug.org/texlive/acquire-netinstall.html</link>.</para></step>
-    		<step><para>Download the App on: <link xlink:href="https://github.com/saigkill/latex_curriculum_vitae-dotnet/releases">https://github.com/saigkill/latex_curriculum_vitae-dotnet/releases</link>.</para></step>
-    		<step><para>Move the executable to the place, where you want (eg: Desktop or Userdirectory). The app will be executed there, without any installation.</para></step>
-    	</procedure>
-    	</para>
+	</indexterm>
+
+	<section xml:id="sec.preperations">
+	<info>
+		<title>Preparations</title>
+	</info>
+	<para>Please follow the steps for the best user experience:
+		<procedure xml:id="proc.preperations">
+			<step>
+				<para>Download LaTEX for Windows on: <link xlink:href="https://www.tug.org/texlive/acquire-netinstall.html">https://www.tug.org/texlive/acquire-netinstall.html</link>.
+				</para>
+			</step>
+			<step>
+				<para>Download the App on: <link xlink:href="https://github.com/saigkill/latex_curriculum_vitae-dotnet/releases">https://github.com/saigkill/latex_curriculum_vitae-dotnet/releases</link>.
+				</para>
+			</step>
+			<step>
+				<para>Move the executable to the place, where you want (eg: Desktop or Userdirectory). The app will be executed there, without any installation.</para>
+			</step>
+			<step>
+				<para>Launch the app.</para>
+			</step>
+		</procedure>
+	</para>
+	</section>	
 
 	<section xml:id="installation-firstrun">
 		<info>
@@ -26,7 +42,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 		<indexterm>
 			<primary>User settings</primary>
 		</indexterm>
-		<para>After launching <productname>latex_curriculum_vitae</productname> the first time, it opens a User settings window, where you can place your information.</para>
+		<para xml:id="par.usersettings">After launching <productname>latex_curriculum_vitae</productname> the first time, it opens a User settings window, where you can place your information.</para>
 		<mediaobject>
 			<imageobject role="fo">
 				<imagedata fileref="UserSettings.png" width="5%" align="center"/>
@@ -35,7 +51,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 				<imagedata fileref="UserSettings.png" width="5%" align="center"/>
 			</imageobject>
 		</mediaobject>
-		<para>The Email settings are mandatory in case of you wish to send out the emails directly. The needed information about the SMTP host you get in your email-providers settings.</para>
+		<important><para>The Email settings are mandatory in case of you wish to send out the emails directly. The needed information about the SMTP host you get in your email-providers settings.</para></important>
+				
 		<para>The <guibutton>Save</guibutton> Button saves your changes and closes the window. The <guibutton>Close</guibutton> just closes the window without any changes in the config file. If you are using the button: <mediaobject>
 			<imageobject role="fo">
 				<imagedata fileref="F1Help_16x.png" width="5%" align="center"/>
@@ -43,62 +60,88 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 			<imageobject role="html">
 				<imagedata fileref="F1Help_16x.png" width="5%" align="center"/>
 			</imageobject>
-		</mediaobject> then you forwarded to the online documentation (this one).</para>		
-		<para>During the firstrun <productname>latex_curriculum_vitae</productname> installs a bunch of
+		</mediaobject> then you forwarded to the online documentation (this one).</para>
+	<para>During the firstrun of <productname>latex_curriculum_vitae</productname> installs a bunch of
 			needed files at: <filename>%appdata%/latex_curriculum_vitae</filename>. In my case the
 			full path looks like:
-				<filename>C:\Users\Sasch\Appdata\Roaming\latex_curriculum_vitae</filename>. You also
+		<filename>C:\Users\Sasch\Appdata\Roaming\latex_curriculum_vitae</filename>. You also
 			can type in Windows Explorers addressfield
-				<filename>%appdata%/latex_curriculum_vitae</filename>.</para>
-		    <para>The AppData directory hold all relevant data for building your job application. After the copy process is done, close the App, because you have sone things to do before producing a job application.</para>
-		<para>Your Appdata directory looks like:</para>
-		<mediaobject>
-			<imageobject role="fo">
-				<imagedata fileref="AppDataDir.png" width="5%" align="center"/>
-			</imageobject>
-			<imageobject role="html">
-				<imagedata fileref="AppDataDir.png" width="5%" align="center"/>
-			</imageobject>
-		</mediaobject>
-		<para>Let's show what is important there. The first Directoty contains 3 directories (Bibliography, Certificates and Certificates of Employment). The Bibliography directory only holds a file called <filename>bibliography.bib</filename>. This is a standard bibfile from Latex, currently filled with my 
-			publications. Feel free to replace their with yours. The second directory <filename>Certificates</filename> are empty. In that directory, you can place all your certificates (maybe a further education or a course what you finished). The third directory is <filename>Certificates of Employment</filename> is reserved
+		<filename>%appdata%/latex_curriculum_vitae</filename>.
+	</para>
+	<para>The AppData directory hold all relevant data for building your job application. After the copy process is done, close the App, because you have sone things to do before producing a job application.</para>
+	<para>Your Appdata directory looks like:</para>
+	<mediaobject>
+		<imageobject role="fo">
+			<imagedata fileref="AppDataDir.png" width="5%" align="center"/>
+		</imageobject>
+		<imageobject role="html">
+			<imagedata fileref="AppDataDir.png" width="5%" align="center"/>
+		</imageobject>
+	</mediaobject>
+	<para>Let's show what is important there. The first Directory contains 3 directories
+		<itemizedlist>
+			<listitem><para>Bibliography</para></listitem>
+			<listitem><para>Certificates</para></listitem>
+			<listitem><para>Certificates of Employment</para></listitem>
+		</itemizedlist>
+	 The Bibliography directory only holds a file called <filename>bibliography.bib</filename>. 
+		This is a standard bibfile from Latex, currently filled with my publications. Feel free to replace their with yours. 
+		<important><para>
+		In case you are not using this feature so just comment out in the <filename>curriculum_vitae.tex</filename> file the part <code>\addbibresource{bibliography.bib}</code> and also the section:
+		<code>
+\section{Publikationen}
+\printbibsection{article}{Artikel}
+\printbibsection{book}{Bücher} 
+\printbibsection{misc}{other publications}
+		</code>
+		</para></important>
+		The second directory <filename>Certificates</filename> is empty. In that directory, you can place all 
+		your certificates (maybe a further education or a course what you finished). The third directory is <filename>Certificates of Employment</filename> is reserved
 		for that kind of certificates, what you become from your boss after ending your job. For the <filename>Certificates</filename> and the <filename>Certificates of Employment</filename> are some things important.</para>
-		<example xml:id="ex.sorting">
-			<title>Sorting the examples</title>
-			<remark>In the most countries you have to order your material anti-chronologic. That means the first certificate is the last one, ordered to the oldest certificate. To provide this, you have to add a Prefix for each certificate. Lets say, you have three certificates from jobs in 2018, 2019 and 2020. Then prefix the certificates so:
-			</remark><itemizedlist>
-				<listitem>
-					<para>1_your_2018job.pdf</para>
-				</listitem>
-				<listitem>
-					<para>2_your_2019job.pdf</para>
-				</listitem>
-				<listitem>
-					<para>3_your_2020job.pdf</para>
-				</listitem>
-			</itemizedlist>
-			<remark>Your mention is right: The next will be a 4_your_2021job.pdf. By preparing the files in that case, i can do a reverse ordering by rhe app itself.</remark>
-		</example>
-		<para>Now we looking the other directories. We have a <filename>Curriculum_Vitae</filename> directory. And it contains a predefined LaTEX file for the curriculum vitae called <filename>curriculum_vitae.tex</filename>. Then we have a file <filename>friggeri-cv.cls</filename>. As you maybe expect, this
-		is the class file for producing the curriculum vitae. The <filename>Letter of Application</filename> directory holds the <filename>letter_of_application.tex</filename> file, what we use for producing the letter of application. The <filename>Pictures</filename> directory contains some icons for building the cv and also a
-		<filename>signature.png</filename> and a <filename>userpic.jpg</filename>. Just replace them with your own signature file and userpic.</para>
-		<para>In your AppData directory we also have two other files. Per default, the <filename>JobApplications.csv</filename> is empty, and will be filled during the creating part of the job application. You can open the csv file with a Excel or LibreOffice Calc.The <filename>personal_data.tex</filename> holds your personal data. As you set your preferences in the User Settings Window, this file was
-			produced. It will be newly created after each iteration. <important><para>So if you want to change your data, use the User Settings Window.</para></important></para>
-	</section>
+		<para>In the most countries you have to order your material anti-chronologic. That means the first certificate is the last one, ordered to the oldest certificate. To provide this, you have to add a Prefix for each certificate. 
+			Lets say, you have three certificates from jobs in 2018, 2019 and 2020. Then prefix the certificates so:</para>	
+	<example xml:id="ex.sorting">
+		<title>Sorting the examples</title>		
+		<itemizedlist>
+			<listitem>
+				<para>1_your_2018job.pdf</para>
+			</listitem>
+			<listitem>
+				<para>2_your_2019job.pdf</para>
+			</listitem>
+			<listitem>
+				<para>3_your_2020job.pdf</para>
+			</listitem>
+		</itemizedlist>		
+	</example>
+	<para>Your mention is right: The next will be a 4_your_2021job.pdf. By preparing the files in that case, i can do a reverse ordering by rhe app itself.</para>
+	<para>Now we looking the other directories. We have a <filename>Curriculum_Vitae</filename> directory. And it contains a predefined LaTEX file for the curriculum vitae called <filename>curriculum_vitae.tex</filename>. 
+		Then we have a file <filename>friggeri-cv.cls</filename>. As you maybe expect, this
+		is the class file for producing the curriculum vitae. The <filename>Letter of Application</filename> directory holds the <filename>letter_of_application.tex</filename> file, what we use for producing the letter of application. 
+		The <filename>Pictures</filename> directory contains some icons for building the cv and also a
+		<filename>signature.png</filename> and a <filename>userpic.jpg</filename>. Just replace them with your own signature file and userpic and overwrite the delivered one.</para>
+	<para>In your AppData directory we also have two other files. Per default, the <filename>JobApplications.csv</filename> is empty by the first run, and will be filled during the creating part of the job application. You can open the csv file 
+		with a Excel or LibreOffice Calc. The <filename>personal_data.tex</filename> holds your personal data. As you set your preferences in the User Settings Window, this file was
+			produced.<important>
+		<para>It will be newly created after each iteration. So if you want to change your data, use the User Settings Window.</para>
+	</important>
+</para>
+</section>
 
-	<section xml:id="preparing-latex-files">
-		<info>
-			<title>Preparing the latex files</title>
-		</info>
-		<indexterm>
-			<primary>Preparing Latex</primary>
-		</indexterm>
-		
-		<para>
-			As already written, we have the LaTEX files <filename>letter_of_application.tex</filename> and <filename>curriculum_vitae.tex</filename>. You have to modify it for your needs. Also it's possible to use your own tefiles. It is just important to save they as <filename>letter_of_application.tex</filename> and 
-			<filename>curriculum_vitae.tex</filename> in the prepared directories. This app produces two files, for compiling the job application: the first <filename>personal_data.tex</filename> you already heard. It looks in my case:
-		</para>
-		<screen>
+<section xml:id="preparing-latex-files">
+<info>
+	<title>Preparing the latex files</title>
+</info>
+<indexterm>
+	<primary>Preparing Latex</primary>
+</indexterm>
+
+<para>
+			As already written, we have the LaTEX files <filename>letter_of_application.tex</filename> and <filename>curriculum_vitae.tex</filename>. You have to modify it for your needs. Also it's possible to use your own texfiles. 
+			It is just important to save they as <filename>letter_of_application.tex</filename> and <filename>curriculum_vitae.tex</filename> in the prepared directories. This app produces two files, for compiling the 
+			job application: the first <filename>personal_data.tex</filename> you already heard. It looks in my case:
+</para>
+<screen>
 \def\firstname{Sascha}
 \def\familyname{Manns}
 \def\mystreet{Maifeldstraße 10}
@@ -106,11 +149,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 \def\myphone{+49-000-0000000}
 \def\myemail{Sascha.Manns@outlook.de}
 \def\myblog{http://saschamanns.de}			
-		</screen>
-		<para>So if you just add a <code>\input{$HOME/AppData/Roaming/latex_curriculum_vitae/personal_data.tex}</code> to your c<filename>Curriculum_vitae.tex</filename> you can use the newly defined macros. Each place in the document where you write <code>\firstname</code>, LaTEX sets your firstname. If you prepare a own
-			cv, and want to add a image reference or link with a image, you have to set the full path like: <code>\href{https://www.facebook.com/sascha.manns}{sascha.manns}\includegraphics[width=0.4cm]{$HOME/AppData/Roaming/latex_curriculum_vitae/Pictures/facebook.png}</code>.</para>
-		<para>The second mentioned file is called <filename>application_details.tex</filename>. It will also generated by the app during the creating process. It looks like:</para>
-		<screen>
+</screen>
+<para>So if you just add a <code>\input{personal_data.tex}</code> to your <filename>Curriculum_vitae.tex</filename> you can use the newly defined macros. Each place in the 
+		document where you write <code>\firstname</code>, LaTEX sets your firstname. If you prepare a own cv, and want to add a image reference or link with a image, you have to set the full path like: 
+	<code>\href{https://www.facebook.com/sascha.manns}{sascha.manns}\includegraphics[width=0.4cm]{$HOME/AppData/Roaming/latex_curriculum_vitae/Pictures/facebook.png}</code>.
+</para>
+<para>The second mentioned file is called <filename>application_details.tex</filename>. It will also generated by the app during the creating process. It looks like:</para>
+<screen>
 \def\jobtitle{Fachinformatiker Anwendungsentwicklung}
 \def\company{XYZ GmbH}
 \def\contact{Mr. Bean}
@@ -119,7 +164,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 \def\salutation{Dear Mr. Bean,}
 \def\subject{Application as Fachinformatiker Anwendungsentwicklung}
 \def\addressstring{XYZ GmbH\\Mr. Bean \\Street 2\\56068 A City}			
-		</screen>
-		<para>Because that file will jsut be created inside the temporary directory, where the compilation happens, you just can use <code>\input{./application_details.tex}</code> to use the macros defined there.</para>
-	</section>
+</screen>
+<para>Because that file will jsut be created inside the temporary directory, where the compilation happens, you just can use <code>\input{application_details.tex}</code> to use the macros defined there.</para>
+</section>
 </chapter>

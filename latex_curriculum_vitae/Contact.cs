@@ -51,17 +51,17 @@ namespace latex_curriculum_vitae
         {
             string salutation;
 
-            if (gname == Properties.Resources.GenderMale)
+            if (cname == "")
+            {
+                salutation = Properties.Resources.SalutationUnknown + ",";
+            }
+            else if (gname == Properties.Resources.GenderMale)
             {
                 salutation = Properties.Resources.SalutationMale + " " + cname + ",";
             }
-            else if (gname == Properties.Resources.GenderFemale)
-            {
-                salutation = Properties.Resources.SalutationFemale + " " + cname + ",";
-            }
             else
             {
-                salutation = Properties.Resources.SalutationUnknown + ",";
+                salutation = Properties.Resources.SalutationFemale + " " + cname + ",";
             }
             return salutation;
         }

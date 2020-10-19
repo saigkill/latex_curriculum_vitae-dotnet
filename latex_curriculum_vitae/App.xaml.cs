@@ -55,9 +55,6 @@ namespace latex_curriculum_vitae
                 Setup.CheckLatexPath();
                 Setup.CheckDocumentsPath();
                 Configuration.SetSetting("firstrun", "false");
-#if DEBUG
-                MessageBox.Show("Firstrun not found");
-#endif
             }
             else
             {
@@ -69,7 +66,6 @@ namespace latex_curriculum_vitae
                 CultureInfo.DefaultThreadCurrentCulture = vCulture;
                 CultureInfo.DefaultThreadCurrentUICulture = vCulture;
 
-                MessageBox.Show("Culture done");
 #endif
                 Window settings = new MainWindow();
                 settings.Show();
