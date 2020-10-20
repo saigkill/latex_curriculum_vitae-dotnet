@@ -15,6 +15,9 @@
 
 // Dependencies
 
+using latex_curriculum_vitae.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows;
 
@@ -25,6 +28,9 @@ namespace latex_curriculum_vitae
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Private members
+        private ServiceProvider serviceProvider;
+        #endregion
 
         #region Initialize Main
         public MainWindow()
@@ -49,7 +55,17 @@ namespace latex_curriculum_vitae
 
         public void BtnGoDatabase_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is currently not supported.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+            ServiceCollection services = new ServiceCollection();
+            services.AddDbContext<JobApplicationDataDbContext>(options =>
+            {
+                options.UseSqlite("Data Source = JobApplications.db");
+            });
+
+            services.AddSingleton<DatabaseWindow>();
+            serviceProvider = services.BuildServiceProvider();
+
+            var databaseWindow = serviceProvider.GetService<DatabaseWindow>();
+            databaseWindow.Show();
         }
     }
 }

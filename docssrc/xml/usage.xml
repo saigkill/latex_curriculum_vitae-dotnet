@@ -11,6 +11,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 	</indexterm>
 
 	<section xml:id="sec.mainmenue">
+		<info>
+			<title>The Main Menue</title>
+		</info>
 		<para>If you already prepared the things in the Installation chapter, we can show how it works in the practice.</para>
 		<procedure xml:id="proc.mainmenue">
 			<step>
@@ -33,8 +36,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 	</section>
 
 	<section xml:id="sec.write_application">
+		<info>
+			<title>Write your application</title>
+		</info>
 		<para>Inside this window you have the possibility to write your job application. Let's look, how it works:</para>
-		<procedure xml:id="proc-GUI">			
+		<procedure xml:id="proc.GUI">			
 			<step>
 				<para>In the jobtitle box, you have to place the title of your new
 					job.</para>
@@ -49,6 +55,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 				<para>Now we can place the name of the contact person. If we dont have any name, then we just can leave it blank. In that case the app will write "Dear Sir or Madam". That also will be used, if you choose the Gender "Unknown". 
 				In all other cases it produces a "Dear Mr. Bean" or "Dear Mrs Bean".</para>
 				<para>The "Apllication details" range are pure optional. In the "URL" field you can add the job offer url. It will be placed in the CSV file, what already was discussed.</para>
+				<para>If you set the checkbox "Initiative application", the Subject from the <filename>letter_of_applicaton.tex</filename> will be changed from "Application as" to "Initiative application as".</para>
 			</step>
 			<step>
 				<para>Now we have two options, to use the app. In case of you are entering a email address, and click on <guibutton>Generate</guibutton>, the app compiles all stuff and send it directly out (if you have set the SMTP settings 

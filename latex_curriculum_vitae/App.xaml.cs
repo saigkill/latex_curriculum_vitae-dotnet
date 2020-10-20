@@ -27,23 +27,12 @@ namespace latex_curriculum_vitae
     public partial class App : Application
     {
 
-        //#region Private members
-        //private readonly ServiceProvider serviceProvider;
-        //#endregion
+        #region Constructor
+        public App()
+        {
 
-        //#region Constructor
-        //public App()
-        //{
-        //    ServiceCollection services = new ServiceCollection();
-        //    services.AddDbContext<JobApplicationDataDbContext>(options =>
-        //    {
-        //        options.UseSqlite("Data Source = JobApplications.db");
-        //    });
-
-        //    services.AddSingleton<DatabaseWindow>();
-        //    serviceProvider = services.BuildServiceProvider();
-        //}
-        //#endregion
+        }
+        #endregion
 
         #region Event Handlers
         private void OnStartup(object s, StartupEventArgs e)
