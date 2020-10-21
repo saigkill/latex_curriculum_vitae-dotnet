@@ -138,6 +138,63 @@
   <data name="CsvEmailSent" xml:space="preserve">
     <value>Email gesendet</value>
   </data>
+  <data name="DwAddApplication" xml:space="preserve">
+    <value>Bewerbung hinzufügen</value>
+  </data>
+  <data name="DwAddNewApplication" xml:space="preserve">
+    <value>Bewerbung hinzufügen</value>
+  </data>
+  <data name="DwApplicationId" xml:space="preserve">
+    <value>Bewerbungs Id</value>
+  </data>
+  <data name="DwCity" xml:space="preserve">
+    <value>Stadt</value>
+  </data>
+  <data name="DwCompany" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="DwConfirmed" xml:space="preserve">
+    <value>Bestätigt</value>
+  </data>
+  <data name="DwContact" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="DwDeleteApplication" xml:space="preserve">
+    <value>Lösche Bewerbung</value>
+  </data>
+  <data name="DwEditApplication" xml:space="preserve">
+    <value>Ändere Bewerbung</value>
+  </data>
+  <data name="DwHeader" xml:space="preserve">
+    <value>Erkunden Sie den Status Ihrer Bewerbungen</value>
+  </data>
+  <data name="DwHeader1" xml:space="preserve">
+    <value>Der aktuelle Status Ihrer Bewerbungen</value>
+  </data>
+  <data name="DwInvited" xml:space="preserve">
+    <value>Eingeladen</value>
+  </data>
+  <data name="DwJobinterview" xml:space="preserve">
+    <value>Vorstellungsgespräch</value>
+  </data>
+  <data name="DwJobOfferUrl" xml:space="preserve">
+    <value>Jobangebot URL</value>
+  </data>
+  <data name="DwJobtitle" xml:space="preserve">
+    <value>Jobtitel</value>
+  </data>
+  <data name="DwLastPhoneCall" xml:space="preserve">
+    <value>Letztes Telefonat</value>
+  </data>
+  <data name="DwRefused" xml:space="preserve">
+    <value>Absage</value>
+  </data>
+  <data name="DwSent" xml:space="preserve">
+    <value>Gesendet</value>
+  </data>
+  <data name="DwStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
   <data name="EmailHTML" xml:space="preserve">
     <value>&lt;p&gt;{0}&lt;br&gt;
 &lt;p&gt;anbei sende ich Ihnen meine Bewerbungsunterlagen.&lt;br&gt;
@@ -236,6 +293,9 @@ Mit freundlichem Gruß
   </data>
   <data name="Subjectprefix" xml:space="preserve">
     <value>Bewerbung als</value>
+  </data>
+  <data name="UsBitLyToken" xml:space="preserve">
+    <value>Bit.ly Token:</value>
   </data>
   <data name="UsBlog" xml:space="preserve">
     <value>Ihr Blog:</value>

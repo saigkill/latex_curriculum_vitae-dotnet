@@ -16,8 +16,10 @@
 // Dependencies
 
 using System;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace latex_curriculum_vitae
 {
@@ -56,6 +58,11 @@ namespace latex_curriculum_vitae
 
             #region JobApplication Data
             JobApplication myapplication = new JobApplication(txtURL.Text, txtEmail.Text, txtJobtitle.Text);
+            if (myuser.BitLyToken != "Not Found")
+            {
+                myapplication.UseBitLy(myuser.BitLyToken, myapplication.URL);
+                MessageBox.Show("URL:" + myapplication.URL);
+            }
 
             if (myapplication.Email == "")
             {
@@ -103,7 +110,7 @@ namespace latex_curriculum_vitae
             }
             #endregion
 
-            #region Add Information to CSV
+            #region Add Information to CSV            
             CSVExport.WriteCSV(company.Name, myapplication.Jobtitle, company.City, myapplication.URL);
             #endregion
 
@@ -143,6 +150,12 @@ namespace latex_curriculum_vitae
         private void ChkInitiativeUnchecked(object sender, EventArgs e)
         {
             SubjectPrefixGlob = Properties.Resources.Subjectprefix;
+        }
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

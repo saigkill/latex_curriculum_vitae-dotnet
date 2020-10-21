@@ -56,6 +56,8 @@
                 <TextBox x:Name="txtBlog" Grid.Column="4" Grid.Row="2" Margin="5"/>
                 <Label x:Name="lblPhonenumber" Content="{x:Static p:Resources.UsPhonenumber}" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center"/>
                 <TextBox x:Name="txtPhonenumber" Grid.Column="4" Grid.Row="3" Margin="5"/>
+                <Label x:Name="lblBitlyToken" Grid.Column="3" Grid.Row="4" Content="{x:Static p:Resources.UsBitLyToken}" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtBitlyToken" Grid.Column="4" Grid.Row="4" Margin="5"/>
             </Grid>
         </Border>
 

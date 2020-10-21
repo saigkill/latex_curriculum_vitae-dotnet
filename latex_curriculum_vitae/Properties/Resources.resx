@@ -124,6 +124,63 @@
     <value>Email sent</value>
     <comment>Email sent entry in CSV</comment>
   </data>
+  <data name="DwAddApplication" xml:space="preserve">
+    <value>Add Application</value>
+  </data>
+  <data name="DwAddNewApplication" xml:space="preserve">
+    <value>New application</value>
+  </data>
+  <data name="DwApplicationId" xml:space="preserve">
+    <value>Application Id</value>
+  </data>
+  <data name="DwCity" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="DwCompany" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="DwConfirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="DwContact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="DwDeleteApplication" xml:space="preserve">
+    <value>Delete Application</value>
+  </data>
+  <data name="DwEditApplication" xml:space="preserve">
+    <value>Edit Application</value>
+  </data>
+  <data name="DwHeader" xml:space="preserve">
+    <value>Exlore the state of your Job Applications</value>
+  </data>
+  <data name="DwHeader1" xml:space="preserve">
+    <value>The current status of your job applications</value>
+  </data>
+  <data name="DwInvited" xml:space="preserve">
+    <value>Invited</value>
+  </data>
+  <data name="DwJobinterview" xml:space="preserve">
+    <value>Jobinterview</value>
+  </data>
+  <data name="DwJobOfferUrl" xml:space="preserve">
+    <value>Job offer url</value>
+  </data>
+  <data name="DwJobtitle" xml:space="preserve">
+    <value>Jobtitle</value>
+  </data>
+  <data name="DwLastPhoneCall" xml:space="preserve">
+    <value>Last phone call</value>
+  </data>
+  <data name="DwRefused" xml:space="preserve">
+    <value>Refuesed</value>
+  </data>
+  <data name="DwSent" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="DwStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
   <data name="EmailHTML" xml:space="preserve">
     <value>&lt;p&gt;{0}&lt;br&gt;
 &lt;p&gt;I am sending you my application documents attached.&lt;br&gt;
@@ -233,6 +290,9 @@ Sincerely
   </data>
   <data name="Subjectprefix" xml:space="preserve">
     <value>Application as</value>
+  </data>
+  <data name="UsBitLyToken" xml:space="preserve">
+    <value>Bit.Ly Token:</value>
   </data>
   <data name="UsBlog" xml:space="preserve">
     <value>Your Blog:</value>

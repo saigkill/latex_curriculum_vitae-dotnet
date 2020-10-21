@@ -15,6 +15,7 @@
 
 // Dependencies
 
+
 using System;
 
 namespace latex_curriculum_vitae.Data
@@ -32,5 +33,14 @@ namespace latex_curriculum_vitae.Data
         public DateTime LastPhonecall { get; set; }
         public DateTime JobInterview { get; set; }
         public string JobOfferUrl { get; set; }
+
+        public JobApplicationData()
+        {
+            EmailSent = DateTime.Now;
+            EmailConfirmation = DateTime.Now;
+            LastPhonecall = DateTime.Now;
+            JobInterview = DateTime.Now;
+            Status = "Sent";
+        }
     }
 }

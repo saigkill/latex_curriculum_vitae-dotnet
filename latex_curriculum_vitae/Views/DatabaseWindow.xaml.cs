@@ -33,6 +33,7 @@ namespace latex_curriculum_vitae
         public DatabaseWindow(JobApplicationDataDbContext context)
         {
             this.context = context;
+            this.Title = "Latex Curriculum Vitae" + " - " + Properties.Resources.DwHeader;
             InitializeComponent();
             GetJobApplicationData();
             NewJobapplicationGrid.DataContext = NewJobApplicationData;

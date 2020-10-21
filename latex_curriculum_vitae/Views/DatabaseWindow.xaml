@@ -4,35 +4,42 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:latex_curriculum_vitae"
+        xmlns:p="clr-namespace:latex_curriculum_vitae.Properties"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Latex Curriculum Vitae - Explore your Applications" Height="550" Width="1600">
+        Title="Latex Curriculum Vitae - Explore your Applications" Height="620" Width="1600">
     <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1059*"/>
+            <ColumnDefinition Width="275*"/>
+            <ColumnDefinition Width="266*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Label FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"
-               Grid.Row="0" Content="The current status of your job applications"/>
+        <Label FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="643,0,0,0" Content="{x:Static p:Resources.DwHeader1}"/>
+        <Image HorizontalAlignment="Left" Height="40" Margin="174,7,0,0" VerticalAlignment="Top" Width="100" Source="/Views/profile.png" Stretch="Uniform" Grid.RowSpan="2" Grid.Column="2"/>
 
         <DataGrid x:Name="JobApplicationDG" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"
-                  Grid.Row="1" ColumnWidth="*" Margin="5" IsSynchronizedWithCurrentItem="True" >
+                  Grid.Row="1" ColumnWidth="*" Margin="5,5,5,5" IsSynchronizedWithCurrentItem="True" Grid.ColumnSpan="3" BorderBrush="#FF619640" Background="#FFDAEBD0">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Application Id" Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="Company" Binding="{Binding Company}"/>
-                <DataGridTextColumn Header="Jobitle" Binding="{Binding Jobtitle}"/>
-                <DataGridTextColumn Header="City" Binding="{Binding City}"/>
-                <DataGridTextColumn Header="Contact" Binding="{Binding ContactName}"/>
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
-                <DataGridTextColumn Header="Sent" Binding="{Binding EmailSent}" />
-                <DataGridTextColumn Header="Confirmed" Binding="{Binding EmailConfirmation}" />
-                <DataGridTextColumn Header="Last phone call" Binding="{Binding LastPhonecall}" />
-                <DataGridTextColumn Header="Jobinterview" Binding="{Binding JobInterview}" />
-                <DataGridTextColumn Header="Job offer url" Binding="{Binding JobOfferUrl}" />
+                <DataGridTextColumn Header="{x:Static p:Resources.DwApplicationId}" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="{x:Static p:Resources.DwCompany}" Binding="{Binding Company}"/>
+                <DataGridTextColumn Header="{x:Static p:Resources.DwJobtitle}" Binding="{Binding Jobtitle}"/>
+                <DataGridTextColumn Header="{x:Static p:Resources.DwCity}" Binding="{Binding City}"/>
+                <DataGridTextColumn Header="{x:Static p:Resources.DwContact}" Binding="{Binding ContactName}"/>
+                <DataGridTextColumn Header="{x:Static p:Resources.DwStatus}" Binding="{Binding Status}" />
+                <DataGridTextColumn Header="{x:Static p:Resources.DwSent}" Binding="{Binding EmailSent}" />
+                <DataGridTextColumn Header="{x:Static p:Resources.DwConfirmed}" Binding="{Binding EmailConfirmation}" />
+                <DataGridTextColumn Header="{x:Static p:Resources.DwLastPhoneCall}" Binding="{Binding LastPhonecall}" />
+                <DataGridTextColumn Header="{x:Static p:Resources.DwJobinterview}" Binding="{Binding JobInterview}" />
+                <DataGridTextColumn Header="{x:Static p:Resources.DwJobOfferUrl}" Binding="{Binding JobOfferUrl}" />
 
-                <DataGridTemplateColumn Header="Edit Application">
+                <DataGridTemplateColumn Header="{x:Static p:Resources.DwEditApplication}">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Edit" Click="SelectJobApplicationToEdit" />
@@ -40,7 +47,7 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Header="Delete Application">
+                <DataGridTemplateColumn Header="{x:Static p:Resources.DwDeleteApplication}">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Delete" Click="DeleteApplication"/>
@@ -50,21 +57,20 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Margin="6" BorderThickness="1" BorderBrush="Black">
+            <Border Grid.Column="0" Margin="6" BorderThickness="1" BorderBrush="#FF619640" Background="#FFDAEBD0">
                 <StackPanel  Margin="5">
-                    <Label Content="Add new application" FontWeight="Bold"
+                    <Label Content="{x:Static p:Resources.DwAddNewApplication}" FontWeight="Bold"
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center" Margin="5"/>
 
                     <Grid Name="NewJobapplicationGrid">
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
@@ -79,45 +85,66 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-                        <Label Grid.Row="0" Grid.Column="0" Content="Company"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Company}"/>
+                        <Label Grid.Row="0" Grid.Column="0" Content="{x:Static p:Resources.DwCompany}" Margin="5"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Company}" Margin="5"/>
 
-                        <Label Grid.Row="1" Grid.Column="0" Content="Jobtitle"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Jobtitle}"/>
+                        <Label Grid.Row="1" Grid.Column="0" Content="{x:Static p:Resources.DwJobtitle}" Margin="5"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Jobtitle}" Margin="5"/>
 
-                        <Label Grid.Row="2" Grid.Column="0" Content="City"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding City}"/>
+                        <Label Grid.Row="2" Grid.Column="0" Content="{x:Static p:Resources.DwCity}" Margin="5"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding City}" Margin="5"/>
 
-                        <Label Grid.Row="3" Grid.Column="0" Content="Contact"/>
-                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ContactName}"/>
+                        <Label Grid.Row="3" Grid.Column="0" Content="{x:Static p:Resources.DwContact}" Margin="5"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ContactName}" Margin="5"/>
 
-                        <Label Grid.Row="4" Grid.Column="0" Content="Status"/>
-                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Status}"/>
+                        <Label Grid.Row="4" Grid.Column="0" Content="{x:Static p:Resources.DwStatus}" Margin="5"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Status}" Margin="5"/>
+                        <!--<ComboBox x:Name="cboStatus" Grid.Row="4" Grid.Column="1" Margin="5" SelectedItem="{Binding Status}">
+                            <ComboBoxItem IsSelected="True" Content="{x:Static p:Resources.DwSent}"/>
+                            <ComboBoxItem Content="{x:Static p:Resources.DwConfirmed}"/>
+                            <ComboBoxItem Content="{x:Static p:Resources.DwInvited}"/>
+                            <ComboBoxItem Content="{x:Static p:Resources.DwRefused}"/>
+                        </ComboBox>-->
 
-                        <Label Grid.Row="0" Grid.Column="2" Content="Sent"/>
-                        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding EmailSent}"/>
+                        <Label Grid.Row="0" Grid.Column="2" Content="{x:Static p:Resources.DwSent}" Margin="5"/>
+                        <!--<TextBox Grid.Row="0" Grid.Column="3" Text="{Binding EmailSent}"/>-->
+                        <DatePicker Name="dpEmailSent1"  Grid.Row="0" Grid.Column="3" DisplayDate="{x:Static sys:DateTime.Now}" SelectedDate="{Binding EmailSent}" Margin="5"/>
 
-                        <Label Grid.Row="1" Grid.Column="2" Content="Confirmed"/>
-                        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding EmailConfirmation}"/>
+                        <Label Grid.Row="1" Grid.Column="2" Content="{x:Static p:Resources.DwConfirmed}" Margin="5"/>
+                        <!--<TextBox Grid.Row="1" Grid.Column="3" Text="{Binding EmailConfirmation}"/> -->
+                        <DatePicker Name="dpEmailConfirmed1" Grid.Row="1" Grid.Column="3" SelectedDate="{Binding EmailConfirmation}" Margin="5"/>
 
-                        <Label Grid.Row="2" Grid.Column="2" Content="Last phone call"/>
-                        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding LastPhonecall}"/>
+                        <Label Grid.Row="2" Grid.Column="2" Content="{x:Static p:Resources.DwLastPhoneCall}" Margin="5"/>
+                        <!--<TextBox Grid.Row="2" Grid.Column="3" Text="{Binding LastPhonecall}"/>-->
+                        <DatePicker Name="dpLastPhonecall1" Grid.Row="2" Grid.Column="3" SelectedDate="{Binding LastPhonecall}" Margin="5"/>
 
-                        <Label Grid.Row="3" Grid.Column="2" Content="Jobinterview"/>
-                        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding JobInterview}"/>
+                        <Label Grid.Row="3" Grid.Column="2" Content="{x:Static p:Resources.DwJobinterview}" Margin="5"/>
+                        <!--<TextBox Grid.Row="3" Grid.Column="3" Text="{Binding JobInterview}"/>-->
+                        <DatePicker Name="dpJobInterview1" Grid.Row="3" Grid.Column="3" SelectedDate="{Binding JobInterview}" Margin="5"/>
 
-                        <Label Grid.Row="4" Grid.Column="2" Content="Job offer url"/>
-                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding JobOfferUrl}"/>
-
+                        <Label Grid.Row="4" Grid.Column="2" Content="{x:Static p:Resources.DwJobOfferUrl}" Margin="5"/>
+                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding JobOfferUrl}" Margin="5"/>
                     </Grid>
-                    <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Click="AddItem" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Add Application"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Width="130" Click="AddItem" Margin="10" Content="{x:Static p:Resources.DwAddNewApplication}"/>
+                    </Grid>
 
                 </StackPanel>
             </Border>
 
-            <Border Grid.Column="1" Margin="5" BorderThickness="1" BorderBrush="Black">
+            <Border Grid.Column="1" Margin="5" BorderThickness="1" BorderBrush="#FF619640" Background="#FFDAEBD0">
                 <StackPanel Margin="5">
-                    <Label Content="Edit application" FontWeight="Bold"
+                    <Label Content="{x:Static p:Resources.DwEditApplication}" FontWeight="Bold"
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center" Margin="5"/>
 
@@ -138,47 +165,63 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-                        <Label Grid.Row="0" Grid.Column="0" Content="Company"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Company}"/>
+                        <Label Grid.Row="0" Grid.Column="0" Content="{x:Static p:Resources.DwCompany}" Margin="5"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Company}" Margin="5"/>
 
-                        <Label Grid.Row="1" Grid.Column="0" Content="Jobtitle"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Jobtitle}"/>
+                        <Label Grid.Row="1" Grid.Column="0" Content="{x:Static p:Resources.DwJobtitle}" Margin="5"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Jobtitle}" Margin="5"/>
 
-                        <Label Grid.Row="2" Grid.Column="0" Content="City"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding City}"/>
+                        <Label Grid.Row="2" Grid.Column="0" Content="{x:Static p:Resources.DwCity}" Margin="5"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding City}" Margin="5"/>
 
-                        <Label Grid.Row="3" Grid.Column="0" Content="Contact"/>
-                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ContactName}"/>
+                        <Label Grid.Row="3" Grid.Column="0" Content="{x:Static p:Resources.DwContact}" Margin="5"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ContactName}" Margin="5"/>
 
-                        <Label Grid.Row="4" Grid.Column="0" Content="Status"/>
-                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Status}"/>
+                        <Label Grid.Row="4" Grid.Column="0" Content="{x:Static p:Resources.DwStatus}" Margin="5"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Status}" Margin="5"/>
+                        <!--<ComboBox x:Name="cboStatus1" Grid.Row="4" Grid.Column="1" Margin="5" SelectedItem="{Binding Status}">
+                            <ComboBoxItem IsSelected="True" Content="{x:Static p:Resources.DwSent}"/>
+                            <ComboBoxItem Content="{x:Static p:Resources.DwConfirmed}"/>
+                            <ComboBoxItem Content="{x:Static p:Resources.DwInvited}"/>
+                            <ComboBoxItem Content="{x:Static p:Resources.DwRefused}"/>
+                        </ComboBox>-->
 
-                        <Label Grid.Row="0" Grid.Column="2" Content="Sent"/>
-                        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding EmailSent}"/>
+                        <Label Grid.Row="0" Grid.Column="2" Content="{x:Static p:Resources.DwSent}" Margin="5"/>
+                        <!--<TextBox Grid.Row="0" Grid.Column="3" Text="{Binding EmailSent}"/>-->
+                        <DatePicker Name="dpEmailSent2" Grid.Row="0" Grid.Column="3" SelectedDate="{Binding EmailSent}" Margin="5"/>
 
-                        <Label Grid.Row="1" Grid.Column="2" Content="Confirmed"/>
-                        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding EmailConfirmation}"/>
+                        <Label Grid.Row="1" Grid.Column="2" Content="{x:Static p:Resources.DwConfirmed}" Margin="5"/>
+                        <!--<TextBox Grid.Row="1" Grid.Column="3" Text="{Binding EmailConfirmation}"/>-->
+                        <DatePicker Name="dpEmailConfirmation2" Grid.Row="1" Grid.Column="3" SelectedDate="{Binding EmailConfirmation}" Margin="5"/>
 
-                        <Label Grid.Row="2" Grid.Column="2" Content="Last phone call"/>
-                        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding LastPhonecall}"/>
+                        <Label Grid.Row="2" Grid.Column="2" Content="{x:Static p:Resources.DwLastPhoneCall}" Margin="5"/>
+                        <!--<TextBox Grid.Row="2" Grid.Column="3" Text="{Binding LastPhonecall}"/>-->
+                        <DatePicker Name="dpLastPhonecall2" Grid.Row="2" Grid.Column="3" SelectedDate="{Binding LastPhonecall}" Margin="5"/>
 
-                        <Label Grid.Row="3" Grid.Column="2" Content="Jobinterview"/>
-                        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding JobInterview}"/>
+                        <Label Grid.Row="3" Grid.Column="2" Content="{x:Static p:Resources.DwJobinterview}" Margin="5"/>
+                        <!--<TextBox Grid.Row="3" Grid.Column="3" Text="{Binding JobInterview}"/>-->
+                        <DatePicker Name="dpJobInterview2" Grid.Row="3" Grid.Column="3" SelectedDate="{Binding JobInterview}" Margin="5"/>
 
-                        <Label Grid.Row="4" Grid.Column="2" Content="Job offer url"/>
-                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding JobOfferUrl}"/>
+                        <Label Grid.Row="4" Grid.Column="2" Content="{x:Static p:Resources.DwJobOfferUrl}" Margin="5"/>
+                        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding JobOfferUrl}" Margin="5"/>
                     </Grid>
                     <Grid>
-                        <Button Width="150" Click="UpdateItem" Margin="20,20,0,0"
-                            HorizontalAlignment="Left" VerticalAlignment="Center" Content="Edit Application">
-                        </Button>
-                        <Button Click="BtnExit_Click" Width="150" HorizontalAlignment="Right" VerticalAlignment="Center" IsCancel="True" Margin="20,20,0,0" Content="Exit"/>
-
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Width="130" Click="UpdateItem" Margin="10" Content="{x:Static p:Resources.DwEditApplication}"/>
+                        <Button Click="BtnExit_Click" Grid.Row="0" Grid.Column="3" Width="130" IsCancel="True" Margin="10" Content="{x:Static p:Resources.BtnExit}"/>
                     </Grid>
-
                 </StackPanel>
             </Border>
         </Grid>
-        <Image HorizontalAlignment="Center" Height="44" Margin="1495,2,0,0" VerticalAlignment="Top" Width="100" Source="/profile.png" Grid.RowSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="44" Margin="164,2,0,0" VerticalAlignment="Top" Width="100" Source="/profile.png" Grid.RowSpan="2" Grid.Column="2"/>
     </Grid>
 </Window>

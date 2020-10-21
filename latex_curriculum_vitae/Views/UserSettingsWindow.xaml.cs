@@ -45,6 +45,7 @@ namespace latex_curriculum_vitae
             txtSMTPUser.Text = Configuration.GetSetting("smtp-user");
             txtSMTPPass.Text = Configuration.GetSetting("smtp-pass");
             txtSMTPPort.Text = Configuration.GetSetting("smtp-port");
+            txtBitlyToken.Text = Configuration.GetSetting("bitly-token");
         }
         #endregion
 
@@ -62,6 +63,7 @@ namespace latex_curriculum_vitae
             Configuration.SetSetting("smtp-user", txtSMTPUser.Text);
             Configuration.SetSetting("smtp-pass", txtSMTPPass.Text);
             Configuration.SetSetting("smtp-port", txtSMTPPort.Text);
+            Configuration.SetSetting("bitly-token", txtBitlyToken.Text);
             ConfigurationManager.RefreshSection("appSettings");
 
             this.Close();

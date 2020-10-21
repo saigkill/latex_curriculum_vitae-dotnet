@@ -14,6 +14,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Dependencies
+using BitlyAPI;
 
 namespace latex_curriculum_vitae
 {
@@ -52,6 +53,13 @@ namespace latex_curriculum_vitae
             _prepare = _prepare.Replace(@"#", @"\#");
             _prepare = _prepare.Replace(@"&", @"\&");
             return _prepare;
+        }
+
+        public async void UseBitLy(string apkikey, string url)
+        {
+            var bitly = new Bitly(apkikey);
+            var linkResponse = await bitly.PostShorten(url);
+            URL = linkResponse.Link;
         }
     }
 }

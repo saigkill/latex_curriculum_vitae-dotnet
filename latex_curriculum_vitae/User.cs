@@ -47,6 +47,8 @@ namespace latex_curriculum_vitae
 
         public int SmtpPort { set; get; }
 
+        public string BitLyToken { get; set; }
+
         /// <summary>
         /// That constructor uses the config file to set up all user relevant information.
         /// </summary>
@@ -63,6 +65,7 @@ namespace latex_curriculum_vitae
             SmtpUser = Configuration.GetSetting("smtp-user");
             SmtpPass = Configuration.GetSetting("smtp-pass");
             SmtpPort = Convert.ToInt32(Configuration.GetSetting("smtp-port"));
+            BitLyToken = Configuration.GetSetting("bitly-token");
 
             UserFile();
         }

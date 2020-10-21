@@ -35,7 +35,7 @@
 	</para>
 	</section>	
 
-	<section xml:id="installation-firstrun">
+	<section xml:id="sec.firstrun">
 		<info>
 			<title>User settings</title>
 		</info>
@@ -52,6 +52,8 @@
 			</imageobject>
 		</mediaobject>
 		<important><para>The Email settings are mandatory in case of you wish to send out the emails directly. The needed information about the SMTP host you get in your email-providers settings.</para></important>
+		<para>If you want to shorten your links before they saved, you can use BitLy. Just get a token via <link xlink:href="https://bitly.is/accesstoken"
+			xmlns:xlink="http://www.w3.org/1999/xlink">https://bitly.is/accesstoken</link> and place them in the BitLy Token Field.</para>
 				
 		<para>The <guibutton>Save</guibutton> Button saves your changes and closes the window. The <guibutton>Close</guibutton> just closes the window without any changes in the config file. If you are using the button: <mediaobject>
 			<imageobject role="fo">
@@ -121,14 +123,14 @@
 		The <filename>Pictures</filename> directory contains some icons for building the cv and also a
 		<filename>signature.png</filename> and a <filename>userpic.jpg</filename>. Just replace them with your own signature file and userpic and overwrite the delivered one.</para>
 	<para>In your AppData directory we also have two other files. Per default, the <filename>JobApplications.csv</filename> is empty by the first run, and will be filled during the creating part of the job application. You can open the csv file 
-		with a Excel or LibreOffice Calc. The <filename>personal_data.tex</filename> holds your personal data. As you set your preferences in the User Settings Window, this file was
+		with a Excel or LibreOffice Calc.<important><para>If you want to open and change the csv, make a copy, and leave the original one untouched.</para></important> The <filename>personal_data.tex</filename> holds your personal data. As you set your preferences in the User Settings Window, this file was
 			produced.<important>
 		<para>It will be newly created after each iteration. So if you want to change your data, use the User Settings Window.</para>
 	</important>
 </para>
 </section>
 
-<section xml:id="preparing-latex-files">
+<section xml:id="sec.latex-files">
 <info>
 	<title>Preparing the latex files</title>
 </info>

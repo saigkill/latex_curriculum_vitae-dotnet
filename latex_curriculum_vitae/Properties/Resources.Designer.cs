@@ -124,6 +124,177 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add Application ähnelt.
+        /// </summary>
+        public static string DwAddApplication {
+            get {
+                return ResourceManager.GetString("DwAddApplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die New application ähnelt.
+        /// </summary>
+        public static string DwAddNewApplication {
+            get {
+                return ResourceManager.GetString("DwAddNewApplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Application Id ähnelt.
+        /// </summary>
+        public static string DwApplicationId {
+            get {
+                return ResourceManager.GetString("DwApplicationId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die City ähnelt.
+        /// </summary>
+        public static string DwCity {
+            get {
+                return ResourceManager.GetString("DwCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Company ähnelt.
+        /// </summary>
+        public static string DwCompany {
+            get {
+                return ResourceManager.GetString("DwCompany", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Confirmed ähnelt.
+        /// </summary>
+        public static string DwConfirmed {
+            get {
+                return ResourceManager.GetString("DwConfirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contact ähnelt.
+        /// </summary>
+        public static string DwContact {
+            get {
+                return ResourceManager.GetString("DwContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Delete Application ähnelt.
+        /// </summary>
+        public static string DwDeleteApplication {
+            get {
+                return ResourceManager.GetString("DwDeleteApplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Edit Application ähnelt.
+        /// </summary>
+        public static string DwEditApplication {
+            get {
+                return ResourceManager.GetString("DwEditApplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exlore the state of your Job Applications ähnelt.
+        /// </summary>
+        public static string DwHeader {
+            get {
+                return ResourceManager.GetString("DwHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The current status of your job applications ähnelt.
+        /// </summary>
+        public static string DwHeader1 {
+            get {
+                return ResourceManager.GetString("DwHeader1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Invited ähnelt.
+        /// </summary>
+        public static string DwInvited {
+            get {
+                return ResourceManager.GetString("DwInvited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Jobinterview ähnelt.
+        /// </summary>
+        public static string DwJobinterview {
+            get {
+                return ResourceManager.GetString("DwJobinterview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Job offer url ähnelt.
+        /// </summary>
+        public static string DwJobOfferUrl {
+            get {
+                return ResourceManager.GetString("DwJobOfferUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Jobtitle ähnelt.
+        /// </summary>
+        public static string DwJobtitle {
+            get {
+                return ResourceManager.GetString("DwJobtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Last phone call ähnelt.
+        /// </summary>
+        public static string DwLastPhoneCall {
+            get {
+                return ResourceManager.GetString("DwLastPhoneCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Refuesed ähnelt.
+        /// </summary>
+        public static string DwRefused {
+            get {
+                return ResourceManager.GetString("DwRefused", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sent ähnelt.
+        /// </summary>
+        public static string DwSent {
+            get {
+                return ResourceManager.GetString("DwSent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Status ähnelt.
+        /// </summary>
+        public static string DwStatus {
+            get {
+                return ResourceManager.GetString("DwStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die &lt;p&gt;{0}&lt;br&gt;
         ///&lt;p&gt;I am sending you my application documents attached.&lt;br&gt;
         ///&lt;p&gt;Sincerly&lt;/p&gt;
@@ -399,6 +570,15 @@ namespace latex_curriculum_vitae.Properties {
         public static string Subjectprefix {
             get {
                 return ResourceManager.GetString("Subjectprefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bit.Ly Token: ähnelt.
+        /// </summary>
+        public static string UsBitLyToken {
+            get {
+                return ResourceManager.GetString("UsBitLyToken", resourceCulture);
             }
         }
         

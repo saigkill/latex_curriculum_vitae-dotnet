@@ -42,7 +42,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
     <abstract>      
       <para>        
         <productname>Latex Curriculum Vitae</productname> is a simple solution for writing job applications with producing beautiful documents with LaTEX.
-You can write, compile and send the stuff directly within the app. Also you get a simple CSV file, what contains all sent stuff. You can use it as example in a Excel-Sheet.
+You can write, compile and send the stuff directly within the app.
       </para>
     </abstract>
     <legalnotice>
@@ -89,46 +89,5 @@ You can write, compile and send the stuff directly within the app. Also you get 
     <xi:include href="usage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="app.revision_update.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="app.gfdl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-  </part>
-  <part>
-    <info>
-      <title>Developer Documentation</title>
-    </info>
-    <chapter>
-      <title>Namespace Documentation</title>
-    <xi:include href="doxygen/docbook/namespacelatex__curriculum__vitae.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="doxygen/docbook/namespacelatex__curriculum__vitae_1_1_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="doxygen/docbook/namespacelatex__curriculum__vitae_1_1_mappers.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="doxygen/docbook/namespacelatex__curriculum__vitae_1_1_models.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="doxygen/docbook/namespacelatex__curriculum__vitae_1_1_properties.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="doxygen/docbook/namespacelatex__curriculum__vitae_1_1_services.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    </chapter>
-    <chapter>
-      <title>Class Documentation</title>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_app.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_build.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_company.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_configuration.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_constants.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_contact.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_c_s_v_export.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_constants_1_1_csv_headers.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_services_1_1_csv_parser_service.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_database_window.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_email.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_constants_1_1_general.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/interfacelatex__curriculum__vitae_1_1_services_1_1_i_csv_parser_service.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_job_application.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_data_1_1_job_application_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_data_1_1_job_application_data_db_context.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_mappers_1_1_job_application_map.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_models_1_1_job_application_model.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_main_window.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_properties_1_1_resources.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_setup.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_user.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_user_settings_window.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="doxygen/docbook/classlatex__curriculum__vitae_1_1_write_job_application_window.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    </chapter>    
-  </part>
+  </part>  
 </book>
