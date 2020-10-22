@@ -26,7 +26,7 @@ Latex Curriculum Vitae is released under the GPL3 License, see the file 'LICENSE
 |dependencies|[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=saigkill/latex_curriculum_vitae-dotnet)](https://dependabot.com) |
 |downloads|![GitHub All Releases](https://img.shields.io/github/downloads/saigkill/latex_curriculum_vitae-dotnet/total)|
 
-## FEATURES/PROBLEMS
+## FEATURES
 
 * Write automated high quality job applications
 * Storing User information
