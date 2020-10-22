@@ -1,0 +1,207 @@
+\hypertarget{classlatex__curriculum__vitae_1_1_build}{}\doxysection{latex\+\_\+curriculum\+\_\+vitae.\+Build Class Reference}
+\label{classlatex__curriculum__vitae_1_1_build}\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+
+
+Class for compiling and building the La\+T\+EX documents and it merges all pdfs in one.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_a7f2f0919ae6cb8b152ef542a235fec0c}{Prepare\+Build}} ()
+\begin{DoxyCompactList}\small\item\em This method copies the needed La\+T\+EX documents to the temporary directory. It doesn\textquotesingle{}t return anything. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_addbdab2d70f5d80603d5757167dda45b}{Get\+Subject}} (string subjectprefix, string jobtitle)
+\begin{DoxyCompactList}\small\item\em This method combines the language dependend subjectprefix with the Jobtitle. Ex\+: Application as Softwaredeveloper. It returns the combined subject for the La\+T\+EX letter of application. The returned string contains escaped characters like hash and ampersand. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_aa19efe1ebaa9bfdc797073a4e9435562}{Get\+Email\+Subject}} (string subjectprefix, string jobtitle)
+\begin{DoxyCompactList}\small\item\em This method combines the language dependend subjectprefix with the Jobtitle. Ex\+: Application as Softwaredeveloper. It returns the combined subject for the La\+T\+EX letter of application. The returned string comes without the escape sequences. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_af7db132c5a5e5efddd5d64fa8c86ee28}{Create\+Application\+Config}} (string jobtitle, string company, string contact, string street, string city, string salutation, string subject, string addressstring)
+\begin{DoxyCompactList}\small\item\em This method creates the job application specific La\+T\+EX file \char`\"{}application\+\_\+details.\+tex\char`\"{}. It will be used in letter of application. The method doesn\textquotesingle{}t return anything. ~\newline
+ \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_a3b64fe730ff758809db07c845bb8ed7b}{Compile\+Application}} ()
+\begin{DoxyCompactList}\small\item\em This methods uses pdflatex and xelatex for compiling the La\+T\+EX documents. It doesn\textquotesingle{}t returns anything. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_abd00498dee0c095ef3cf286a11ba72c7}{Get\+Final\+Pdf\+Name}} (string firstname, string familyname)
+\begin{DoxyCompactList}\small\item\em This method combines the language specific string for \char`\"{}application documents\char`\"{} with users firstname and familyname. Ex\+: Application\+\_\+\+Documents\+\_\+\+Sascha\+\_\+\+Manns.\+pdf \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_a52f63f80e826b751a028e91a05e68b50}{Combine\+Application}} (string firstname, string familyname)
+\begin{DoxyCompactList}\small\item\em This method combines pdfs. So you get a pdf for your certificates of employment, a seperate pdf for other certificates and a final pdf what contains letter of application, curriculum vitae and certs. It doesn\textquotesingle{}t returns anything. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_a93b69c65502bc10bc60f7de8917c1304}{Open\+Explorer}} ()
+\begin{DoxyCompactList}\small\item\em This method opens the Windows Explorer after merging the pdfs in that case, that you haven\textquotesingle{}t set a company email address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_a1abecf0481708d7f94cc104b57a38d4e}{Merge\+P\+D\+Fs}} (string target\+Path, params string\mbox{[}$\,$\mbox{]} pdfs)
+\begin{DoxyCompactList}\small\item\em This method is only for merging pdfs. It doesn\textquotesingle{}t returns anything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_abc0e04015f4cd76080a69027506f7b5d}\label{classlatex__curriculum__vitae_1_1_build_abc0e04015f4cd76080a69027506f7b5d}} 
+static readonly string {\bfseries tmp\+Dir} = Path.\+Get\+Temp\+Path()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for compiling and building the La\+T\+EX documents and it merges all pdfs in one. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_a52f63f80e826b751a028e91a05e68b50}\label{classlatex__curriculum__vitae_1_1_build_a52f63f80e826b751a028e91a05e68b50}} 
+\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}!CombineApplication@{CombineApplication}}
+\index{CombineApplication@{CombineApplication}!latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+\doxysubsubsection{\texorpdfstring{CombineApplication()}{CombineApplication()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Build.\+Combine\+Application (\begin{DoxyParamCaption}\item[{string}]{firstname,  }\item[{string}]{familyname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method combines pdfs. So you get a pdf for your certificates of employment, a seperate pdf for other certificates and a final pdf what contains letter of application, curriculum vitae and certs. It doesn\textquotesingle{}t returns anything. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em firstname} & comes from myuser.\+firstname (contains users first name)\\
+\hline
+{\em familyname} & comes from myuser.\+familyname (contains users surname)$<$/param \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_a3b64fe730ff758809db07c845bb8ed7b}\label{classlatex__curriculum__vitae_1_1_build_a3b64fe730ff758809db07c845bb8ed7b}} 
+\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}!CompileApplication@{CompileApplication}}
+\index{CompileApplication@{CompileApplication}!latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+\doxysubsubsection{\texorpdfstring{CompileApplication()}{CompileApplication()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Build.\+Compile\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This methods uses pdflatex and xelatex for compiling the La\+T\+EX documents. It doesn\textquotesingle{}t returns anything. 
+
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_af7db132c5a5e5efddd5d64fa8c86ee28}\label{classlatex__curriculum__vitae_1_1_build_af7db132c5a5e5efddd5d64fa8c86ee28}} 
+\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}!CreateApplicationConfig@{CreateApplicationConfig}}
+\index{CreateApplicationConfig@{CreateApplicationConfig}!latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+\doxysubsubsection{\texorpdfstring{CreateApplicationConfig()}{CreateApplicationConfig()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Build.\+Create\+Application\+Config (\begin{DoxyParamCaption}\item[{string}]{jobtitle,  }\item[{string}]{company,  }\item[{string}]{contact,  }\item[{string}]{street,  }\item[{string}]{city,  }\item[{string}]{salutation,  }\item[{string}]{subject,  }\item[{string}]{addressstring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method creates the job application specific La\+T\+EX file \char`\"{}application\+\_\+details.\+tex\char`\"{}. It will be used in letter of application. The method doesn\textquotesingle{}t return anything. ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jobtitle} & comes from myapplication.\+Jobtitle (contains the Jobtitle)\\
+\hline
+{\em company} & comes from company.\+Name (contains the company name)\\
+\hline
+{\em contact} & comes from contact.\+Name (contains the name of companies contact person)\\
+\hline
+{\em street} & comes from company.\+Street (contains companies street)\\
+\hline
+{\em city} & comes from company.\+City (contains companies city)\\
+\hline
+{\em salutation} & comes from contact.\+Salutation (contains letters salutation)\\
+\hline
+{\em subject} & comes originary from \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_build_addbdab2d70f5d80603d5757167dda45b}{Get\+Subject()}} method.\\
+\hline
+{\em addressstring} & comes originary from contact.\+Addressline() method.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_aa19efe1ebaa9bfdc797073a4e9435562}\label{classlatex__curriculum__vitae_1_1_build_aa19efe1ebaa9bfdc797073a4e9435562}} 
+\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}!GetEmailSubject@{GetEmailSubject}}
+\index{GetEmailSubject@{GetEmailSubject}!latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+\doxysubsubsection{\texorpdfstring{GetEmailSubject()}{GetEmailSubject()}}
+{\footnotesize\ttfamily static string latex\+\_\+curriculum\+\_\+vitae.\+Build.\+Get\+Email\+Subject (\begin{DoxyParamCaption}\item[{string}]{subjectprefix,  }\item[{string}]{jobtitle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method combines the language dependend subjectprefix with the Jobtitle. Ex\+: Application as Softwaredeveloper. It returns the combined subject for the La\+T\+EX letter of application. The returned string comes without the escape sequences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subjectprefix} & comes from myuser.\+Subjectprefix\\
+\hline
+{\em jobtitle} & comes from myapplication.\+Jobtitle (contains the Jobtitle)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string subject
+\end{DoxyReturn}
+~\newline
+ \mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_abd00498dee0c095ef3cf286a11ba72c7}\label{classlatex__curriculum__vitae_1_1_build_abd00498dee0c095ef3cf286a11ba72c7}} 
+\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}!GetFinalPdfName@{GetFinalPdfName}}
+\index{GetFinalPdfName@{GetFinalPdfName}!latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+\doxysubsubsection{\texorpdfstring{GetFinalPdfName()}{GetFinalPdfName()}}
+{\footnotesize\ttfamily static string latex\+\_\+curriculum\+\_\+vitae.\+Build.\+Get\+Final\+Pdf\+Name (\begin{DoxyParamCaption}\item[{string}]{firstname,  }\item[{string}]{familyname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method combines the language specific string for \char`\"{}application documents\char`\"{} with users firstname and familyname. Ex\+: Application\+\_\+\+Documents\+\_\+\+Sascha\+\_\+\+Manns.\+pdf 
+
+
+\begin{DoxyParams}{Parameters}
+{\em firstname} & comes from myuser.\+firstname (contains users first name)\\
+\hline
+{\em familyname} & comes from myuser.\+familyname (contains users surname)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string finalpdf
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_addbdab2d70f5d80603d5757167dda45b}\label{classlatex__curriculum__vitae_1_1_build_addbdab2d70f5d80603d5757167dda45b}} 
+\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}!GetSubject@{GetSubject}}
+\index{GetSubject@{GetSubject}!latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+\doxysubsubsection{\texorpdfstring{GetSubject()}{GetSubject()}}
+{\footnotesize\ttfamily static string latex\+\_\+curriculum\+\_\+vitae.\+Build.\+Get\+Subject (\begin{DoxyParamCaption}\item[{string}]{subjectprefix,  }\item[{string}]{jobtitle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method combines the language dependend subjectprefix with the Jobtitle. Ex\+: Application as Softwaredeveloper. It returns the combined subject for the La\+T\+EX letter of application. The returned string contains escaped characters like hash and ampersand. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subjectprefix} & comes from myuser.\+Subjectprefix\\
+\hline
+{\em jobtitle} & comes from myapplication.\+Jobtitle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+subject
+\end{DoxyReturn}
+~\newline
+ \mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_a1abecf0481708d7f94cc104b57a38d4e}\label{classlatex__curriculum__vitae_1_1_build_a1abecf0481708d7f94cc104b57a38d4e}} 
+\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}!MergePDFs@{MergePDFs}}
+\index{MergePDFs@{MergePDFs}!latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+\doxysubsubsection{\texorpdfstring{MergePDFs()}{MergePDFs()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Build.\+Merge\+P\+D\+Fs (\begin{DoxyParamCaption}\item[{string}]{target\+Path,  }\item[{params string\mbox{[}$\,$\mbox{]}}]{pdfs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This method is only for merging pdfs. It doesn\textquotesingle{}t returns anything. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Path} & defines the path where the needed pdfs come from.\\
+\hline
+{\em pdfs} & is a array of pdf pathes to merge.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_a93b69c65502bc10bc60f7de8917c1304}\label{classlatex__curriculum__vitae_1_1_build_a93b69c65502bc10bc60f7de8917c1304}} 
+\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}!OpenExplorer@{OpenExplorer}}
+\index{OpenExplorer@{OpenExplorer}!latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+\doxysubsubsection{\texorpdfstring{OpenExplorer()}{OpenExplorer()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Build.\+Open\+Explorer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method opens the Windows Explorer after merging the pdfs in that case, that you haven\textquotesingle{}t set a company email address. 
+
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_build_a7f2f0919ae6cb8b152ef542a235fec0c}\label{classlatex__curriculum__vitae_1_1_build_a7f2f0919ae6cb8b152ef542a235fec0c}} 
+\index{latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}!PrepareBuild@{PrepareBuild}}
+\index{PrepareBuild@{PrepareBuild}!latex\_curriculum\_vitae.Build@{latex\_curriculum\_vitae.Build}}
+\doxysubsubsection{\texorpdfstring{PrepareBuild()}{PrepareBuild()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Build.\+Prepare\+Build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method copies the needed La\+T\+EX documents to the temporary directory. It doesn\textquotesingle{}t return anything. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Sasch/\+One\+Drive/source/repos/\+Visual\+\_\+\+Studio/latex\+\_\+curriculum\+\_\+vitae-\/dotnet/latex\+\_\+curriculum\+\_\+vitae/Build.\+cs\end{DoxyCompactItemize}

@@ -31,8 +31,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 				</mediaobject>
 			</step>
 		</procedure>
-		<para>So you have currently two options. If you want to write your application, you can click on the button and follow the documentation on <link linkend='sec.write_application'/>. 
-		If you want to see or change your user settings, than you can read more on <link linkend='par.usersettings'/>. The database part of this app currently isn't supported yet.</para>
+		<para>So you have currently two options. If you want to write your application, you can click on the button and follow the documentation on <link linkend="sec.write_application"/>. 
+		If you want to see or change your user settings, than you can read more on <link linkend="par.usersettings"/>. The database part of this app currently isn't supported yet.</para>
 	</section>
 
 	<section xml:id="sec.write_application">
@@ -40,6 +40,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 			<title>Write your application</title>
 		</info>
 		<para>Inside this window you have the possibility to write your job application. Let's look, how it works:</para>
+		<mediaobject>
+			<imageobject role="fo">
+				<imagedata fileref="WriteJobApplication.png" width="25%" align="center"/>
+			</imageobject>
+			<imageobject role="html">
+				<imagedata fileref="WriteJobApplication.png" width="25%" align="center"/>
+			</imageobject>
+		</mediaobject>
 		<procedure xml:id="proc.GUI">			
 			<step>
 				<para>In the jobtitle box, you have to place the title of your new
@@ -54,12 +62,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 			<step>
 				<para>Now we can place the name of the contact person. If we dont have any name, then we just can leave it blank. In that case the app will write "Dear Sir or Madam". That also will be used, if you choose the Gender "Unknown". 
 				In all other cases it produces a "Dear Mr. Bean" or "Dear Mrs Bean".</para>
-				<para>The "Apllication details" range are pure optional. In the "URL" field you can add the job offer url. It will be placed in the CSV file, what already was discussed.</para>
+				<para>The "Application details" range are pure optional. In the "URL" field you can add the job offer url. It will be placed in the CSV file, what already was discussed.</para>
 				<para>If you set the checkbox "Initiative application", the Subject from the <filename>letter_of_applicaton.tex</filename> will be changed from "Application as" to "Initiative application as".</para>
 			</step>
 			<step>
 				<para>Now we have two options, to use the app. In case of you are entering a email address, and click on <guibutton>Generate</guibutton>, the app compiles all stuff and send it directly out (if you have set the SMTP settings 
-				in the installation part. See <link linkend='par.usersettings'/>) with you in BCC. If you leave it blank and click on 
+				in the installation part. See <link linkend="par.usersettings"/>) with you in BCC. If you leave it blank and click on 
 					<guibutton>Generate</guibutton>, the app also compiles all stuff, but in this case it opens the Windows Explorer with the <filename>AppData/Local/Temp/latex_curriculum_vitae</filename> directory. This is the compile folder. All what 
 					you can see there will be deleted each new iteration. But now you have 
 					the option to upload the files to a job application website.</para>

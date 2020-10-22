@@ -72,7 +72,7 @@ namespace latex_curriculum_vitae
 
         public void BtnHelp_Click(object sender, EventArgs e)
         {
-            Setup.GetOnlineDocumentation();
+            Setup.GetOnlineDocumentation("cha.installation.html");
         }
 
         #region Exit Application

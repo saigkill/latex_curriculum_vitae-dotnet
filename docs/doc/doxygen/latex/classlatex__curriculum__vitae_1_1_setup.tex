@@ -1,0 +1,119 @@
+\hypertarget{classlatex__curriculum__vitae_1_1_setup}{}\doxysection{latex\+\_\+curriculum\+\_\+vitae.\+Setup Class Reference}
+\label{classlatex__curriculum__vitae_1_1_setup}\index{latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}}
+
+
+This class contains methods for doing the setup  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_setup_a45af0041b45ec2687db495bcf41094ca}{Check\+App\+Config}} ()
+\begin{DoxyCompactList}\small\item\em This method checks, if the config file is already present. Otherwise it launches the User\+Settings Window. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_setup_a2394e03973f611864215a955b03e6538}{Check\+Latex\+Path}} ()
+\begin{DoxyCompactList}\small\item\em This method checks, if La\+T\+EX is already installed. Otherwise it opens the installation website. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_setup_ae39c1a8308597d85f86744efbb6c3aed}{Check\+Documents\+Path}} ()
+\begin{DoxyCompactList}\small\item\em This method copies by the first run a couple of files to the App\+Data directory. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_setup_a8cb2686614dff6e98b5bf381f7bd9346}{Get\+Online\+Documentation}} ()
+\begin{DoxyCompactList}\small\item\em This method launches the online documentation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_setup_a8aa3bec87bd0924a6d8c65cd77492c97}\label{classlatex__curriculum__vitae_1_1_setup_a8aa3bec87bd0924a6d8c65cd77492c97}} 
+static void {\bfseries Get\+Online\+Documentation} (string target)
+\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_setup_ab9f1df12e43159a0b610b89eec1db416}{Cleanup}} ()
+\begin{DoxyCompactList}\small\item\em This method cleans up the temporary directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_setup_a11b5c9b2db3e38d34a489721744941de}{Create\+Documents\+Path}} ()
+\begin{DoxyCompactList}\small\item\em This method just creates the directory structure, what lcv expected. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_setup_a8ccc4c802ac6f35f09baccbc74c50be3}{Copy\+Documents}} ()
+\begin{DoxyCompactList}\small\item\em This method copies a couple of needed files to the App\+Data directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_setup_a80f49e6bd798a8736c621e71c05239b0}\label{classlatex__curriculum__vitae_1_1_setup_a80f49e6bd798a8736c621e71c05239b0}} 
+static readonly string {\bfseries app\+Data\+Path} = Environment.\+Get\+Folder\+Path(Environment.\+Special\+Folder.\+Application\+Data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class contains methods for doing the setup 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_setup_a45af0041b45ec2687db495bcf41094ca}\label{classlatex__curriculum__vitae_1_1_setup_a45af0041b45ec2687db495bcf41094ca}} 
+\index{latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}!CheckAppConfig@{CheckAppConfig}}
+\index{CheckAppConfig@{CheckAppConfig}!latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}}
+\doxysubsubsection{\texorpdfstring{CheckAppConfig()}{CheckAppConfig()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Setup.\+Check\+App\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method checks, if the config file is already present. Otherwise it launches the User\+Settings Window. 
+
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_setup_ae39c1a8308597d85f86744efbb6c3aed}\label{classlatex__curriculum__vitae_1_1_setup_ae39c1a8308597d85f86744efbb6c3aed}} 
+\index{latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}!CheckDocumentsPath@{CheckDocumentsPath}}
+\index{CheckDocumentsPath@{CheckDocumentsPath}!latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}}
+\doxysubsubsection{\texorpdfstring{CheckDocumentsPath()}{CheckDocumentsPath()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Setup.\+Check\+Documents\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method copies by the first run a couple of files to the App\+Data directory. 
+
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_setup_a2394e03973f611864215a955b03e6538}\label{classlatex__curriculum__vitae_1_1_setup_a2394e03973f611864215a955b03e6538}} 
+\index{latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}!CheckLatexPath@{CheckLatexPath}}
+\index{CheckLatexPath@{CheckLatexPath}!latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}}
+\doxysubsubsection{\texorpdfstring{CheckLatexPath()}{CheckLatexPath()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Setup.\+Check\+Latex\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method checks, if La\+T\+EX is already installed. Otherwise it opens the installation website. 
+
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_setup_ab9f1df12e43159a0b610b89eec1db416}\label{classlatex__curriculum__vitae_1_1_setup_ab9f1df12e43159a0b610b89eec1db416}} 
+\index{latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}}
+\doxysubsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Setup.\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method cleans up the temporary directory. 
+
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_setup_a8ccc4c802ac6f35f09baccbc74c50be3}\label{classlatex__curriculum__vitae_1_1_setup_a8ccc4c802ac6f35f09baccbc74c50be3}} 
+\index{latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}!CopyDocuments@{CopyDocuments}}
+\index{CopyDocuments@{CopyDocuments}!latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}}
+\doxysubsubsection{\texorpdfstring{CopyDocuments()}{CopyDocuments()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Setup.\+Copy\+Documents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This method copies a couple of needed files to the App\+Data directory. 
+
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_setup_a11b5c9b2db3e38d34a489721744941de}\label{classlatex__curriculum__vitae_1_1_setup_a11b5c9b2db3e38d34a489721744941de}} 
+\index{latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}!CreateDocumentsPath@{CreateDocumentsPath}}
+\index{CreateDocumentsPath@{CreateDocumentsPath}!latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}}
+\doxysubsubsection{\texorpdfstring{CreateDocumentsPath()}{CreateDocumentsPath()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Setup.\+Create\+Documents\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This method just creates the directory structure, what lcv expected. 
+
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_setup_a8cb2686614dff6e98b5bf381f7bd9346}\label{classlatex__curriculum__vitae_1_1_setup_a8cb2686614dff6e98b5bf381f7bd9346}} 
+\index{latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}!GetOnlineDocumentation@{GetOnlineDocumentation}}
+\index{GetOnlineDocumentation@{GetOnlineDocumentation}!latex\_curriculum\_vitae.Setup@{latex\_curriculum\_vitae.Setup}}
+\doxysubsubsection{\texorpdfstring{GetOnlineDocumentation()}{GetOnlineDocumentation()}}
+{\footnotesize\ttfamily static void latex\+\_\+curriculum\+\_\+vitae.\+Setup.\+Get\+Online\+Documentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This method launches the online documentation. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Sasch/\+One\+Drive/source/repos/\+Visual\+\_\+\+Studio/latex\+\_\+curriculum\+\_\+vitae-\/dotnet/latex\+\_\+curriculum\+\_\+vitae/Setup.\+cs\end{DoxyCompactItemize}

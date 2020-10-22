@@ -28,19 +28,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
         </affiliation>
         <email>Sascha.Manns@outlook.de</email>
       </author>
-    </authorgroup>
-    <cover>
-      <mediaobject>
-        <imageobject role="fo">
-          <imagedata fileref="cover.png" width="50%" align="center"/>
-        </imageobject>
-        <imageobject role="html">
-          <imagedata fileref="cover.png" width="50%" align="center"/>
-        </imageobject>
-      </mediaobject>
-    </cover>    
-    <abstract>      
-      <para>        
+    </authorgroup>     
+    <abstract>           
+      <para>
+        <mediaobject>
+          <imageobject role="fo">
+            <imagedata fileref="cover.png" width="50%" align="center"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata fileref="cover.png" width="50%" align="center"/>
+          </imageobject>
+        </mediaobject>        
         <productname>Latex Curriculum Vitae</productname> is a simple solution for writing job applications with producing beautiful documents with LaTEX.
 You can write, compile and send the stuff directly within the app.
       </para>
@@ -72,22 +70,19 @@ You can write, compile and send the stuff directly within the app.
       </para>
     </legalnotice>
   </info>
-  <part>
+  <chapter xml:id="cha.about">
     <info>
-      <title>User Documentation</title>
+      <title>Round about</title>
     </info>
-    <chapter xml:id="cha.about">
-      <info>
-        <title>Round about</title>
-      </info>
-      <xi:include href="common_intro_typografie.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="common_intro_feedback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="common_intro_making.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      <xi:include href="common_intro_source_code.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    </chapter>
-    <xi:include href="installation.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="usage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="app.revision_update.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="app.gfdl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-  </part>  
+    <xi:include href="common_intro_typografie.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="common_intro_feedback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="common_intro_making.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="common_intro_source_code.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  </chapter>
+  <xi:include href="installation.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="usage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="database.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="credits.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="app.revision_update.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="app.gfdl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>  
 </book>

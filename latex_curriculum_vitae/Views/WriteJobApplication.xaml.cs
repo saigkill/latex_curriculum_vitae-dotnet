@@ -139,7 +139,7 @@ namespace latex_curriculum_vitae
         #region Get Onlinehelp
         private void BtnGetOnlineHelp_Click(object sender, EventArgs e)
         {
-            Setup.GetOnlineDocumentation();
+            Setup.GetOnlineDocumentation("cha.usage.html");
         }
         #endregion        
         private void ChkInititativeChecked(object sender, EventArgs e)

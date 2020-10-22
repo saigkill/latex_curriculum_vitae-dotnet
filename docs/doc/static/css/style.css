@@ -41,18 +41,18 @@ a {
  /* Selection colour, the unprefixed Webkit version & the -moz-prefixed
     version must be on separate lines for it to work. */
 ::selection {
-    background-color: #439239;
+    background-color: #0A3732;
     color: #FFF;
 }
 
 ::-moz-selection {
-    background-color: #439239;
+    background-color: #0A3732;
     color: #FFF;
 }
 
 body {
     background-color: #FFF;
-    font-family: "Stafford Pro Light", 'Open Sans', 'DejaVu Sans', 'Verdana', sans-serif;
+    font-family: 'Stafford Pro Light', 'Open Sans', 'DejaVu Sans', 'Verdana', sans-serif;
     line-height: 140%;
 }
 
@@ -132,8 +132,8 @@ html, body {
 
 #_logo img {
     width: 81px; /* 81px */
-    height: 45px; /38px */
-    color: #439239;
+    height: 45px; /*38px */
+    color: #0A3732;
     line-height: 55px;
     font-weight: 600;
     display: block;
@@ -187,7 +187,7 @@ html, body {
 }
 
 .crumbs > a:hover, .crumbs > a:focus, .crumbs > a:active {
-    color: #439239;
+    color: #0A3732;
     text-decoration: none;
 }
 
@@ -440,7 +440,7 @@ html, body {
     width: 100%;
     min-width: 150px;
     background-image: url(../images/dots-grayongreen.png);
-    background-color: #76AD2D;
+    background-color: #0A3732;
     position: relative;
     z-index: 4;
 }
@@ -551,7 +551,7 @@ html, body {
 .inactive #_toc-area-button:hover, .inactive #_toc-area-button:focus, .inactive #_toc-area-button:active,
 .inactive #_find-area-button:hover, .inactive #_find-area-button:focus, .inactive #_find-area-button:active,
 .nav-inner > a.tool-spacer:hover, .nav-inner > a.tool-spacer:focus, .nav-inner > a.tool-spacer:active {
-    background-color: rgba(255,255,255,0.1);
+    background-color: #0A3732;
 }
 
 .active > .tool {
@@ -934,7 +934,7 @@ button:focus::-moz-focus-inner, button::-moz-focus-inner {
 
 .top-button:hover, .top-button:focus, .top-button:active {
     text-decoration: none;
-    color: #439239;
+    color: #0A3732;
 }
 
 .button > a > .prev-icon {
@@ -1021,7 +1021,7 @@ button:focus::-moz-focus-inner, button::-moz-focus-inner {
 .nav-link:hover > .nav-label,
 .nav-link:focus > .nav-label,
 .nav-link:active > .nav-label {
-    color: #439239;
+    color: #0A3732;
 }
 
 .bottom-button {
@@ -1238,7 +1238,7 @@ button:focus::-moz-focus-inner, button::-moz-focus-inner {
 }
 
 div.version-info {
-    color: #439239;
+    color: #0A3732;
     font-weight: normal;
     background-color: rgba(255,255,255,0.7);
     padding: 3px 5px;
@@ -1259,7 +1259,7 @@ h6.version-info {
     padding: 5px 7px;
     font-size: 24px;
     color: #FFF;
-    background-color: #76AD2D;
+    background-color: #55C388;
     float: left;
     line-height: 100%;
 }
@@ -1275,7 +1275,7 @@ h6.version-info {
     line-height: 120%;
     width: auto;
     clear: both;
-    color: #439239;
+    color: #0A3732;
     padding: 70px 0 50px;
 }
 
@@ -1384,7 +1384,7 @@ h6.version-info {
 
 .name, .refentry h2, .refentrytitle a, h2, .indexdiv h3, .qandadiv-title,
 .qandaset .title, .glossdiv .title {
-    color: #439239;
+    color: #55C388;
 }
 
 a:hover .name, a:focus .name, a:active .name,
@@ -1451,7 +1451,7 @@ a.leads-to-page:active .name, .refentrytitle a:hover, .refentrytitle a:focus,
 
 .permalink:hover, .permalink:focus, .permalink:active,
 .report-bug:hover, .report-bug:focus, .report-bug:active {
-    color: #439239;
+    color: #0A3732;
     text-decoration: none !important;
 }
 
@@ -1471,7 +1471,7 @@ a.leads-to-page:active .name, .refentrytitle a:hover, .refentrytitle a:focus,
 
 .line {
     margin: 17px 0 36px 0;
-    border-bottom: 1px solid #439239;
+    border-bottom: 1px solid #0A3732;
     width: 100%;
 }
 
@@ -1506,7 +1506,7 @@ a.leads-to-page:active .name, .refentrytitle a:hover, .refentrytitle a:focus,
 }
 
 .tip.admonition.normal {
-    border-color: #439239;
+    border-color: #0A3732;
     background: #FFF url(../images/dots-green.png) repeat-x scroll top;
 }
 
@@ -1551,7 +1551,7 @@ a.leads-to-page:active .name, .refentrytitle a:hover, .refentrytitle a:focus,
 }
 
 .tip.admonition.normal > h6 {
-    color: #439239;
+    color: #0A3732;
 }
 
 .note.admonition.normal > h6 {
@@ -1622,7 +1622,7 @@ strong, b, .imprint-label, .version-info .productname,
 
 .arch-arrow-start {
     background-color: #7DC24D;
-    border: 1px solid #439239;
+    border: 1px solid #0A3732;
     border-radius: 3px;
     padding: 0 2px 0 4px;
     display: inline-block;
@@ -1717,7 +1717,7 @@ p, .simplelist td {
 
 .ulink, .link, .xref, .email, .glosssee,
 .glossseealso, .indexterm {
-    color: #439239;
+    color: #0A3732;
     text-decoration: none;
 }
 
@@ -1751,7 +1751,7 @@ p, .simplelist td {
 .glossseealso:visited:hover, .glossseealso:visited:focus, .glossseealso:visited:active,
 .indexterm:hover, .indexterm:focus, .indexterm:active,
 .indexterm:visited:hover, .indexterm:visited:focus, .indexterm:visited:active {
-    color: #439239;
+    color: #0A3732;
     text-decoration: underline;
 }
 
@@ -1771,7 +1771,7 @@ p, .simplelist td {
 .itemizedlist-title .xref:hover, .itemizedlist-title .xref:focus, .itemizedlist-title .xref:active,
 .variablelist-title .xref:hover, .variablelist-title .xref:focus, .variablelist-title .xref:active,
 .qandadiv-title .xref:hover, .qandadiv-title .xref:focus, .qandadiv-title .xref:active {
-    color: #439239;
+    color: #0A3732;
     text-decoration: none;
 }
 
@@ -1930,7 +1930,7 @@ code, .literal, .replaceable, .package {
     padding: 1px 6px 1.5px 5px;
     margin: 0 5px;
     border-radius: 10px;
-    background-color: #439239;
+    background-color: #0A3732;
     color: #FFF;
     font-family: 'Open Sans', Helvetica, FreeSans, sans-serif;
     font-size: 13px;
@@ -2099,7 +2099,7 @@ a:hover code, a:focus code, a:active code,
 a:hover .replaceable, a:focus .replaceable, a:active .replaceable,
 a:hover .literal, a:focus .literal, a:active .literal,
 a:hover .package, a:focus .package, a:active .package {
-    border-color: #439239;
+    border-color: #0A3732;
 }
 
 
@@ -2210,7 +2210,7 @@ a:hover .package, a:focus .package, a:active .package {
 
 ol.procedure, ol.substeps, ol.orderedlist {
     display: block;
-    color: #439239;
+    color: #0A3732;
     font-weight: 600;
 }
 
@@ -2341,7 +2341,7 @@ ul {
     padding: 5px 0 0 35px;
     margin: 0 10px;
     display: block;
-    color: #439239;
+    color: #0A3732;
     list-style-type: disc;
 }
 
@@ -2558,8 +2558,8 @@ p.ds-message {
     }
 
     .callout {
-        border: 1px solid #439239;
-        color: #439239;
+        border: 1px solid #0A3732;
+        color: #0A3732;
     }
 
     #_fixed-header-wrap, #_toolbar-wrap, #_pickers, #_inward, #_footer-wrap,
@@ -2650,7 +2650,7 @@ p.ds-message {
 
     #_find-area {
         height: 42px;
-        background-color: #439239;
+        background-color: #0A3732;
         width: 100%;
         padding: 0 !important;
         overflow: hidden;

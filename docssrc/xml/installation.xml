@@ -89,13 +89,13 @@
 	 The Bibliography directory only holds a file called <filename>bibliography.bib</filename>. 
 		This is a standard bibfile from Latex, currently filled with my publications. Feel free to replace their with yours. 
 		<important><para>
-		In case you are not using this feature so just comment out in the <filename>curriculum_vitae.tex</filename> file the part <code>\addbibresource{bibliography.bib}</code> and also the section:
-		<code>
+		In case you are not using this feature so just comment out in the <filename>curriculum_vitae.tex</filename> file the part <code>\addbibresource{bibliography.bib}</code> and also the section:		
+		<screen>
 \section{Publikationen}
 \printbibsection{article}{Artikel}
 \printbibsection{book}{Bücher} 
 \printbibsection{misc}{other publications}
-		</code>
+		</screen>
 		</para></important>
 		The second directory <filename>Certificates</filename> is empty. In that directory, you can place all 
 		your certificates (maybe a further education or a course what you finished). The third directory is <filename>Certificates of Employment</filename> is reserved
@@ -116,7 +116,7 @@
 			</listitem>
 		</itemizedlist>		
 	</example>
-	<para>Your mention is right: The next will be a 4_your_2021job.pdf. By preparing the files in that case, i can do a reverse ordering by rhe app itself.</para>
+	<para>Your mention is right: The next will be a 4_your_2021job.pdf. By preparing the files in that case, i can do a reverse ordering by the app itself.</para>
 	<para>Now we looking the other directories. We have a <filename>Curriculum_Vitae</filename> directory. And it contains a predefined LaTEX file for the curriculum vitae called <filename>curriculum_vitae.tex</filename>. 
 		Then we have a file <filename>friggeri-cv.cls</filename>. As you maybe expect, this
 		is the class file for producing the curriculum vitae. The <filename>Letter of Application</filename> directory holds the <filename>letter_of_application.tex</filename> file, what we use for producing the letter of application. 

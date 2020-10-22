@@ -1,0 +1,10 @@
+* Check if all code is documented
+* Check the GPL-Header year
+* Update documentation
+* Run daps-run.sh (openSUSE WSL)
+* Run doxygen Doxyfile (Powershell)
+* Run /docs/doc/doxygen/latex/make.bat
+* Add release to CHANGELOG.md
+* Set a git tag vor the release
+* Add exe to the Github Release Assets
+* Write release blog

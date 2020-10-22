@@ -1,0 +1,112 @@
+\hypertarget{classlatex__curriculum__vitae_1_1_contact}{}\doxysection{latex\+\_\+curriculum\+\_\+vitae.\+Contact Class Reference}
+\label{classlatex__curriculum__vitae_1_1_contact}\index{latex\_curriculum\_vitae.Contact@{latex\_curriculum\_vitae.Contact}}
+
+
+This class is for instancing a \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_contact}{Contact}} object.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlatex__curriculum__vitae_1_1_contact_a531887acd5f3e9c445b4bc9e006544f1}{Contact}} (string cname, string gname)
+\begin{DoxyCompactList}\small\item\em This Constructor sets the arguments values to the \mbox{\hyperlink{namespacelatex__curriculum__vitae_1_1_properties}{Properties}} and instances the object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_contact_a7c0ca56c9060c63d8b27492fb893b6be}{Addressline}} (string company, string contactname, string cgender, string cstreet, int? czip, string ccity)
+\begin{DoxyCompactList}\small\item\em This method combines the arguments to create a address string for using in the letter of application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_contact_a9af19aae2b308fd0d278d828341d3ffe}\label{classlatex__curriculum__vitae_1_1_contact_a9af19aae2b308fd0d278d828341d3ffe}} 
+string {\bfseries Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_contact_a9842d46d173a7e52c65044ffd0a2dee8}\label{classlatex__curriculum__vitae_1_1_contact_a9842d46d173a7e52c65044ffd0a2dee8}} 
+string {\bfseries Gender}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_contact_a31d7cabbd1f39d5f375eee6f5a7039f1}\label{classlatex__curriculum__vitae_1_1_contact_a31d7cabbd1f39d5f375eee6f5a7039f1}} 
+string {\bfseries Salutation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_contact_aa22601bf44426c018d8eb84fea92cf06}{Get\+Salutation}} (string cname, string gname)
+\begin{DoxyCompactList}\small\item\em This method creates from the contact name and gender the right salutation. Ex. Dear Mr. Manns \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is for instancing a \mbox{\hyperlink{classlatex__curriculum__vitae_1_1_contact}{Contact}} object. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_contact_a531887acd5f3e9c445b4bc9e006544f1}\label{classlatex__curriculum__vitae_1_1_contact_a531887acd5f3e9c445b4bc9e006544f1}} 
+\index{latex\_curriculum\_vitae.Contact@{latex\_curriculum\_vitae.Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!latex\_curriculum\_vitae.Contact@{latex\_curriculum\_vitae.Contact}}
+\doxysubsubsection{\texorpdfstring{Contact()}{Contact()}}
+{\footnotesize\ttfamily latex\+\_\+curriculum\+\_\+vitae.\+Contact.\+Contact (\begin{DoxyParamCaption}\item[{string}]{cname,  }\item[{string}]{gname }\end{DoxyParamCaption})}
+
+
+
+This Constructor sets the arguments values to the \mbox{\hyperlink{namespacelatex__curriculum__vitae_1_1_properties}{Properties}} and instances the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cname} & comes from the gui txt\+Contact\+Name.\+Text (Contains the name of the contact)\\
+\hline
+{\em gname} & comes from the gui (Contains the contacts gender)\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_contact_a7c0ca56c9060c63d8b27492fb893b6be}\label{classlatex__curriculum__vitae_1_1_contact_a7c0ca56c9060c63d8b27492fb893b6be}} 
+\index{latex\_curriculum\_vitae.Contact@{latex\_curriculum\_vitae.Contact}!Addressline@{Addressline}}
+\index{Addressline@{Addressline}!latex\_curriculum\_vitae.Contact@{latex\_curriculum\_vitae.Contact}}
+\doxysubsubsection{\texorpdfstring{Addressline()}{Addressline()}}
+{\footnotesize\ttfamily string latex\+\_\+curriculum\+\_\+vitae.\+Contact.\+Addressline (\begin{DoxyParamCaption}\item[{string}]{company,  }\item[{string}]{contactname,  }\item[{string}]{cgender,  }\item[{string}]{cstreet,  }\item[{int?}]{czip,  }\item[{string}]{ccity }\end{DoxyParamCaption})}
+
+
+
+This method combines the arguments to create a address string for using in the letter of application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em company} & comes from company.\+Name (Contains the company name)\\
+\hline
+{\em contactname} & comes from contact.\+Name (Contains the contact name)\\
+\hline
+{\em cgender} & comes from contact.\+Gender (Contains contacts gender)\\
+\hline
+{\em cstreet} & comes from company.\+Street (Contains companies street)\\
+\hline
+{\em czip} & comes from company.\+Z\+IP (contains companies zip)\\
+\hline
+{\em ccity} & comes from company.\+City (Contains companies city)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string addressline
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlatex__curriculum__vitae_1_1_contact_aa22601bf44426c018d8eb84fea92cf06}\label{classlatex__curriculum__vitae_1_1_contact_aa22601bf44426c018d8eb84fea92cf06}} 
+\index{latex\_curriculum\_vitae.Contact@{latex\_curriculum\_vitae.Contact}!GetSalutation@{GetSalutation}}
+\index{GetSalutation@{GetSalutation}!latex\_curriculum\_vitae.Contact@{latex\_curriculum\_vitae.Contact}}
+\doxysubsubsection{\texorpdfstring{GetSalutation()}{GetSalutation()}}
+{\footnotesize\ttfamily string latex\+\_\+curriculum\+\_\+vitae.\+Contact.\+Get\+Salutation (\begin{DoxyParamCaption}\item[{string}]{cname,  }\item[{string}]{gname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This method creates from the contact name and gender the right salutation. Ex. Dear Mr. Manns 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cname} & comes from the gui txt\+Contact\+Name.\+Text (Contains the name of the contact)\\
+\hline
+{\em gname} & comes from the gui (Contains the contacts gender)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string salutation
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Sasch/\+One\+Drive/source/repos/\+Visual\+\_\+\+Studio/latex\+\_\+curriculum\+\_\+vitae-\/dotnet/latex\+\_\+curriculum\+\_\+vitae/Contact.\+cs\end{DoxyCompactItemize}
