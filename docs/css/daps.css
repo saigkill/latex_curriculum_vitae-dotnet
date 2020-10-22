@@ -79,6 +79,14 @@ h3.feature::before {
   margin-left: 2rem;
 }
 
+.donations {
+    border-top: 2px solid #0A3732;
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+
+
+
 footer {
   border-top: 2px solid #0A3732;
   text-align: right;

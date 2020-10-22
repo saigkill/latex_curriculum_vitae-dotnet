@@ -5,15 +5,11 @@
 ## DESCRIPTION
 
 Latex Curriculum Vitae is a simple solution for writing job applications with producing beautiful documents with LaTEX.
-You can write, compile and send the stuff directly within the app. Also you get a simple CSV file, what contains all sent stuff. You can use it as example in a Excel-Sheet.
+You can write, compile and send the stuff directly within the app. Also you can manage the current status from your applications. You need just a Windows 10 Computer and a basic knowledge of LaTEX all other dependencies are bundled by the release.
 
 The CHANGELOG.md contains a detailed description of what has changed.
 
 Latex Curriculum Vitae is released under the GPL3 License, see the file 'LICENSE.md' for more information.
-
-The official website is:
-
-    https://github.com/saigkill/latex_curriculum_vitae-dotnet
 
 |What|Where|
 |-----|-------------------------------------------------------------------------------------|
@@ -29,21 +25,15 @@ The official website is:
 |continuous integration | ![.NET Core](https://github.com/saigkill/latex_curriculum_vitae-dotnet/workflows/.NET%20Core/badge.svg) |
 |dependencies|[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=saigkill/latex_curriculum_vitae-dotnet)](https://dependabot.com) |
 
-## SCREENSHOT
-
-### Create a job application
-
-[![Screenshot](https://raw.githubusercontent.com/saigkill/latex_curriculum_vitae-dotnet/master/docssrc/images/src/png/WriteJobApplication.png)](https://github.com/saigkill/latex_curriculum_vitae-dotnet)
-
-### Main Menu
-
-[![Screenshot](https://raw.githubusercontent.com/saigkill/latex_curriculum_vitae-dotnet/master/docssrc/images/src/png/MainWindow.png)](https://github.com/saigkill/latex_curriculum_vitae-dotnet)
 
 ## FEATURES/PROBLEMS
 
-* Provides a LaTEX driven PDF bundle of documents
-* Sends the email directly from the app
-* Stores all applications in a CSV file
+* Write automated high quality job applications
+* Storing User information
+* Really fast producing
+* Direct Email or Upload
+* Managing the current status of your open Applications
+* Localized in English and German
 
 ## REQUIREMENTS
 
@@ -58,5 +48,6 @@ The official website is:
 
 The installation is very easy.
 
-    Download the nuget package or the exe
+    Download the exe
+    Move it to eg Documents or Desktop
     Doubleclick on it
