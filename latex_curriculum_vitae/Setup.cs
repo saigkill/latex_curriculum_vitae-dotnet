@@ -92,13 +92,13 @@ namespace latex_curriculum_vitae
 
         public static void GetOnlineDocumentation()
         {
-            string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/";
+            string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/doc/index.html";
             Process.Start(targetURL);
         }
 
         public static void GetOnlineDocumentation(string target)
         {
-            string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/" + "#" + target;
+            string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/doc/" + target;
             Process.Start(targetURL);
         }
 
