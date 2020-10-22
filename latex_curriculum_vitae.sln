@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "latex_curriculum_vitae", "latex_curriculum_vitae\latex_curriculum_vitae.csproj", "{A8E560C7-B133-471A-ACFF-E7ED458F8B54}"
 EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "latex_curriculum_vitae-Setup", "latex_curriculum_vitae-Setup\latex_curriculum_vitae-Setup.wixproj", "{DFB557A4-0FC2-4228-803E-2B7704D6DB50}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD02FB94-E7B3-4840-BAEC-8EBEEF1043CC}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
@@ -35,19 +33,13 @@ Global
 		{A8E560C7-B133-471A-ACFF-E7ED458F8B54}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A8E560C7-B133-471A-ACFF-E7ED458F8B54}.Release|x86.ActiveCfg = Release|Any CPU
 		{A8E560C7-B133-471A-ACFF-E7ED458F8B54}.Release|x86.Build.0 = Release|Any CPU
-		{DFB557A4-0FC2-4228-803E-2B7704D6DB50}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{DFB557A4-0FC2-4228-803E-2B7704D6DB50}.Debug|x86.ActiveCfg = Debug|x86
-		{DFB557A4-0FC2-4228-803E-2B7704D6DB50}.Debug|x86.Build.0 = Debug|x86
-		{DFB557A4-0FC2-4228-803E-2B7704D6DB50}.Release|Any CPU.ActiveCfg = Release|x86
-		{DFB557A4-0FC2-4228-803E-2B7704D6DB50}.Release|x86.ActiveCfg = Release|x86
-		{DFB557A4-0FC2-4228-803E-2B7704D6DB50}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_AutoCreateNewLanguageFiles = True
-		RESX_SortFileContentOnSave = True
 		SolutionGuid = {C78BB2F2-1BB1-4F05-A99E-DF3E94547651}
+		RESX_SortFileContentOnSave = True
+		RESX_AutoCreateNewLanguageFiles = True
 	EndGlobalSection
 EndGlobal

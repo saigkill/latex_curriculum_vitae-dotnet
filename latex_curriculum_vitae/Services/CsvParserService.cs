@@ -20,6 +20,7 @@ using latex_curriculum_vitae.Mappers;
 using latex_curriculum_vitae.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -33,8 +34,8 @@ namespace latex_curriculum_vitae.Services
             try
             {
                 using var reader = new StreamReader(path, Encoding.Default);
-                using var csv = new CsvReader(reader);
-                csv.Configuration.Delimiter = ",";
+                using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+                //csv.Configuration.Delimiter = ",";
                 csv.Configuration.RegisterClassMap<JobApplicationMap>();
                 var records = csv.GetRecords<JobApplicationModel>().ToList();
                 return records;
@@ -60,7 +61,7 @@ namespace latex_curriculum_vitae.Services
         public void WriteNewCsvFile(string path, List<JobApplicationModel> jobApplicationModels)
         {
             using StreamWriter sw = new StreamWriter(path, false, new UTF8Encoding(true));
-            using CsvWriter cw = new CsvWriter(sw);
+            using CsvWriter cw = new CsvWriter(sw, CultureInfo.InvariantCulture);
             cw.Configuration.Delimiter = ",";
             cw.WriteHeader<JobApplicationModel>();
             cw.NextRecord();
