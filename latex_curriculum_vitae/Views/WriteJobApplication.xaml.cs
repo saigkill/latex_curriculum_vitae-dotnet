@@ -61,7 +61,6 @@ namespace latex_curriculum_vitae
             if (myuser.BitLyToken != "Not Found")
             {
                 myapplication.UseBitLy(myuser.BitLyToken, myapplication.URL);
-                MessageBox.Show("URL:" + myapplication.URL);
             }
 
             if (myapplication.Email == "")
