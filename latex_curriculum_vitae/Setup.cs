@@ -153,6 +153,9 @@ namespace latex_curriculum_vitae
 
             // Empty CSV file
             File.Copy(Path.Combine(main, "Assets", "CSV", "JobApplications.csv"), Path.Combine(targetPath, "JobApplications.csv"));
+
+            // Database
+            File.Copy(Path.Combine(main, "Assets", "Database", "JobApplications.db"), Path.Combine(targetPath, "JobApplications.db"));
         }
 
         /// <summary>

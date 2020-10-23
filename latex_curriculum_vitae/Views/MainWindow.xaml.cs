@@ -19,6 +19,7 @@ using latex_curriculum_vitae.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.IO;
 using System.Windows;
 
 namespace latex_curriculum_vitae
@@ -30,6 +31,8 @@ namespace latex_curriculum_vitae
     {
         #region Private members
         private ServiceProvider serviceProvider;
+        static readonly string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        string targetPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
         #endregion
 
         #region Initialize Main
@@ -58,7 +61,9 @@ namespace latex_curriculum_vitae
             ServiceCollection services = new ServiceCollection();
             services.AddDbContext<JobApplicationDataDbContext>(options =>
             {
-                options.UseSqlite("Data Source = JobApplications.db");
+                string sqlitedir = Path.Combine(targetPath, "JobApplications.db");
+                string sqlitestring = String.Format(@"Data Source = {0}", sqlitedir);
+                options.UseSqlite(sqlitestring);
             });
 
             services.AddSingleton<DatabaseWindow>();
