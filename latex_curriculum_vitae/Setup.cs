@@ -59,12 +59,16 @@ namespace latex_curriculum_vitae
             {
                 Directory.SetCurrentDirectory(main);
             }
-            catch (Exception e)
+            catch (System.IO.DirectoryNotFoundException e)
             {
-                MessageBox.Show(Properties.Resources.MsgSetupCheckLatex + e, Properties.Resources.MsgSetupCheckLatexHeader, MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Properties.Resources.MsgSetupCheckLatex + " " + e, Properties.Resources.MsgSetupCheckLatexHeader, MessageBoxButton.OK, MessageBoxImage.Error);
                 string targetURL = @"https://www.tug.org/texlive/acquire-netinstall.html";
                 Process.Start(targetURL);
 
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e, "Exception occured", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
