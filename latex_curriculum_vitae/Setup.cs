@@ -68,7 +68,7 @@ namespace latex_curriculum_vitae
             }
             catch (Exception e)
             {
-                MessageBox.Show(e, "Exception occured", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Unknown Exception" + e, "Exception occured", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
