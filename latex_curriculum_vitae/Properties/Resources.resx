@@ -99,26 +99,26 @@
   </resheader>
   <data name="AddressFemale" xml:space="preserve">
     <value>Mrs</value>
-    <comment>Adress female</comment>
+    <comment>Address female</comment>
   </data>
   <data name="AddressMale" xml:space="preserve">
     <value>Mr</value>
-    <comment>Adress male</comment>
+    <comment>Address male</comment>
   </data>
   <data name="AppDoc" xml:space="preserve">
     <value>Application_documents_</value>
-    <comment>A bundle of documents for apply to a job with final _</comment>
+    <comment>A collection of documents for applying to a job with final _</comment>
   </data>
   <data name="BtnExit" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="Cert" xml:space="preserve">
     <value>Additional_Certificates_</value>
-    <comment>A bundle of additional certificates final _</comment>
+    <comment>A collection of additional certificates final _</comment>
   </data>
   <data name="Cos" xml:space="preserve">
     <value>Job_References_</value>
-    <comment>Bundle of job references with final _</comment>
+    <comment>A collection of job references with final _</comment>
   </data>
   <data name="CsvEmailSent" xml:space="preserve">
     <value>Email sent</value>
@@ -128,7 +128,7 @@
     <value>Add Application</value>
   </data>
   <data name="DwAddNewApplication" xml:space="preserve">
-    <value>New application</value>
+    <value>New Application</value>
   </data>
   <data name="DwApplicationId" xml:space="preserve">
     <value>Application Id</value>
@@ -152,10 +152,10 @@
     <value>Edit Application</value>
   </data>
   <data name="DwHeader" xml:space="preserve">
-    <value>Exlore the state of your Job Applications</value>
+    <value>Exlore the Status of your Job Applications</value>
   </data>
   <data name="DwHeader1" xml:space="preserve">
-    <value>The current status of your job applications</value>
+    <value>The Current Status of your Job Applications</value>
   </data>
   <data name="DwInvited" xml:space="preserve">
     <value>Invited</value>
@@ -173,7 +173,7 @@
     <value>Last phone call</value>
   </data>
   <data name="DwRefused" xml:space="preserve">
-    <value>Refuesed</value>
+    <value>Refused</value>
   </data>
   <data name="DwSent" xml:space="preserve">
     <value>Sent</value>
@@ -183,21 +183,21 @@
   </data>
   <data name="EmailHTML" xml:space="preserve">
     <value>&lt;p&gt;{0}&lt;br&gt;
-&lt;p&gt;I am sending you my application documents attached.&lt;br&gt;
-&lt;p&gt;Sincerly&lt;/p&gt;
+&lt;p&gt;You will find the documents for my application attached.&lt;br&gt;
+&lt;p&gt;Sincerley&lt;/p&gt;
 &lt;p align=left&gt;{1}&lt;br&gt;
 &lt;center&gt;&lt;img src=""cid:{2}"" width=""10%""&gt;&lt;/center&gt;&lt;/p&gt;</value>
   </data>
   <data name="EmailNotSet" xml:space="preserve">
-    <value>You haven't set all needed fields for sending emails. I open for you the Usersettings Window.</value>
+    <value>You haven't set all necessary fields for sending emails. The User Settings Window will now open for you.</value>
   </data>
   <data name="EmailNotSetHeader" xml:space="preserve">
-    <value>Can't send email.</value>
+    <value>Cannot send email.</value>
   </data>
   <data name="EmailPlain" xml:space="preserve">
     <value>{0}
 
-I am sending you my application documents attached.
+You will find the documents for my application attached.
 
 Sincerely
 {1}</value>
@@ -224,19 +224,19 @@ Sincerely
     <comment>Gender Male</comment>
   </data>
   <data name="GenderUnknown" xml:space="preserve">
-    <value>Unknown</value>
-    <comment>Unknown gender</comment>
+    <value>Other/Neutral</value>
+    <comment>Other/Neutral</comment>
   </data>
   <data name="HRDepartment" xml:space="preserve">
     <value>HR department</value>
-    <comment>The human ressources department</comment>
+    <comment>The human resources department</comment>
   </data>
   <data name="MsgDirFinalPdf" xml:space="preserve">
-    <value>Now i open for you the directory in the explorer, what contains your PDFs.</value>
+    <value>The explorer directory will now open containing your PDFs.</value>
     <comment>Information about open directory</comment>
   </data>
   <data name="MsgEmailSent" xml:space="preserve">
-    <value>Your email is now sent. You can do the next job application.</value>
+    <value>Your email is now sent. You can proceed with the next job application.</value>
     <comment>Messagebox Info about Email sent</comment>
   </data>
   <data name="MsgHeaderInfo" xml:space="preserve">
@@ -244,22 +244,22 @@ Sincerely
     <comment>Messagebox Headertitle</comment>
   </data>
   <data name="MsgSetupCheckConfig" xml:space="preserve">
-    <value>You starting the app the first time. Please add your user settings in the window.</value>
+    <value>You are using the app the first time. Please add your user settings in the window.</value>
   </data>
   <data name="MsgSetupCheckConfigHeader" xml:space="preserve">
     <value>Check Configuration</value>
   </data>
   <data name="MsgSetupCheckDocument" xml:space="preserve">
-    <value>Please close the App and follow the documentation. I open it for you.</value>
+    <value>Please close the app and follow the documentation. The documentation will now open for you.</value>
   </data>
   <data name="MsgSetupCheckDocumentHeader" xml:space="preserve">
-    <value>Check documents path</value>
+    <value>Check Documents Path</value>
   </data>
   <data name="MsgSetupCheckDocumentsCopy" xml:space="preserve">
-    <value>You starting the app the first time. I prepare now the directory structure and copy the needed files to:</value>
+    <value>You are using the app the first time. The directory structure is being prepared. Please copy the needed files to:</value>
   </data>
   <data name="MsgSetupCheckLatex" xml:space="preserve">
-    <value>I haven't found TeXLive. Now i open a Browser, where you can download it. Please close this app and install TexLive.</value>
+    <value>Cannot find TeXLive. A browser will now open for you to download this software. Please close this app and install TeXLive.</value>
   </data>
   <data name="MsgSetupCheckLatexHeader" xml:space="preserve">
     <value>Check LaTEX</value>
@@ -268,16 +268,16 @@ Sincerely
     <value>Open Database</value>
   </data>
   <data name="MWStartWriteJobApplication" xml:space="preserve">
-    <value>Write your Job-Application</value>
+    <value>Write Your Job Application</value>
   </data>
   <data name="MWTitle" xml:space="preserve">
-    <value>Main Menue</value>
+    <value>Main Menu</value>
   </data>
   <data name="MWUsersettings" xml:space="preserve">
     <value>View or Change User Settings</value>
   </data>
   <data name="SalutationFemale" xml:space="preserve">
-    <value>Dear Mrs</value>
+    <value>Dear Ms</value>
     <comment>Salutation for writing to a Ms.</comment>
   </data>
   <data name="SalutationMale" xml:space="preserve">
@@ -285,7 +285,7 @@ Sincerely
     <comment>Salutation for writing to a Mr.</comment>
   </data>
   <data name="SalutationUnknown" xml:space="preserve">
-    <value>Dear Sir or Madam</value>
+    <value>To whom it may concern;</value>
     <comment>Salutation if unknown</comment>
   </data>
   <data name="Subjectprefix" xml:space="preserve">
@@ -301,25 +301,25 @@ Sincerely
     <value>Save</value>
   </data>
   <data name="UsEmailaddress" xml:space="preserve">
-    <value>Your Emailaddress:</value>
+    <value>Your Email Address:</value>
   </data>
   <data name="UsEmailSettings" xml:space="preserve">
     <value>Email settings</value>
   </data>
   <data name="UsFamilyname" xml:space="preserve">
-    <value>Your Familyname:</value>
+    <value>Your Family Name:</value>
   </data>
   <data name="UsFirstname" xml:space="preserve">
-    <value>Your Firstname:</value>
+    <value>Your First Name:</value>
   </data>
   <data name="UsHeader" xml:space="preserve">
-    <value>Your User settings</value>
+    <value>Your User Settings</value>
   </data>
   <data name="UsPersonalSettings" xml:space="preserve">
     <value>Personal Settings</value>
   </data>
   <data name="UsPhonenumber" xml:space="preserve">
-    <value>Your Phonenumber:</value>
+    <value>Your Phone Number:</value>
   </data>
   <data name="UsSmtpPassword" xml:space="preserve">
     <value>SMTP-Password:</value>
@@ -358,7 +358,7 @@ Sincerely
     <value>City:</value>
   </data>
   <data name="WJACompanyDetails" xml:space="preserve">
-    <value>Companydetails</value>
+    <value>Company Details</value>
   </data>
   <data name="WJACompanyName" xml:space="preserve">
     <value>Company Name:</value>
@@ -366,16 +366,16 @@ Sincerely
   </data>
   <data name="WJACompanyStreet" xml:space="preserve">
     <value>Companies Street:</value>
-    <comment>Street of the Company</comment>
+    <comment>Street Address of the Company:</comment>
   </data>
   <data name="WJAContact" xml:space="preserve">
-    <value>Contact person</value>
+    <value>Contact Person:</value>
   </data>
   <data name="WJAContactName" xml:space="preserve">
     <value>Name:</value>
   </data>
   <data name="WJAEmail" xml:space="preserve">
-    <value>Emailaddress:</value>
+    <value>Email Address:</value>
   </data>
   <data name="WJAGender" xml:space="preserve">
     <value>Gender:</value>
@@ -391,7 +391,7 @@ Sincerely
     <value>Initiative application</value>
   </data>
   <data name="WJAJobtitle" xml:space="preserve">
-    <value>Jobtitle:</value>
+    <value>Job Title:</value>
   </data>
   <data name="WJAUrl" xml:space="preserve">
     <value>URL:</value>
