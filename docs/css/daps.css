@@ -85,7 +85,11 @@ h3.feature::before {
     padding-top: 2rem;
 }
 
-
+.statistics {
+    border-top: 2px solid #0A3732;
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
 
 footer {
   border-top: 2px solid #0A3732;
