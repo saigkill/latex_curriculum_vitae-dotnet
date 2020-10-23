@@ -47,6 +47,6 @@ Latex Curriculum Vitae is released under the GPL3 License, see the file `LICENSE
 
 Installation is very easy:
 
-    Download the exe
+    Download the exe (https://github.com/saigkill/latex_curriculum_vitae-dotnet/releases)
     Move it to eg Documents or Desktop
     Doubleclick on it
