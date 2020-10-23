@@ -20,6 +20,7 @@
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Version>0.9.0</Version>
 		<Product>Latex Curriculum Vitae</Product>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -51,7 +52,7 @@
 
 	<ItemGroup>
 		<Resource Include="Views\F1Help_16x.png" />
-		<Resource Include="Views\profile.png" />
+		<Resource Include="Assets\images\profile.png" />
 	</ItemGroup>
 
 	<ItemGroup>

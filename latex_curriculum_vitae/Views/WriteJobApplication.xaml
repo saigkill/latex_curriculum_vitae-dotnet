@@ -100,7 +100,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Margin="5,-4,10,21" Height="30" Grid.ColumnSpan="6" Grid.RowSpan="2">
+                <StackPanel Margin="5,-4,10,21" Height="30" Grid.ColumnSpan="7" Grid.RowSpan="2">
                     <Label Content="{x:Static p:Resources.WJAApplication}" FontWeight="Bold" HorizontalAlignment="Center"
                        Height="29"/>
                 </StackPanel>

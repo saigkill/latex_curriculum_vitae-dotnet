@@ -59,12 +59,16 @@ namespace latex_curriculum_vitae
             {
                 Directory.SetCurrentDirectory(main);
             }
-            catch (Exception e)
+            catch (System.IO.DirectoryNotFoundException e)
             {
-                MessageBox.Show(Properties.Resources.MsgSetupCheckLatex + e, Properties.Resources.MsgSetupCheckLatexHeader, MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Properties.Resources.MsgSetupCheckLatex + " " + e, Properties.Resources.MsgSetupCheckLatexHeader, MessageBoxButton.OK, MessageBoxImage.Error);
                 string targetURL = @"https://www.tug.org/texlive/acquire-netinstall.html";
                 Process.Start(targetURL);
 
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Unknown Exception" + e, "Exception occured", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -153,6 +157,9 @@ namespace latex_curriculum_vitae
 
             // Empty CSV file
             File.Copy(Path.Combine(main, "Assets", "CSV", "JobApplications.csv"), Path.Combine(targetPath, "JobApplications.csv"));
+
+            // Database
+            File.Copy(Path.Combine(main, "Assets", "Database", "JobApplications.db"), Path.Combine(targetPath, "JobApplications.db"));
         }
 
         /// <summary>
