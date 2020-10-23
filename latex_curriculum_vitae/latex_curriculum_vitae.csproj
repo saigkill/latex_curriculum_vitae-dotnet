@@ -20,6 +20,7 @@
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Version>0.9.0</Version>
 		<Product>Latex Curriculum Vitae</Product>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -39,7 +40,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="BitlyAPI" Version="4.0.1" />
+		<PackageReference Include="BitlyAPI" Version="4.0.0" />
 		<PackageReference Include="CsvHelper" Version="15.0.8" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0-rc.1.20451.13" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0-rc.1.20451.14" />
@@ -51,7 +52,7 @@
 
 	<ItemGroup>
 		<Resource Include="Views\F1Help_16x.png" />
-		<Resource Include="Views\profile.png" />
+		<Resource Include="Assets\images\profile.png" />
 	</ItemGroup>
 
 	<ItemGroup>
