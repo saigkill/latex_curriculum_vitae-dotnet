@@ -26,12 +26,8 @@
 
 #### `master` BRANCH
 
-The master branch is the last stable version.
-
-#### `develop` BRANCH
-
-The develop branch is the branch where i'm working on a new feature or release.
+The master branch is the working directory
 
 #### PULL REQUESTS
 
-Please base all Pullrequests off the `develop` branch.
+Please base all Pullrequests off the `master` branch.
