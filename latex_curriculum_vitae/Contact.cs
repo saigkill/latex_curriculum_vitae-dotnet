@@ -37,7 +37,6 @@ namespace latex_curriculum_vitae
         {
             Name = cname;
             Gender = gname;
-
             Salutation = GetSalutation(Name, Gender);
         }
 
@@ -51,7 +50,7 @@ namespace latex_curriculum_vitae
         {
             string salutation;
 
-            if (cname == "")
+            if (string.IsNullOrEmpty(cname))
             {
                 salutation = Properties.Resources.SalutationUnknown + ",";
             }
@@ -83,7 +82,7 @@ namespace latex_curriculum_vitae
             company = company.Replace(@"&", @"\&");
 
             addressline = company + "\\\\";
-            if (contactname == "" || cgender == Properties.Resources.GenderUnknown)
+            if (string.IsNullOrEmpty(contactname) || cgender == Properties.Resources.GenderUnknown)
             {
                 addressline += Properties.Resources.HRDepartment + " \\\\";
             }
