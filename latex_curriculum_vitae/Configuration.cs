@@ -24,7 +24,7 @@ namespace latex_curriculum_vitae
     /// <summary>
     /// This class is for configure the project.
     /// </summary>
-    static class Configuration
+    internal static class Configuration
     {
         /// <summary>
         /// This method gets a specific information from the config file specified by its key name.
@@ -35,7 +35,7 @@ namespace latex_curriculum_vitae
         {
             try
             {
-                var appSettings = ConfigurationManager.AppSettings;
+                System.Collections.Specialized.NameValueCollection appSettings = ConfigurationManager.AppSettings;
                 string result = appSettings[key] ?? "Not Found";
                 return result;
             }
@@ -45,7 +45,6 @@ namespace latex_curriculum_vitae
                 string empty = "";
                 return empty;
             }
-
         }
 
         /// <summary>
@@ -57,12 +56,16 @@ namespace latex_curriculum_vitae
         {
             try
             {
-                var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                var entry = config.AppSettings.Settings[key];
+                System.Configuration.Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                KeyValueConfigurationElement entry = config.AppSettings.Settings[key];
                 if (entry == null)
+                {
                     config.AppSettings.Settings.Add(key, value);
+                }
                 else
+                {
                     config.AppSettings.Settings[key].Value = value;
+                }
 
                 config.Save(ConfigurationSaveMode.Modified);
             }

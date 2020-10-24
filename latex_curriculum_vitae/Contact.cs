@@ -20,7 +20,7 @@ namespace latex_curriculum_vitae
     /// <summary>
     /// This class is for instancing a Contact object.
     /// </summary>
-    class Contact
+    internal class Contact
     {
         public string Name { get; set; }
 
@@ -37,7 +37,6 @@ namespace latex_curriculum_vitae
         {
             Name = cname;
             Gender = gname;
-
             Salutation = GetSalutation(Name, Gender);
         }
 
@@ -51,7 +50,7 @@ namespace latex_curriculum_vitae
         {
             string salutation;
 
-            if (cname == "")
+            if (string.IsNullOrEmpty(cname))
             {
                 salutation = Properties.Resources.SalutationUnknown + ",";
             }
@@ -76,14 +75,14 @@ namespace latex_curriculum_vitae
         /// <param name="czip">comes from company.ZIP (contains companies zip)</param>
         /// <param name="ccity">comes from company.City (Contains companies city)</param>
         /// <returns>string addressline</returns>
-        public string Addressline(string company, string contactname, string cgender, string cstreet, int? czip, string ccity)
+        public string Addressline(string company, string contactname, string cgender, string cstreet, string czip, string ccity)
         {
             string addressline;
             company = company.Replace(@"#", @"\#");
             company = company.Replace(@"&", @"\&");
 
             addressline = company + "\\\\";
-            if (contactname == "" || cgender == Properties.Resources.GenderUnknown)
+            if (string.IsNullOrEmpty(contactname) || cgender == Properties.Resources.GenderUnknown)
             {
                 addressline += Properties.Resources.HRDepartment + " \\\\";
             }
@@ -99,17 +98,17 @@ namespace latex_curriculum_vitae
                 }
             }
 
-            if (cstreet != "")
+            if (!string.IsNullOrEmpty(cstreet))
             {
                 addressline = addressline + cstreet + "\\\\";
             }
 
-            if (czip != null)
+            if (!string.IsNullOrEmpty(czip))
             {
                 addressline += czip + " ";
             }
 
-            if (ccity != "")
+            if (!string.IsNullOrEmpty(ccity))
             {
                 addressline += ccity;
             }

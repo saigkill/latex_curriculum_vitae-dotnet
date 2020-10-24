@@ -23,7 +23,7 @@ namespace latex_curriculum_vitae
     /// <summary>
     /// This class instances the User object.
     /// </summary>
-    class User
+    internal class User
     {
         public string Firstname { get; set; }
 
@@ -85,9 +85,9 @@ namespace latex_curriculum_vitae
             // Write the string array to a new file named "WriteLines.txt".
             using StreamWriter outputFile = new StreamWriter(Path.Combine(lcvDataPath, "personal_data.tex"));
             foreach (string line in lines)
+            {
                 outputFile.WriteLine(line);
-
+            }
         }
-
     }
 }

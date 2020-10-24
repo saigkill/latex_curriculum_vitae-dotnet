@@ -20,11 +20,11 @@ namespace latex_curriculum_vitae
     /// <summary>
     /// This class is for building a instance of the Company object.
     /// </summary>
-    class Company
+    internal class Company
     {
         public string Name { get; set; }
         public string Street { get; set; }
-        public int ZIP { get; set; }
+        public string ZIP { get; set; }
         public string City { get; set; }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace latex_curriculum_vitae
         /// <param name="costreet">comes directly from the gui txtCompanyStreet.Text (Contains companies street)</param>
         /// <param name="czip">comes directly from the gui txtZIP.Text (Contains companies ZIP)</param>
         /// <param name="cocity">comes directly from the gui txtCity.Text (Contains companies city)</param>
-        public Company(string coname, string costreet, int czip, string cocity)
+        public Company(string coname, string costreet, string czip, string cocity)
         {
             Name = coname;
             Street = costreet;
@@ -49,9 +49,9 @@ namespace latex_curriculum_vitae
         public Company(string coname)
         {
             Name = coname;
-            Street = "";
-            ZIP = 0;
-            City = "";
+            Street = string.Empty;
+            ZIP = string.Empty;
+            City = string.Empty;
         }
     }
 }
