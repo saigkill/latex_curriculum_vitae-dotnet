@@ -28,11 +28,5 @@ namespace latex_curriculum_vitae
             public const string EmailSent = "Email sent";
             public const string JobOfferUrl = "Joboffer url";
         }
-
-        public class General
-        {
-
-        }
-
     }
 }
