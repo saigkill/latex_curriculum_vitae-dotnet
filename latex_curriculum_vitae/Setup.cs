@@ -61,10 +61,10 @@ namespace latex_curriculum_vitae
             }
             catch (System.IO.DirectoryNotFoundException e)
             {
-                MessageBox.Show(Properties.Resources.MsgSetupCheckLatex + " " + e, Properties.Resources.MsgSetupCheckLatexHeader, MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Properties.Resources.MsgSetupCheckLatex, Properties.Resources.MsgSetupCheckLatexHeader, MessageBoxButton.OK, MessageBoxImage.Error);
                 string targetURL = @"https://www.tug.org/texlive/acquire-netinstall.html";
-                Process.Start(targetURL);
-
+                //https://stackoverflow.com/questions/4580263/how-to-open-in-default-browser-in-c-sharp
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {targetURL}") { CreateNoWindow = true });
             }
             catch (Exception e)
             {
@@ -97,13 +97,13 @@ namespace latex_curriculum_vitae
         public static void GetOnlineDocumentation()
         {
             string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/doc/index.html";
-            Process.Start(targetURL);
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {targetURL}") { CreateNoWindow = true });
         }
 
         public static void GetOnlineDocumentation(string target)
         {
             string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/doc/" + target;
-            Process.Start(targetURL);
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {targetURL}") { CreateNoWindow = true });
         }
 
         /// <summary>

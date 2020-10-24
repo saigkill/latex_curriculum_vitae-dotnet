@@ -10,6 +10,15 @@
 		<RepositoryUrl>https://github.com/saigkill/latex_curriculum_vitae-dotnet/</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
 		<PackageIcon>profile.png</PackageIcon>
+		<!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+		<!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+		<!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	<Configurations>Debug;Release</Configurations>
 		<Copyright>Copyright © 2020 Sascha Manns &lt;Sascha.Manns@outlook.de&gt;</Copyright>
 		<NeutralLanguage>en-US</NeutralLanguage>
@@ -22,16 +31,16 @@
 		<Product>Latex Curriculum Vitae</Product>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 	</PropertyGroup>
-
 	<ItemGroup>
-		<Compile Remove="Attachements\**" />
-		<EmbeddedResource Remove="Attachements\**" />
-		<None Remove="Attachements\**" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Assets\**" />		
 		<None Include="..\LICENSE.md" Link="Assets\LICENSE.md">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
 		</None>
-		<Page Remove="Attachements\**" />
+		<Page Remove="Assets\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -42,8 +51,12 @@
 	<ItemGroup>
 		<PackageReference Include="BitlyAPI" Version="4.0.0" />
 		<PackageReference Include="CsvHelper" Version="15.0.8" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0-rc.1.20451.13" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0-rc.1.20451.14" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0-rc.2.20475.6" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0-rc.2.20475.5" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.0-beta-20204-02">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="MimeKit" Version="2.9.2" />
 		<PackageReference Include="NETCore.MailKit" Version="2.0.3" />
 		<PackageReference Include="PdfSharpCore" Version="1.2.6" />
