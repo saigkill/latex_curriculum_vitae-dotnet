@@ -27,16 +27,16 @@ namespace latex_curriculum_vitae
     /// <summary>
     /// This class contains methods for doing the setup
     /// </summary>
-    static class Setup
+    internal static class Setup
     {
-        static readonly string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        private static readonly string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
         /// <summary>
         /// This method checks, if the config file is already present. Otherwise it launches the UserSettings Window.
         /// </summary>
         public static void CheckAppConfig()
         {
-            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            System.Configuration.Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
             bool lcvConfigPathExists = File.Exists(config.FilePath);
 
@@ -59,7 +59,7 @@ namespace latex_curriculum_vitae
             {
                 Directory.SetCurrentDirectory(main);
             }
-            catch (System.IO.DirectoryNotFoundException e)
+            catch (System.IO.DirectoryNotFoundException)
             {
                 MessageBox.Show(Properties.Resources.MsgSetupCheckLatex, Properties.Resources.MsgSetupCheckLatexHeader, MessageBoxButton.OK, MessageBoxImage.Error);
                 string targetURL = @"https://www.tug.org/texlive/acquire-netinstall.html";
@@ -177,7 +177,6 @@ namespace latex_curriculum_vitae
             {
                 File.Delete(del);
             };
-
         }
     }
 }
