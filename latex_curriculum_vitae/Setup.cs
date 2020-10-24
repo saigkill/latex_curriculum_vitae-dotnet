@@ -93,7 +93,6 @@ namespace latex_curriculum_vitae
         /// <summary>
         /// This method launches the online documentation.
         /// </summary>
-
         public static void GetOnlineDocumentation()
         {
             string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/doc/index.html";

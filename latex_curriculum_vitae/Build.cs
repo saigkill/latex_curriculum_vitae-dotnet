@@ -20,13 +20,14 @@ using PdfSharpCore.Pdf.IO;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Windows;
 
 namespace latex_curriculum_vitae
 {
     /// <summary>
     /// Class for compiling and building the LaTEX documents and it merges all pdfs in one.
-    /// </summary>
+    /// </summary> 
     public static class Build
     {
         private static readonly string tmpDir = Path.GetTempPath();
@@ -162,21 +163,9 @@ namespace latex_curriculum_vitae
             string cert = Properties.Resources.Cert + firstname + "_" + familyname + ".pdf";
             string finalpdf = GetFinalPdfName(firstname, familyname);
 
-            string[] cosEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates_of_Employment"));
-            string[] certEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates"));
+            string[] cosEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates_of_Employment")).OrderByDescending(x => x).ToArray();
+            string[] certEntries = Directory.GetFiles(Path.Combine(srcPath, "Appendix", "Certificates")).OrderByDescending(x => x).ToArray();
             string[] finalEntries = { "letter_of_application.pdf", "curriculum_vitae.pdf", cos, cert };
-
-            // Sort array in ascending order. 
-            Array.Sort(cosEntries);
-
-            // reverse array 
-            Array.Reverse(cosEntries);
-
-            // Sort array in ascending order. 
-            Array.Sort(certEntries);
-
-            // reverse array 
-            Array.Reverse(certEntries);
 
             // Certificates of Employment
             MergePDFs(Path.Combine(mytmpDir, cos), cosEntries);
@@ -184,10 +173,8 @@ namespace latex_curriculum_vitae
             // Certificates
             MergePDFs(Path.Combine(mytmpDir, cert), certEntries);
 
-
             // Production of the final document
             MergePDFs(Path.Combine(mytmpDir, finalpdf), finalEntries);
-
         }
 
         /// <summary>
@@ -227,6 +214,7 @@ namespace latex_curriculum_vitae
                 WindowStyle = ProcessWindowStyle.Hidden,
                 FileName = "cmd.exe"
             };
+
             string _path = Path.Combine(path, "AppData", "Local", "Temp", "latex_curriculum_vitae");
             startInfo.Arguments = string.Format("/C start {0}", _path);
             process.StartInfo = startInfo;
