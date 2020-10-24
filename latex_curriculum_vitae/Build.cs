@@ -29,7 +29,7 @@ namespace latex_curriculum_vitae
     /// </summary>
     public static class Build
     {
-        readonly static string tmpDir = Path.GetTempPath();
+        private static readonly string tmpDir = Path.GetTempPath();
 
         /// <summary>
         /// This method copies the needed LaTEX documents to the temporary directory. It doesn't return anything.
@@ -103,7 +103,9 @@ namespace latex_curriculum_vitae
             string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
             using StreamWriter outputFile = new StreamWriter(Path.Combine(mytmpDir, "application_details.tex"));
             foreach (string line in lines)
+            {
                 outputFile.WriteLine(line);
+            }
         }
 
         /// <summary>
@@ -129,7 +131,6 @@ namespace latex_curriculum_vitae
                 process.Start();
                 process.WaitForExit();
             }
-
         }
 
         /// <summary>
