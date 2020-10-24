@@ -32,7 +32,7 @@
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Remove="Assets\**" />		
@@ -41,6 +41,7 @@
 			<PackagePath></PackagePath>
 		</None>
 		<Page Remove="Assets\**" />
+		<None Include="Assets\images\profile.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -65,7 +66,6 @@
 
 	<ItemGroup>
 		<Resource Include="Views\F1Help_16x.png" />
-		<Resource Include="Assets\images\profile.png" />
 	</ItemGroup>
 
 	<ItemGroup>
