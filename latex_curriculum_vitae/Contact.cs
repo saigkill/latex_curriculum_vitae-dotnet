@@ -99,17 +99,17 @@ namespace latex_curriculum_vitae
                 }
             }
 
-            if (cstreet != "")
+            if (!string.IsNullOrEmpty(cstreet))
             {
                 addressline = addressline + cstreet + "\\\\";
             }
 
-            if (czip != null)
+            if (!string.IsNullOrEmpty(czip))
             {
                 addressline += czip + " ";
             }
 
-            if (ccity != "")
+            if (!string.IsNullOrEmpty(ccity))
             {
                 addressline += ccity;
             }
