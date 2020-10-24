@@ -34,7 +34,7 @@ namespace latex_curriculum_vitae
         public WriteJobApplicationWindow()
         {
             InitializeComponent();
-            this.Title = "Latex Curriculum Vitae" + " - " + Properties.Resources.WJAHeader;
+            Title = "Latex Curriculum Vitae" + " - " + Properties.Resources.WJAHeader;
             SubjectPrefixGlob = Properties.Resources.Subjectprefix;
         }
         #endregion
@@ -79,7 +79,7 @@ namespace latex_curriculum_vitae
             }
             else
             {
-                company = new Company(txtCompanyName.Text, txtCompanyStreet.Text, Convert.ToInt32(txtZIP.Text), txtCity.Text);
+                company = new Company(txtCompanyName.Text, txtCompanyStreet.Text, txtZIP.Text, txtCity.Text);
             }
 
             ComboBoxItem typeItem = (ComboBoxItem)cboGender.SelectedItem;
@@ -131,7 +131,7 @@ namespace latex_curriculum_vitae
         #region Exit App
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         #endregion
 
