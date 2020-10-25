@@ -51,7 +51,7 @@
 				<imagedata fileref="UserSettings.png" width="5%" align="center"/>
 			</imageobject>
 		</mediaobject>
-		<important><para>The Email settings are mandatory in case of you wish to send out the emails directly. The needed information about the SMTP host you get in your email-providers settings.</para></important>
+		<para>All settings in this window are mandatory.</para>
 		<para>If you want to shorten your links before they saved, you can use BitLy. Just get a token via <link xlink:href="https://bitly.is/accesstoken"
 			xmlns:xlink="http://www.w3.org/1999/xlink">https://bitly.is/accesstoken</link> and place them in the BitLy Token Field.</para>
 				
