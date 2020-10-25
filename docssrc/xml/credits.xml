@@ -20,6 +20,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
                 <para>Henrik Heigl does the Logo (<link xlink:href="https://henrikheigl.de"
                     xmlns:xlink="http://www.w3.org/1999/xlink">https://henrikheigl.de</link>)</para>
             </listitem>
+          <listitem>
+            <para>Samantha Hamilton (English-Text-Contributor)</para>
+          </listitem>
+          <listitem>
+            <para>Shouyi Fortuntato (Coding-Cotributor)</para>
+          </listitem>
             <listitem>
                 <para>Thomas Schraitle (DocBook Consultant)</para>
             </listitem>
