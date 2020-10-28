@@ -9,7 +9,7 @@
     <title>Documentation Conventions</title>
   
     <para>
-        The following notices and typographical conventions are used in this
+        The following notices conventions are used throughout this
         documentation:
     </para>
     
@@ -38,7 +38,7 @@
         </listitem>
         <listitem>
             <para>
-                Notices
+                Notices:
             </para>
             <warning>
                 <title>Warning Notice</title>
@@ -57,14 +57,14 @@
             <note>
                 <title>Note Notice</title>
                 <para>
-                    Additional information, for example about differences in software
+                    Additional information. For example, differences in software
                     versions.
                 </para>
             </note>
             <tip>
                 <title>Tip Notice</title>
                 <para>
-                    Helpful information, like a guideline or a piece of practical advice.
+                    Helpful information, like a guideline or practical advice.
                 </para>
             </tip>
         </listitem>

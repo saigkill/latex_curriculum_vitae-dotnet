@@ -6,7 +6,7 @@
 
 Latex Curriculum Vitae is a simple solution for writing job applications. Using LaTEX, you can produce, compile, and send beautiful documents directly within the app. Latex Curriculum Vitae also allows you to manage the current status of submitted applications. Users only need a Windows 10 computer and a basic knowledge of LaTEX---all other dependencies are bundled by the release.
 
-The CHANGELOG.md contains a detailed description of what files have been changed.
+The `CHANGELOG.md` file contains a detailed description of what has been changed and updated.
 
 Latex Curriculum Vitae is released under the GPL3 License, see the file `LICENSE.md` for more information.
 

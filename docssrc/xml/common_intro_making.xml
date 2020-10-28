@@ -18,7 +18,7 @@
         documentation are provided by the DocBook Authoring and Publishing Suite (DAPS). The
         project's home page can be found at <link xlink:show="new"
             xlink:href="https://github.com/openSUSE/daps">https://github.com/openSUSE/daps</link>. </para>
-    <para>You can find the docbook sources of this documentation on <link
+    <para>You can find the DocBook sources of this documentation on <link
             xlink:href="https://github.com/saigkill/latex_curriculum_vitae-dotnet/tree/master/docssrc"
             >https://github.com/saigkill/latex_curriculum_vitae-dotnet/tree/master/docssrc</link>. </para>
 </sect1>

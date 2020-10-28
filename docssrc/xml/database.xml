@@ -12,9 +12,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 	<section xml:id="sec.database-ui">
 		<info>
-			<title>The user interface</title>
+			<title>The User Interface</title>
 		</info>
-		<para>After starting the Database Window, you will get that ui.</para>
+		<para>After starting the Database Window, you will see this UI:</para>
 		<mediaobject>
 			<imageobject role="fo">
 				<imagedata fileref="DatabaseWindowLandscape.png" width="50%" align="center"/>
@@ -23,8 +23,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 				<imagedata fileref="DatabaseWindow.png" width="50%" align="center"/>
 			</imageobject>
 		</mediaobject>
-		<para>The ui has two ranges. The top range shows you all registered applications. You can use the <guibutton>Edit</guibutton> Button for changing things in a registered application. The <guibutton>Delete</guibutton> 
-			Button removes the application from the list.</para>
-		<para>In the "New application" range on the bottom left, you can add a new apllication to the list.</para>
+		<para>The UI contains two sections. The top section shows the current status of all your registered applications. When you select an application row, you can use the <guibutton>Edit</guibutton> button to change features of a registered application. Use the <guibutton>Delete</guibutton> 
+			button to remove a selected application from the list.</para>
+		<para>In the "New application" section on the bottom left, you can create and add a new application to the list.</para>
 	</section>	
 </chapter>

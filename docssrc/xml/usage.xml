@@ -4,7 +4,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 <chapter version="5.0" xml:id="cha.usage" xmlns="http://docbook.org/ns/docbook"
 	xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info>
-			<title>How to use <productname>latex_curriculum_vitae</productname></title>
+			<title>How to Use <productname>latex_curriculum_vitae</productname></title>
 		</info>
 	<indexterm>
 		<primary>Usage</primary>
@@ -12,15 +12,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 	<section xml:id="sec.mainmenue">
 		<info>
-			<title>The Main Menue</title>
+			<title>The Main Menu</title>
 		</info>
-		<para>If you already prepared the things in the Installation chapter, we can show how it works in the practice.</para>
+		<para>This section will now show you how the app works in practice. Please follow the Installation Guide in Chapter 2.0 before continuing.</para>
 		<procedure xml:id="proc.mainmenue">
 			<step>
-				<para>Launch Latex Curriculum Vitae from your selected place.</para>
+				<para>Launch Latex Curriculum Vitae from your desktop.</para>
 			</step>
 			<step>
-				<para>Now opens the user interface:</para>
+				<para>The user interface opens, displaying:</para>
 				<mediaobject>
 					<imageobject role="fo">
 						<imagedata fileref="MainWindow.png" width="25%" align="center"/>
@@ -31,15 +31,15 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 				</mediaobject>
 			</step>
 		</procedure>
-		<para>So you have currently two options. If you want to write your application, you can click on the button and follow the documentation on <link linkend="sec.write_application"/>. 
-		If you want to see or change your user settings, than you can read more on <link linkend="par.usersettings"/>. The database part of this app currently isn't supported yet.</para>
+		<para>You have two options. To start writing your application, you can click on the button "Write your Job-Application" and follow the documentation below <link linkend="sec.write_application"/>. 
+		If you want to see or change your user settings, select "View or Change User Settings" and read more on <link linkend="par.usersettings"/>. Currently, the database feature of this app is not supported. Follow on GitHub for release updates.</para>
 	</section>
 
 	<section xml:id="sec.write_application">
 		<info>
-			<title>Write your application</title>
+			<title>Write Your Application</title>
 		</info>
-		<para>Inside this window you have the possibility to write your job application. Let's look, how it works:</para>
+		<para>Use this windwo to write your job application. To begin:</para>
 		<mediaobject>
 			<imageobject role="fo">
 				<imagedata fileref="WriteJobApplication.png" width="25%" align="center"/>
@@ -50,40 +50,39 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 		</mediaobject>
 		<procedure xml:id="proc.GUI">			
 			<step>
-				<para>In the jobtitle box, you have to place the title of your new
+				<para>In the "Job Title" box, place the title of your new
 					job.</para>
 			</step>
 			<step>
-				<para>The company name is already known, then you have to type it there.</para>
+				<para>The company name is already known, then type it in the "Company Name" box.</para>
 			</step>
 			<step>
-				<para>If you are not knowing the street, zip code and city, you can leave it blank.</para>
+				<para>You can include more information about the company in the address boxes. If you do not know the street, zip code, and city, you can leave it blank.</para>
 			</step>
 			<step>
-				<para>Now we can place the name of the contact person. If we dont have any name, then we just can leave it blank. In that case the app will write "Dear Sir or Madam". That also will be used, if you choose the Gender "Unknown". 
-				In all other cases it produces a "Dear Mr. Bean" or "Dear Mrs Bean".</para>
-				<para>The "Application details" range are pure optional. In the "URL" field you can add the job offer url. It will be placed in the CSV file, what already was discussed.</para>
+				<para>Now you can enter the information for the contact person. If you do not have a name, then simply leave this box blank. In this situation the app will write "To whom it may concern" as a salutation (this salutation will also be used if you select a gender of "Other/Neutral"). 
+				In all other cases the app produces a "Dear Mr. Bean" or "Dear Mrs. Bean" salutation.</para>
+				<para>The "Application details" range are pure optional. In the "URL" field you can add the job offer URL. It will be placed in the CSV file for future reference.</para>
 				<para>If you set the checkbox "Initiative application", the Subject from the <filename>letter_of_applicaton.tex</filename> will be changed from "Application as" to "Initiative application as".</para>
 			</step>
 			<step>
-				<para>Now we have two options, to use the app. In case of you are entering a email address, and click on <guibutton>Generate</guibutton>, the app compiles all stuff and send it directly out (if you have set the SMTP settings 
-				in the installation part. See <link linkend="par.usersettings"/>) with you in BCC. If you leave it blank and click on 
-					<guibutton>Generate</guibutton>, the app also compiles all stuff, but in this case it opens the Windows Explorer with the <filename>AppData/Local/Temp/latex_curriculum_vitae</filename> directory. This is the compile folder. All what 
-					you can see there will be deleted each new iteration. But now you have 
-					the option to upload the files to a job application website.</para>
+				<para>There are two options for using the app. In the case where you enter a email address and click <guibutton>Generate</guibutton>, the app will compile all files and email it directly (if you have set the SMTP settings 
+				in the Installation Guide. See <link linkend="par.usersettings"/>) with you in BCC. If you leave the email box blank and click 
+					<guibutton>Generate</guibutton>, the app will also compile all files, but in this case will open Windows Explorer showing the compile folder (<filename>AppData/Local/Temp/latex_curriculum_vitae</filename>) directory.  
+					Every file that you can see in this directory will be deleted with each new iteration; however, you now have the option to upload the files yourself to a job application website.</para>
 			</step>
 			<step>
-				<para>Now your application is done. You can now write another one, or you can use the buttons on the bottom.</para>
+				<para>Now your application is done! You can now proceed to writing another.</para>
 			</step>
 			<step>
-				<para>By clicking on <guibutton>Close</guibutton> will exiting the app. If you are using the button: <mediaobject>
+				<para>By clicking on <guibutton>Close</guibutton> you will exit the app. If you are select the button: <mediaobject>
 					<imageobject role="fo">
 						<imagedata fileref="F1Help_16x.png" width="5%" align="center"/>
 					</imageobject>
 					<imageobject role="html">
 						<imagedata fileref="F1Help_16x.png" width="5%" align="center"/>
 					</imageobject>
-				</mediaobject> then you forwarded to the online documentation (this one).</para>
+				</mediaobject> you will be forwarded to this online documentation.</para>
 			</step>			
 		</procedure>
 	</section>
