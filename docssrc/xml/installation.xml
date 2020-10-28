@@ -4,7 +4,7 @@
 	xmlns="http://docbook.org/ns/docbook"
 	xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info>
-		<title>Downloading, Installation &amp; Configuration</title>
+		<title>Download, Install &amp; Configure</title>
 	</info>
 	<indexterm>
 		<primary>Download</primary>
@@ -64,10 +64,10 @@
 			</imageobject>
 		</mediaobject> you will be forwarded to this online documentation.</para>
 	<para>During the first run of <productname>latex_curriculum_vitae</productname> a collection of required files will be installed 
-			to: <filename>%appdata%/latex_curriculum_vitae</filename>. As an example, on my computer the file
-			full path appears as:
-		<filename>C:\Users\Sasch\Appdata\Roaming\latex_curriculum_vitae</filename>. You 
-			can also type <filename>%appdata%/latex_curriculum_vitae</filename> in the Windows Explorers address field.
+			to: <filename>%appdata%/latex_curriculum_vitae</filename>. As an example, on my computer the full
+			file path appears as:
+		<filename>C:\Users\Sasch\Appdata\Roaming\latex_curriculum_vitae</filename>. Alternatively, if you  
+			type <filename>%appdata%/latex_curriculum_vitae</filename> in the Windows Explorer address field, Windows Explorer will direct you to the file path location.
 	</para>
 	<para>The AppData directory holds all relevant data for building your job application.</para> 
 	<para>After required files have been automatically installed and your user information has been updated, 
@@ -97,7 +97,7 @@
 \printbibsection{book}{Bücher} 
 \printbibsection{misc}{other publications}
 		</screen>
-		 of the <filename>curriculum_vitae.tex</filename> file.
+		 of the <filename>curriculum_vitae.tex</filename> file, by placing a % symbol at the beginning of each specified line.
 		</para></important>
 		The <filename>Certificates</filename> directory is empty. In this directory, you can place copies of all 
 		your certificates (for example, certificates from further education or a completed course). The <filename>Certificates of Employment</filename> directory is reserved
