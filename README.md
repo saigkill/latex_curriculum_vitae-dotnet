@@ -50,3 +50,5 @@ Installation is very easy:
     Download the exe (https://github.com/saigkill/latex_curriculum_vitae-dotnet/releases)
     Move it to eg User Directory or Desktop
     Doubleclick on it
+
+To view the complete Installation Guide, you can find the project documentation [here.](https://saigkill.github.io/latex_curriculum_vitae-dotnet/)
