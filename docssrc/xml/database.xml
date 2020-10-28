@@ -26,5 +26,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 		<para>The UI contains two sections. The top section shows the current status of all your registered applications. When you select an application row, you can use the <guibutton>Edit</guibutton> button to change features of a registered application. Use the <guibutton>Delete</guibutton> 
 			button to remove a selected application from the list.</para>
 		<para>In the "New application" section on the bottom left, you can create and add a new application to the list.</para>
+		<para>The "Edit Application" section on the bottom right allows you to make detailed edits on newly created and existing applications.</para>
 	</section>	
 </chapter>
