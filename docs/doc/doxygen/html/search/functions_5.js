@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jobapplication_203',['JobApplication',['../classlatex__curriculum__vitae_1_1_job_application.html#a7e4505caa962d5fce00d4c7a3d648d7f',1,'latex_curriculum_vitae::JobApplication']]]
+  ['openexplorer_162',['OpenExplorer',['../classlatex__curriculum__vitae_1_1_build.html#a93b69c65502bc10bc60f7de8917c1304',1,'latex_curriculum_vitae::Build']]]
 ];

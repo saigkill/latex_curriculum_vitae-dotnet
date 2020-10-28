@@ -45,10 +45,10 @@
 		<para xml:id="par.usersettings">When you launch <productname>latex_curriculum_vitae</productname> the first time, a User Settings window will open. Here you can fill in your personal information.</para>
 		<mediaobject>
 			<imageobject role="fo">
-				<imagedata fileref="UserSettings.png" width="5%" align="center"/>
+				<imagedata fileref="UserSettings.png" width="80%" align="center"/>
 			</imageobject>
 			<imageobject role="html">
-				<imagedata fileref="UserSettings.png" width="5%" align="center"/>
+				<imagedata fileref="UserSettings.png" width="80%" align="center"/>
 			</imageobject>
 		</mediaobject>
 		<para>All settings in this window are mandatory.</para>

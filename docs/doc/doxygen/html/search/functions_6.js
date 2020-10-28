@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_204',['Main',['../classlatex__curriculum__vitae_1_1_app.html#ac27e3b09066e1d12875ea71bacad850e',1,'latex_curriculum_vitae.App.Main()'],['../classlatex__curriculum__vitae_1_1_app.html#ac27e3b09066e1d12875ea71bacad850e',1,'latex_curriculum_vitae.App.Main()'],['../classlatex__curriculum__vitae_1_1_app.html#ac27e3b09066e1d12875ea71bacad850e',1,'latex_curriculum_vitae.App.Main()'],['../classlatex__curriculum__vitae_1_1_app.html#ac27e3b09066e1d12875ea71bacad850e',1,'latex_curriculum_vitae.App.Main()'],['../classlatex__curriculum__vitae_1_1_app.html#ac27e3b09066e1d12875ea71bacad850e',1,'latex_curriculum_vitae.App.Main()'],['../classlatex__curriculum__vitae_1_1_app.html#ac27e3b09066e1d12875ea71bacad850e',1,'latex_curriculum_vitae.App.Main()'],['../classlatex__curriculum__vitae_1_1_app.html#ac27e3b09066e1d12875ea71bacad850e',1,'latex_curriculum_vitae.App.Main()'],['../classlatex__curriculum__vitae_1_1_app.html#ac27e3b09066e1d12875ea71bacad850e',1,'latex_curriculum_vitae.App.Main()']]],
-  ['mergepdfs_205',['MergePDFs',['../classlatex__curriculum__vitae_1_1_build.html#a1abecf0481708d7f94cc104b57a38d4e',1,'latex_curriculum_vitae::Build']]]
+  ['preparebuild_163',['PrepareBuild',['../classlatex__curriculum__vitae_1_1_build.html#a7f2f0919ae6cb8b152ef542a235fec0c',1,'latex_curriculum_vitae::Build']]]
 ];

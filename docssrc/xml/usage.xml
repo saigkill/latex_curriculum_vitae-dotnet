@@ -23,10 +23,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 				<para>The user interface opens, displaying:</para>
 				<mediaobject>
 					<imageobject role="fo">
-						<imagedata fileref="MainWindow.png" width="25%" align="center"/>
+						<imagedata fileref="MainWindow.png" width="80%" align="center"/>
 					</imageobject>
 					<imageobject role="html">
-						<imagedata fileref="MainWindow.png" width="25%" align="center"/>
+						<imagedata fileref="MainWindow.png" width="80%" align="center"/>
 					</imageobject>
 				</mediaobject>
 			</step>
@@ -42,10 +42,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 		<para>Use this windwo to write your job application. To begin:</para>
 		<mediaobject>
 			<imageobject role="fo">
-				<imagedata fileref="WriteJobApplication.png" width="25%" align="center"/>
+				<imagedata fileref="WriteJobApplication.png" width="80%" align="center"/>
 			</imageobject>
 			<imageobject role="html">
-				<imagedata fileref="WriteJobApplication.png" width="25%" align="center"/>
+				<imagedata fileref="WriteJobApplication.png" width="80%" align="center"/>
 			</imageobject>
 		</mediaobject>
 		<procedure xml:id="proc.GUI">			

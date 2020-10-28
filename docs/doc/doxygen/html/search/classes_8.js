@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainwindow_169',['MainWindow',['../classlatex__curriculum__vitae_1_1_main_window.html',1,'latex_curriculum_vitae']]]
+  ['resources_143',['Resources',['../classlatex__curriculum__vitae_1_1_properties_1_1_resources.html',1,'latex_curriculum_vitae::Properties']]]
 ];
