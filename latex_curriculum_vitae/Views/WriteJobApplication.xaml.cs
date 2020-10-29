@@ -60,7 +60,10 @@ namespace latex_curriculum_vitae
             JobApplication myapplication = new JobApplication(txtURL.Text, txtEmail.Text, txtJobtitle.Text);
             if (myuser.BitLyToken != "Not Found")
             {
-                myapplication.UseBitLy(myuser.BitLyToken, myapplication.URL);
+                if (!string.IsNullOrEmpty(myapplication.URL))
+                {
+                    myapplication.UseBitLy(myuser.BitLyToken, myapplication.URL);
+                }
             }
 
             if (myapplication.Email == "")
