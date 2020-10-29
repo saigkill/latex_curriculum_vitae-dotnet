@@ -66,7 +66,7 @@ namespace latex_curriculum_vitae
                 }
             }
 
-            if (myapplication.Email == "")
+            if (string.IsNullOrEmpty(myapplication.Email))
             {
                 compemail_set = false;
             }
@@ -76,7 +76,7 @@ namespace latex_curriculum_vitae
             }
 
             Company company;
-            if (txtCompanyStreet.Text == "" || txtZIP.Text == "" || txtCity.Text == "")
+            if (string.IsNullOrEmpty(txtCompanyStreet.Text) || (string.IsNullOrEmpty(txtZIP.Text)) || (string.IsNullOrEmpty(txtCity.Text)))
             {
                 company = new Company(txtCompanyName.Text);
             }
