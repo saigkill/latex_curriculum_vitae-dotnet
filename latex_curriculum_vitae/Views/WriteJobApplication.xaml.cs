@@ -16,10 +16,8 @@
 // Dependencies
 
 using System;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace latex_curriculum_vitae
 {
@@ -152,12 +150,6 @@ namespace latex_curriculum_vitae
         private void ChkInitiativeUnchecked(object sender, EventArgs e)
         {
             SubjectPrefixGlob = Properties.Resources.Subjectprefix;
-        }
-
-        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
-        {
-            Regex regex = new Regex("[^0-9]+");
-            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }
