@@ -103,7 +103,7 @@ namespace latex_curriculum_vitae
                 addressline = addressline + cstreet + "\\\\";
             }
 
-            if (!string.IsNullOrEmpty(czip))
+            if (!string.IsNullOrEmpty(czip) || czip != "0")
             {
                 addressline += czip + " ";
             }
