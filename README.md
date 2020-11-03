@@ -21,6 +21,7 @@ Latex Curriculum Vitae is released under the GPL3 License, see the file `LICENSE
 | What | Status |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Code quality | [![Maintainability](https://api.codeclimate.com/v1/badges/976914ee0f04dbd277c2/maintainability)](https://codeclimate.com/github/saigkill/latex_curriculum_vitae-dotnet/maintainability) |
+|Code qualits | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=saigkill_latex_curriculum_vitae-dotnet&metric=alert_status)](https://sonarcloud.io/dashboard?id=saigkill_latex_curriculum_vitae-dotnet)
 |Continuous integration | ![.NET Core](https://github.com/saigkill/latex_curriculum_vitae-dotnet/workflows/.NET%20Core/badge.svg) |
 |Dependencies|[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=saigkill/latex_curriculum_vitae-dotnet)](https://dependabot.com) |
 |Downloads|![GitHub All Releases](https://img.shields.io/github/downloads/saigkill/latex_curriculum_vitae-dotnet/total)|
