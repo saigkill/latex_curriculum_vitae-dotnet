@@ -5,7 +5,7 @@ using System.IO;
 
 namespace latex_curriculum_vitae
 {
-    public static class CSVExport
+    public static class CsvExport
     {
         public static void WriteCSV(string company, string jobtitle, string city, string joburl)
         {

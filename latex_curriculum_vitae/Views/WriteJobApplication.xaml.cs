@@ -15,6 +15,7 @@
 
 // Dependencies
 
+using latex_curriculum_vitae.Models;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -56,12 +57,9 @@ namespace latex_curriculum_vitae
 
             #region JobApplication Data
             JobApplication myapplication = new JobApplication(txtURL.Text, txtEmail.Text, txtJobtitle.Text);
-            if (myuser.BitLyToken != "Not Found")
+            if (myuser.BitLyToken != "Not Found" && !string.IsNullOrEmpty(myapplication.URL))
             {
-                if (!string.IsNullOrEmpty(myapplication.URL))
-                {
-                    myapplication.UseBitLy(myuser.BitLyToken, myapplication.URL);
-                }
+                myapplication.UseBitLy(myuser.BitLyToken, myapplication.URL);
             }
 
             if (string.IsNullOrEmpty(myapplication.Email))
@@ -93,11 +91,22 @@ namespace latex_curriculum_vitae
             #region Build, Compile and Send
             Build.PrepareBuild();
             string subject = Build.GetSubject(SubjectPrefixGlob, myapplication.Jobtitle);
-            Build.CreateApplicationConfig(myapplication.Jobtitle, company.Name, contact.Name, company.Street, company.City, contact.Salutation, subject, addressline);
+            ApplicationConfigModel acm = new ApplicationConfigModel
+            {
+                JobTitle = myapplication.Jobtitle,
+                Company = company.Name,
+                Contact = contact.Name,
+                Street = company.Street,
+                City = company.City,
+                Salutation = contact.Salutation,
+                Subject = subject,
+                Address = addressline
+            };
+            Build.CreateApplicationConfig(acm);
             Build.CompileApplication();
             Build.CombineApplication(myuser.Firstname, myuser.Familyname);
 
-            if (compemail_set == false)
+            if (!compemail_set)
             {
                 Build.OpenExplorer();
 
@@ -106,12 +115,27 @@ namespace latex_curriculum_vitae
             {
                 subject = Build.GetEmailSubject(SubjectPrefixGlob, myapplication.Jobtitle);
                 string finalpdf = Build.GetFinalPdfName(myuser.Firstname, myuser.Familyname);
-                Email.CreateMessage(myuser.Firstname, myuser.Familyname, myuser.Email, contact.Name, myapplication.Email, subject, contact.Salutation, finalpdf, myuser.SmtpServer, myuser.SmtpUser, myuser.SmtpPass, myuser.SmtpPort);
+                EmailModel email = new EmailModel
+                {
+                    FirstName = myuser.Firstname,
+                    FamilyName = myuser.Familyname,
+                    MyEmail = myuser.Email,
+                    ContactName = contact.Name,
+                    CompEmail = myapplication.Email,
+                    Subject = subject,
+                    Salutation = contact.Salutation,
+                    Attachment = finalpdf,
+                    SmtpServer = myuser.SmtpServer,
+                    SmtpUser = myuser.SmtpUser,
+                    SmtpPass = myuser.SmtpPass,
+                    SmtpPort = myuser.SmtpPort
+                };
+                Email.CreateMessage(email);
             }
             #endregion
 
             #region Add Information to CSV            
-            CSVExport.WriteCSV(company.Name, myapplication.Jobtitle, company.City, myapplication.URL);
+            CsvExport.WriteCSV(company.Name, myapplication.Jobtitle, company.City, myapplication.URL);
             #endregion
 
             #region Clean UI

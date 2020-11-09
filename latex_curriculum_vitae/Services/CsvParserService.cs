@@ -18,6 +18,7 @@
 using CsvHelper;
 using latex_curriculum_vitae.Mappers;
 using latex_curriculum_vitae.Models;
+using latex_curriculum_vitae.Exception;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -35,26 +36,25 @@ namespace latex_curriculum_vitae.Services
             {
                 using var reader = new StreamReader(path, Encoding.Default);
                 using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
-                //csv.Configuration.Delimiter = ",";
                 csv.Configuration.RegisterClassMap<JobApplicationMap>();
                 var records = csv.GetRecords<JobApplicationModel>().ToList();
                 return records;
             }
             catch (UnauthorizedAccessException e)
             {
-                throw new Exception(e.Message);
+                throw new LatexException(e.Message);
             }
             catch (FieldValidationException e)
             {
-                throw new Exception(e.Message);
+                throw new LatexException(e.Message);
             }
             catch (CsvHelperException e)
             {
-                throw new Exception(e.Message);
+                throw new LatexException(e.Message);
             }
-            catch (Exception e)
+            catch (System.Exception e)
             {
-                throw new Exception(e.Message);
+                throw new LatexException(e.Message);
             }
         }
 

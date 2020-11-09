@@ -15,6 +15,7 @@
 
 // Dependencies
 
+using latex_curriculum_vitae.Models;
 using MailKit.Net.Smtp;
 using MimeKit;
 using MimeKit.Utils;
@@ -32,36 +33,25 @@ namespace latex_curriculum_vitae
         /// <summary>
         /// This is the main method for creating and sending emails. It doesn't returns anything.        
         /// </summary>
-        /// <param name="firstname">comes from myuser.Firstname</param>
-        /// <param name="familyname">comes from myuser.Familyname</param>
-        /// <param name="myemail">comes from myuser.Email</param>
-        /// <param name="contactname">comes from contact.Name</param>
-        /// <param name="compemail">comes from myapplication.Email</param>
-        /// <param name="subject">comes originally from Build.GetEmailSubject</param>
-        /// <param name="salutation">comes from contact.Salutation</param>
-        /// <param name="attachment">comes from Build.GetFinalPdfName</param>
-        /// <param name="smtpserver">comes from myuser.SmtpServer</param>
-        /// <param name="smtpuser">comes from myuser.SmtpUser</param>
-        /// <param name="smtppass">comes from myuser.SmtpPass</param>
-        /// <param name="smtpport">myuser.SmtpPort</param>
-        public static void CreateMessage(string firstname, string familyname, string myemail, string contactname, string compemail, string subject, string salutation, string attachment, string smtpserver, string smtpuser, string smtppass, int smtpport)
+        /// <param name="email">Email Message</param>
+        public static void CreateMessage(EmailModel email)
         {
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string lcvPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
             string tmpDir = Path.GetTempPath();
             string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
 
-            string myname = firstname + " " + familyname;
+            string myname = $"{email.FirstName} {email.FamilyName}";
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress(myname, myemail));
-            message.To.Add(new MailboxAddress(contactname, compemail));
-            message.Bcc.Add(new MailboxAddress(myname, myemail));
-            message.Subject = subject;
+            message.From.Add(new MailboxAddress(myname, email.MyEmail));
+            message.To.Add(new MailboxAddress(email.ContactName, email.CompEmail));
+            message.Bcc.Add(new MailboxAddress(myname, email.MyEmail));
+            message.Subject = email.Subject;
 
             BodyBuilder builder = new BodyBuilder
             {
                 // Set the plain-text version of the message text
-                TextBody = string.Format(@Properties.Resources.EmailPlain, salutation, myname)
+                TextBody = string.Format(@Properties.Resources.EmailPlain, email.Salutation, myname)
             };
 
             // In order to reference selfie.jpg from the html text, we'll need to add it
@@ -70,15 +60,15 @@ namespace latex_curriculum_vitae
             image.ContentId = MimeUtils.GenerateMessageId();
 
             // Set the html version of the message text
-            builder.HtmlBody = string.Format(@Properties.Resources.EmailHTML, salutation, myname, image.ContentId);
+            builder.HtmlBody = string.Format(@Properties.Resources.EmailHTML, email.Salutation, myname, image.ContentId);
 
             // We may also want to attach a calendar event for Monica's party...
-            builder.Attachments.Add(Path.Combine(mytmpDir, attachment));
+            builder.Attachments.Add(Path.Combine(mytmpDir, email.Attachment));
 
             // Now we just need to set the message body and we're done
             message.Body = builder.ToMessageBody();
 
-            if (smtpserver == "" || smtpport.ToString() == "" || smtpuser == "" || smtppass == "")
+            if (email.SmtpServer == "" || email.SmtpPort.ToString() == "" || email.SmtpUser == "" || email.SmtpPass == "")
             {
                 MessageBox.Show(Properties.Resources.EmailNotSet, Properties.Resources.EmailNotSetHeader, MessageBoxButton.OK, MessageBoxImage.Error);
                 Window settings = new UserSettingsWindow();
@@ -88,10 +78,10 @@ namespace latex_curriculum_vitae
             {
                 // Sending out
                 using var client = new SmtpClient();
-                client.Connect(smtpserver, smtpport, false);
+                client.Connect(email.SmtpServer, email.SmtpPort, false);
 
                 // Note: only needed if the SMTP server requires authentication
-                client.Authenticate(smtpuser, smtppass);
+                client.Authenticate(email.SmtpUser, email.SmtpPass);
 
                 client.Send(message);
                 client.Disconnect(true);
