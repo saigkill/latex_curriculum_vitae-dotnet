@@ -44,16 +44,7 @@ namespace latex_curriculum_vitae
                 Configuration.SetSetting("firstrun", "false");
             }
             else
-            {
-                //#if DEBUG
-                //                var vCulture = new CultureInfo("en-US");
-
-                //                Thread.CurrentThread.CurrentCulture = vCulture;
-                //                Thread.CurrentThread.CurrentUICulture = vCulture;
-                //                CultureInfo.DefaultThreadCurrentCulture = vCulture;
-                //                CultureInfo.DefaultThreadCurrentUICulture = vCulture;
-
-                //#endif
+            {                
                 Window settings = new MainWindow();
                 settings.Show();
             }

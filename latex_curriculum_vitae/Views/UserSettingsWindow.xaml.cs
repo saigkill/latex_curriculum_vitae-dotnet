@@ -18,7 +18,6 @@
 using System;
 using System.Configuration;
 using System.Windows;
-//using System.Windows.Shapes;
 
 namespace latex_curriculum_vitae
 {

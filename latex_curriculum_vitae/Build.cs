@@ -15,6 +15,7 @@
 
 // Dependencies
 
+using latex_curriculum_vitae.Models;
 using PdfSharpCore.Pdf;
 using PdfSharpCore.Pdf.IO;
 using System;
@@ -89,17 +90,10 @@ namespace latex_curriculum_vitae
         /// <summary>
         /// This method creates the job application specific LaTEX file "application_details.tex". It will be used in letter of application. The method doesn't return anything.        
         /// </summary>
-        /// <param name="jobtitle">comes from myapplication.Jobtitle (contains the Jobtitle)</param>
-        /// <param name="company">comes from company.Name (contains the company name)</param>
-        /// <param name="contact">comes from contact.Name (contains the name of companies contact person)</param>
-        /// <param name="street">comes from company.Street (contains companies street)</param>
-        /// <param name="city">comes from company.City (contains companies city)</param>
-        /// <param name="salutation">comes from contact.Salutation (contains letters salutation)</param>
-        /// <param name="subject">comes originary from GetSubject() method.</param>
-        /// <param name="addressstring">comes originary from contact.Addressline() method.</param>
-        public static void CreateApplicationConfig(string jobtitle, string company, string contact, string street, string city, string salutation, string subject, string addressstring)
+        /// <param name="ApplicationConfigModel">Application Model (contains the Jobtitle, Company, Contact etc...)</param>
+        public static void CreateApplicationConfig(ApplicationConfigModel acm)
         {
-            string[] lines = { "\\def\\jobtitle{" + jobtitle + "}", "\\def\\company{" + company + "}", "\\def\\contact{" + contact + "}", "\\def\\street{" + street + "}", "\\def\\city{" + city + "}", "\\def\\salutation{" + salutation + "}", "\\def\\subject{" + subject + "}", "\\def\\addressstring{" + addressstring + "}" };
+            string[] lines = { "\\def\\jobtitle{" + acm.JobTitle + "}", "\\def\\company{" + acm.Company + "}", "\\def\\contact{" + acm.Contact + "}", "\\def\\street{" + acm.Street + "}", "\\def\\city{" + acm.City + "}", "\\def\\salutation{" + acm.Salutation + "}", "\\def\\subject{" + acm.Subject + "}", "\\def\\addressstring{" + acm.Address + "}" };
 
             string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
             using StreamWriter outputFile = new StreamWriter(Path.Combine(mytmpDir, "application_details.tex"));

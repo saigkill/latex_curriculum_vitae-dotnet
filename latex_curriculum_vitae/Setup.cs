@@ -40,7 +40,7 @@ namespace latex_curriculum_vitae
 
             bool lcvConfigPathExists = File.Exists(config.FilePath);
 
-            if (lcvConfigPathExists == false)
+            if (!lcvConfigPathExists)
             {
                 MessageBox.Show(Properties.Resources.MsgSetupCheckConfig, Properties.Resources.MsgSetupCheckConfigHeader, MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -62,11 +62,14 @@ namespace latex_curriculum_vitae
             catch (System.IO.DirectoryNotFoundException)
             {
                 MessageBox.Show(Properties.Resources.MsgSetupCheckLatex, Properties.Resources.MsgSetupCheckLatexHeader, MessageBoxButton.OK, MessageBoxImage.Error);
-                string targetURL = @"https://www.tug.org/texlive/acquire-netinstall.html";
+                string protocol = "https://";
+                string domain = "www.tug.org/";
+                string path = $"texlive/acquire-netinstall.html";
+                string targetURL = $"{protocol}{domain}{path}";
                 //https://stackoverflow.com/questions/4580263/how-to-open-in-default-browser-in-c-sharp
                 Process.Start(new ProcessStartInfo("cmd", $"/c start {targetURL}") { CreateNoWindow = true });
             }
-            catch (Exception e)
+            catch (System.Exception e)
             {
                 MessageBox.Show("Unknown Exception" + e, "Exception occured", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -79,7 +82,7 @@ namespace latex_curriculum_vitae
         {
             string lcvDocsPath = Path.Combine(appDataPath, "latex_curriculum_vitae", "Letter_of_Application", "letter_of_application.tex");
             bool lcvDocsPathExists = File.Exists(lcvDocsPath);
-            if (lcvDocsPathExists == false)
+            if (!lcvDocsPathExists)
             {
                 string targetPath = Path.Combine(appDataPath, "latex_curriculum_vitae");
                 MessageBox.Show(Properties.Resources.MsgSetupCheckDocumentsCopy + " " + targetPath + ".", Properties.Resources.MsgSetupCheckDocumentHeader, MessageBoxButton.OK, MessageBoxImage.Information);
@@ -95,13 +98,19 @@ namespace latex_curriculum_vitae
         /// </summary>
         public static void GetOnlineDocumentation()
         {
-            string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/doc/index.html";
+            string protocol = "https://";
+            string domain = "saigkill.github.io/";
+            string path = "latex_curriculum_vitae-dotnet/doc/index.html";
+            string targetURL = $"{protocol}{domain}{path}";
             Process.Start(new ProcessStartInfo("cmd", $"/c start {targetURL}") { CreateNoWindow = true });
         }
 
         public static void GetOnlineDocumentation(string target)
         {
-            string targetURL = @"https://saigkill.github.io/latex_curriculum_vitae-dotnet/doc/" + target;
+            string protocol = "https://";
+            string domain = "saigkill.github.io/";
+            string path = $"latex_curriculum_vitae-dotnet/doc/{target}";
+            string targetURL = $"{protocol}{domain}{path}";
             Process.Start(new ProcessStartInfo("cmd", $"/c start {targetURL}") { CreateNoWindow = true });
         }
 
@@ -175,7 +184,7 @@ namespace latex_curriculum_vitae
             foreach (string del in delete)
             {
                 File.Delete(del);
-            };
+            }
         }
     }
 }
