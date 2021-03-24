@@ -30,36 +30,49 @@ namespace latex_curriculum_vitae
         public string SubjectPrefixGlob { get; set; }
 
         #region Initialize Main
+
         public WriteJobApplicationWindow()
         {
             InitializeComponent();
             Title = "Latex Curriculum Vitae" + " - " + Properties.Resources.WJAHeader;
             SubjectPrefixGlob = Properties.Resources.Subjectprefix;
         }
-        #endregion
+
+        #endregion Initialize Main
 
         #region Generating job application
+
         private void BtnGenerate_Click(object sender, EventArgs e)
         {
-
             #region Private Variables
+
             string addressline;
             bool compemail_set;
-            #endregion
+
+            #endregion Private Variables
 
             #region Cleanup
+
             Setup.Cleanup();
-            #endregion            
+
+            #endregion Cleanup
 
             #region Settings
+
             User myuser = new User();
-            #endregion
+
+            #endregion Settings
 
             #region JobApplication Data
+
             JobApplication myapplication = new JobApplication(txtURL.Text, txtEmail.Text, txtJobtitle.Text);
             if (myuser.BitLyToken != "Not Found" && !string.IsNullOrEmpty(myapplication.URL))
             {
-                myapplication.UseBitLy(myuser.BitLyToken, myapplication.URL);
+                System.Threading.Tasks.Task task = myapplication.UseBitLy(myuser.BitLyToken, myapplication.URL);
+            }
+            else
+            {
+                //Test
             }
 
             if (string.IsNullOrEmpty(myapplication.Email))
@@ -86,9 +99,11 @@ namespace latex_curriculum_vitae
 
             Contact contact = new Contact(txtContactName.Text, gender);
             addressline = contact.Addressline(company.Name, contact.Name, contact.Gender, company.Street, company.ZIP, company.City);
-            #endregion
+
+            #endregion JobApplication Data
 
             #region Build, Compile and Send
+
             Build.PrepareBuild();
             string subject = Build.GetSubject(SubjectPrefixGlob, myapplication.Jobtitle);
             ApplicationConfigModel acm = new ApplicationConfigModel
@@ -109,7 +124,6 @@ namespace latex_curriculum_vitae
             if (!compemail_set)
             {
                 Build.OpenExplorer();
-
             }
             else
             {
@@ -132,13 +146,17 @@ namespace latex_curriculum_vitae
                 };
                 Email.CreateMessage(email);
             }
-            #endregion
 
-            #region Add Information to CSV            
+            #endregion Build, Compile and Send
+
+            #region Add Information to CSV
+
             CsvExport.WriteCSV(company.Name, myapplication.Jobtitle, company.City, myapplication.URL);
-            #endregion
+
+            #endregion Add Information to CSV
 
             #region Clean UI
+
             txtCity.Clear();
             txtCompanyName.Clear();
             txtCompanyStreet.Clear();
@@ -149,24 +167,32 @@ namespace latex_curriculum_vitae
             txtZIP.Clear();
             chkInitiative.IsChecked = false;
             SubjectPrefixGlob = Properties.Resources.Subjectprefix;
-            #endregion            
+
+            #endregion Clean UI
         }
-        #endregion
+
+        #endregion Generating job application
 
         #region Exit App
+
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Close();
         }
-        #endregion
+
+        #endregion Exit App
 
         #region Get Onlinehelp
+
         private void BtnGetOnlineHelp_Click(object sender, EventArgs e)
         {
             Setup.GetOnlineDocumentation("cha.usage.html");
         }
-        #endregion        
+
+        #endregion Get Onlinehelp
+
         private void ChkInititativeChecked(object sender, EventArgs e)
+
         {
             SubjectPrefixGlob = Properties.Resources.WJAInitiative;
         }

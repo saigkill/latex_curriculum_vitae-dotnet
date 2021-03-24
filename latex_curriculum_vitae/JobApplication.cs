@@ -15,13 +15,14 @@
 
 // Dependencies
 using BitlyAPI;
+using System.Threading.Tasks;
 
 namespace latex_curriculum_vitae
 {
     /// <summary>
     /// This is a class for instancing the JobApplication object
     /// </summary>
-    class JobApplication
+    internal class JobApplication
     {
         public string URL { get; set; }
         public string Email { get; set; }
@@ -29,7 +30,7 @@ namespace latex_curriculum_vitae
         public string SubjectPrefix { get; set; }
 
         /// <summary>
-        /// That Constructor creates the JobApplication object by using the arguments.        
+        /// That Constructor creates the JobApplication object by using the arguments.
         /// </summary>
         /// <param name="aurl">comes directly from the gui txtUrl.Text</param>
         /// <param name="aemail">comes directly from the gui txtEmail.Text</param>
@@ -55,7 +56,7 @@ namespace latex_curriculum_vitae
             return _prepare;
         }
 
-        public async void UseBitLy(string apkikey, string url)
+        public async Task UseBitLy(string apkikey, string url)
         {
             var bitly = new Bitly(apkikey);
             var linkResponse = await bitly.PostShorten(url);
