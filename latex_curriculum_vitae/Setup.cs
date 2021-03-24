@@ -171,6 +171,24 @@ namespace latex_curriculum_vitae
         }
 
         /// <summary>
+        /// Adds a temp folder
+        /// </summary>
+        public static void CheckTmpPath()
+        {
+            string tmpDir = Path.GetTempPath();
+            string mytmpDir = Path.Combine(tmpDir, "latex_curriculum_vitae");
+
+            try
+            {
+                Directory.SetCurrentDirectory(mytmpDir);
+            }
+            catch
+            {
+                Directory.CreateDirectory(mytmpDir);
+            }
+        }
+
+        /// <summary>
         /// This method cleans up the temporary directory.
         /// </summary>
         public static void Cleanup()

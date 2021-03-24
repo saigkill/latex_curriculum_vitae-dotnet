@@ -24,15 +24,16 @@ namespace latex_curriculum_vitae
     /// </summary>
     public partial class App : Application
     {
-
         #region Constructor
+
         public App()
         {
-
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Event Handlers
+
         private void OnStartup(object s, StartupEventArgs e)
         {
             string firstrun = Configuration.GetSetting("firstrun");
@@ -41,14 +42,16 @@ namespace latex_curriculum_vitae
                 Setup.CheckAppConfig();
                 Setup.CheckLatexPath();
                 Setup.CheckDocumentsPath();
+                Setup.CheckTmpPath();
                 Configuration.SetSetting("firstrun", "false");
             }
             else
-            {                
+            {
                 Window settings = new MainWindow();
                 settings.Show();
             }
         }
-        #endregion
+
+        #endregion Event Handlers
     }
 }

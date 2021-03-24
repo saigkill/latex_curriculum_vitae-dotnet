@@ -3,75 +3,105 @@
 schematypens="http://relaxng.org/ns/structure/1.0"?>
 <chapter version="5.0" xml:id="credits" xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <info>
+    <title>Credits</title>
+  </info>
+  <indexterm>
+    <primary>Credits</primary>
+  </indexterm>
+
+  <section xml:id="sec.credits">
     <info>
-        <title>Credits</title>
+      <title>Thank you</title>
     </info>
-    <indexterm>
-        <primary>Credits</primary>
-    </indexterm>
-    
-    <section xml:id="sec.credits">
-        <info>
-            <title>Thank you</title>
-        </info>
-        <para>Now I would like to take the time to thank all of the people who helped make this app possible:</para>
-        <itemizedlist>
-            <listitem>
-                <para>Henrik Heigl created the logo (<link xlink:href="https://henrikheigl.de"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">https://henrikheigl.de</link>)</para>
-            </listitem>
-          <listitem>
-            <para>Samantha Hamilton as an English text contributor (<link xlink:href="https://darlingdocs.com/portfolio/">darling docs</link>)</para>
-          </listitem>
-          <listitem>
-            <para>Shouyi Fortuntato as a coding contributor</para>
-          </listitem>
-            <listitem>
-                <para>Thomas Schraitle as a DocBook consultant</para>
-            </listitem>
-            <listitem>
-                <para>AndikaNewBasic-R (<link xlink:href="https://www.fontsquirrel.com/fonts/andika-basic">https://www.fontsquirrel.com/fonts/andika-basic</link>)</para>
-            </listitem>
-            <listitem>
-                <para>SIL International (<link xlink:href="http://scripts.sil.org/">http://scripts.sil.org/</link>)</para>
-            </listitem>
-            <listitem>
-                <para>Questrial-Regular.otf (Slogan Font)</para>
-            </listitem>
-            <listitem>
-                <para>Arthur Shlain created the TEX logo (<link xlink:href="https://thenounproject.com/ArtZ91/">ArtZ91</link>)</para>
-            </listitem>
-            <listitem>
-                <para><link xlink:href="https://www.flaticon.com/authors/freepik">Freepik</link> created the green check icon (<link xlink:href="https://www.flaticon.com/">www.flaticon.com</link>)
-                </para>
-            </listitem>
-            <listitem>
-                <para>Microsoft VS2017 Image Library</para>
-            </listitem>
-            <listitem>
-                <para>Jeff Jacob for BitLy API support (<link xlink:href="https://github.com/doublej42/BitlyAPI">BitLyAPI</link>)</para>
-            </listitem>
-            <listitem>
-                <para>CsvHelper Project for CSV file support (<link xlink:href="www.nuget.org/packages/CsvHelper/">NuGet Package</link>)</para>
-            </listitem>
-            <listitem>
-                <para>MIMEKit Project for mail support (<link xlink:href="http://www.mimekit.net">Website</link>)</para>
-            </listitem>
-            <listitem>
-                <para>NETCore.MailKit for mail support (<link xlink:href="https://github.com/myloveCc/NETCore.MailKit">Website</link>)</para>
-            </listitem>
-            <listitem>
-                <para>PdfSharpCore for PDF merge support (<link xlink:href="https://github.com/ststeiger/PdfSharpCore">https://github.com/ststeiger/PdfSharpCore</link>)</para>
-            </listitem>
-            <listitem>
-                <para>WPFLocalizeExxtension with localization support (<link xlink:href="https://github.com/XAMLMarkupExtensions/WPFLocalizationExtension/">https://github.com/XAMLMarkupExtensions/WPFLocalizationExtension/</link>)</para>
-            </listitem>
-            <listitem>
-                <para>Oxygen XML (<link xlink:href="https://www.oxygenxml.com">https://www.oxygenxml.com</link></para>
-            </listitem>
-            <listitem>
-                <para>and finally, everyone on <link xlink:href="https://stackoverflow.com">stackoverflow.com</link> and <link xlink:href="https://codeproject.com">codeproject.com</link></para>
-            </listitem>            
-        </itemizedlist>
-    </section>	
+    <para>Now I would like to take the time to thank all of the people who helped make this app possible:</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          Henrik Heigl created the logo (<link xlink:href="https://henrikheigl.de"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">https://henrikheigl.de</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Samantha Hamilton as an English text contributor (<link xlink:href="https://darlingdocs.com/portfolio/">darling docs</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>Shouyi Fortuntato as a coding contributor</para>
+      </listitem>
+      <listitem>
+        <para>Vijayakumar Natarajan as a coding contributor</para>
+      </listitem>
+      <listitem>
+        <para>Thomas Schraitle as a DocBook consultant</para>
+      </listitem>
+      <listitem>
+        <para>
+          AndikaNewBasic-R (<link xlink:href="https://www.fontsquirrel.com/fonts/andika-basic">https://www.fontsquirrel.com/fonts/andika-basic</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          SIL International (<link xlink:href="http://scripts.sil.org/">http://scripts.sil.org/</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>Questrial-Regular.otf (Slogan Font)</para>
+      </listitem>
+      <listitem>
+        <para>
+          Arthur Shlain created the TEX logo (<link xlink:href="https://thenounproject.com/ArtZ91/">ArtZ91</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <link xlink:href="https://www.flaticon.com/authors/freepik">Freepik</link> created the green check icon (<link xlink:href="https://www.flaticon.com/">www.flaticon.com</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>Microsoft VS2017 Image Library</para>
+      </listitem>
+      <listitem>
+        <para>
+          Jeff Jacob for BitLy API support (<link xlink:href="https://github.com/doublej42/BitlyAPI">BitLyAPI</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          CsvHelper Project for CSV file support (<link xlink:href="www.nuget.org/packages/CsvHelper/">NuGet Package</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          MIMEKit Project for mail support (<link xlink:href="http://www.mimekit.net">Website</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          NETCore.MailKit for mail support (<link xlink:href="https://github.com/myloveCc/NETCore.MailKit">Website</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          PdfSharpCore for PDF merge support (<link xlink:href="https://github.com/ststeiger/PdfSharpCore">https://github.com/ststeiger/PdfSharpCore</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          WPFLocalizeExxtension with localization support (<link xlink:href="https://github.com/XAMLMarkupExtensions/WPFLocalizationExtension/">https://github.com/XAMLMarkupExtensions/WPFLocalizationExtension/</link>)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Oxygen XML (<link xlink:href="https://www.oxygenxml.com">https://www.oxygenxml.com</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          and finally, everyone on <link xlink:href="https://stackoverflow.com">stackoverflow.com</link> and <link xlink:href="https://codeproject.com">codeproject.com</link>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
 </chapter>

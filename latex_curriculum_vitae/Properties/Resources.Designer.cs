@@ -133,7 +133,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die New application ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die New Application ähnelt.
         /// </summary>
         public static string DwAddNewApplication {
             get {
@@ -205,7 +205,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Exlore the state of your Job Applications ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exlore the Status of your Job Applications ähnelt.
         /// </summary>
         public static string DwHeader {
             get {
@@ -214,7 +214,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The current status of your job applications ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The Current Status of your Job Applications ähnelt.
         /// </summary>
         public static string DwHeader1 {
             get {
@@ -268,7 +268,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Refuesed ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Refused ähnelt.
         /// </summary>
         public static string DwRefused {
             get {
@@ -296,8 +296,8 @@ namespace latex_curriculum_vitae.Properties {
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die &lt;p&gt;{0}&lt;br&gt;
-        ///&lt;p&gt;I am sending you my application documents attached.&lt;br&gt;
-        ///&lt;p&gt;Sincerly&lt;/p&gt;
+        ///&lt;p&gt;You will find the documents for my application attached.&lt;br&gt;
+        ///&lt;p&gt;Sincerley&lt;/p&gt;
         ///&lt;p align=left&gt;{1}&lt;br&gt;
         ///&lt;center&gt;&lt;img src=&quot;&quot;cid:{2}&quot;&quot; width=&quot;&quot;10%&quot;&quot;&gt;&lt;/center&gt;&lt;/p&gt; ähnelt.
         /// </summary>
@@ -308,7 +308,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die You haven&apos;t set all needed fields for sending emails. I open for you the Usersettings Window. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die You haven&apos;t set all necessary fields for sending emails. The User Settings Window will now open for you. ähnelt.
         /// </summary>
         public static string EmailNotSet {
             get {
@@ -317,7 +317,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Can&apos;t send email. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Cannot send email. ähnelt.
         /// </summary>
         public static string EmailNotSetHeader {
             get {
@@ -328,7 +328,7 @@ namespace latex_curriculum_vitae.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die {0}
         ///
-        ///I am sending you my application documents attached.
+        ///You will find the documents for my application attached.
         ///
         ///Sincerely
         ///{1} ähnelt.
@@ -394,7 +394,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Unknown ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Other/Neutral ähnelt.
         /// </summary>
         public static string GenderUnknown {
             get {
@@ -412,7 +412,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Now i open for you the directory in the explorer, what contains your PDFs. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The explorer directory will now open containing your PDFs. ähnelt.
         /// </summary>
         public static string MsgDirFinalPdf {
             get {
@@ -421,7 +421,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your email is now sent. You can do the next job application. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your email is now sent. You can proceed with the next job application. ähnelt.
         /// </summary>
         public static string MsgEmailSent {
             get {
@@ -439,7 +439,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die You starting the app the first time. Please add your user settings in the window. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die You are using the app the first time. Please add your user settings in the window. ähnelt.
         /// </summary>
         public static string MsgSetupCheckConfig {
             get {
@@ -457,7 +457,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Please close the App and follow the documentation. I open it for you. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Please close the app and follow the documentation. The documentation will now open for you. ähnelt.
         /// </summary>
         public static string MsgSetupCheckDocument {
             get {
@@ -466,7 +466,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Check documents path ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check Documents Path ähnelt.
         /// </summary>
         public static string MsgSetupCheckDocumentHeader {
             get {
@@ -475,7 +475,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die You starting the app the first time. I prepare now the directory structure and copy the needed files to: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die You are using the app the first time. The directory structure is being prepared. Please copy the needed files to: ähnelt.
         /// </summary>
         public static string MsgSetupCheckDocumentsCopy {
             get {
@@ -484,7 +484,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die I haven&apos;t found TeXLive. Now i open a Browser, where you can download it. Please close this app and install TexLive. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Cannot find TeXLive. A browser will now open for you to download this software. Please close this app and install TeXLive. ähnelt.
         /// </summary>
         public static string MsgSetupCheckLatex {
             get {
@@ -511,7 +511,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Write your Job-Application ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Write Your Job Application ähnelt.
         /// </summary>
         public static string MWStartWriteJobApplication {
             get {
@@ -520,7 +520,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Main Menue ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Main Menu ähnelt.
         /// </summary>
         public static string MWTitle {
             get {
@@ -538,7 +538,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Dear Mrs ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dear Ms ähnelt.
         /// </summary>
         public static string SalutationFemale {
             get {
@@ -556,7 +556,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Dear Sir or Madam ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dear ladies and gentlemen ähnelt.
         /// </summary>
         public static string SalutationUnknown {
             get {
@@ -601,7 +601,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your Emailaddress: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Email Address: ähnelt.
         /// </summary>
         public static string UsEmailaddress {
             get {
@@ -619,7 +619,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your Familyname: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Family Name: ähnelt.
         /// </summary>
         public static string UsFamilyname {
             get {
@@ -628,7 +628,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your Firstname: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your First Name: ähnelt.
         /// </summary>
         public static string UsFirstname {
             get {
@@ -637,7 +637,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your User settings ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your User Settings ähnelt.
         /// </summary>
         public static string UsHeader {
             get {
@@ -655,7 +655,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Your Phonenumber: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your Phone Number: ähnelt.
         /// </summary>
         public static string UsPhonenumber {
             get {
@@ -772,7 +772,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Companydetails ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Company Details ähnelt.
         /// </summary>
         public static string WJACompanyDetails {
             get {
@@ -799,7 +799,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Contact person ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Contact Person: ähnelt.
         /// </summary>
         public static string WJAContact {
             get {
@@ -817,7 +817,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Emailaddress: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Email Address: ähnelt.
         /// </summary>
         public static string WJAEmail {
             get {
@@ -862,7 +862,7 @@ namespace latex_curriculum_vitae.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Jobtitle: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Job Title: ähnelt.
         /// </summary>
         public static string WJAJobtitle {
             get {

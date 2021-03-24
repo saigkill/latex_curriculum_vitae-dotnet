@@ -24,12 +24,11 @@ Latex Curriculum Vitae is released under the GPL3 License, see the file `LICENSE
 |Code quality | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=saigkill_latex_curriculum_vitae-dotnet&metric=alert_status)](https://sonarcloud.io/dashboard?id=saigkill_latex_curriculum_vitae-dotnet)
 |Conventional commits | [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) |
 |Continuous integration | ![.NET Core](https://github.com/saigkill/latex_curriculum_vitae-dotnet/workflows/.NET%20Core/badge.svg) |
+|Continuous integration Sonarqube | ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/saigkill/latex_curriculum_vitae-dotnet/Sonarqube) |
+|Security check | ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/saigkill/latex_curriculum_vitae-dotnet/CodeQL) |
 |Open Issues | ![GitHub issues](https://img.shields.io/github/issues/saigkill/latex_curriculum_vitae-dotnet) |
 |Open Pull Request | ![Pull Requests](https://img.shields.io/github/issues-pr/saigkill/latex_curriculum_vitae-dotnet) |
 |Dependencies|[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=saigkill/latex_curriculum_vitae-dotnet)](https://dependabot.com) |
-|Build Sonarqube | ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/saigkill/latex_curriculum_vitae-dotnet/Sonarqube) |
-|Build CodeQL | ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/saigkill/latex_curriculum_vitae-dotnet/CodeQL) |
-|Build .NET Core | ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/saigkill/latex_curriculum_vitae-dotnet/.NET%20Core) |
 |License | ![GitHub](https://img.shields.io/github/license/saigkill/latex_curriculum_vitae-dotnet) |
 |Downloads|![GitHub All Releases](https://img.shields.io/github/downloads/saigkill/latex_curriculum_vitae-dotnet/total)|
 
